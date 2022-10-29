@@ -19,7 +19,7 @@ public class PacketGetSceneAreaRsp extends BasePacket {
                 .addCityInfoList(CityInfo.newBuilder().setCityId(1).setLevel(1).build())
                 .addCityInfoList(CityInfo.newBuilder().setCityId(2).setLevel(1).build())
                 .addCityInfoList(CityInfo.newBuilder().setCityId(3).setLevel(1).build())
-	.addCityInfoList(CityInfo.newBuilder().setCityId(4).setLevel(1).build())
+                .addCityInfoList(CityInfo.newBuilder().setCityId(4).setLevel(1).build())
                 .build();
 
         this.setData(p);
