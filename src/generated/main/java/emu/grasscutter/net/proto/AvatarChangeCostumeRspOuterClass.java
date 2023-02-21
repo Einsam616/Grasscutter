@@ -19,7 +19,13 @@ public final class AvatarChangeCostumeRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint64 avatar_guid = 12;</code>
+     * <code>uint32 costumeId = 15;</code>
+     * @return The costumeId.
+     */
+    int getCostumeId();
+
+    /**
+     * <code>uint64 avatarGuid = 5;</code>
      * @return The avatarGuid.
      */
     long getAvatarGuid();
@@ -29,21 +35,8 @@ public final class AvatarChangeCostumeRspOuterClass {
      * @return The retcode.
      */
     int getRetcode();
-
-    /**
-     * <code>uint32 costume_id = 13;</code>
-     * @return The costumeId.
-     */
-    int getCostumeId();
   }
   /**
-   * <pre>
-   * CmdId: 1645
-   * EnetChannelId: 0
-   * EnetIsReliable: false
-   * IsAllowClient: true
-   * </pre>
-   *
    * Protobuf type {@code AvatarChangeCostumeRsp}
    */
   public static final class AvatarChangeCostumeRsp extends
@@ -88,17 +81,17 @@ public final class AvatarChangeCostumeRspOuterClass {
             case 0:
               done = true;
               break;
+            case 40: {
+
+              avatarGuid_ = input.readUInt64();
+              break;
+            }
             case 56: {
 
               retcode_ = input.readInt32();
               break;
             }
-            case 96: {
-
-              avatarGuid_ = input.readUInt64();
-              break;
-            }
-            case 104: {
+            case 120: {
 
               costumeId_ = input.readUInt32();
               break;
@@ -135,10 +128,152 @@ public final class AvatarChangeCostumeRspOuterClass {
               emu.grasscutter.net.proto.AvatarChangeCostumeRspOuterClass.AvatarChangeCostumeRsp.class, emu.grasscutter.net.proto.AvatarChangeCostumeRspOuterClass.AvatarChangeCostumeRsp.Builder.class);
     }
 
-    public static final int AVATAR_GUID_FIELD_NUMBER = 12;
+    /**
+     * Protobuf enum {@code AvatarChangeCostumeRsp.AAJPALBMJPF}
+     */
+    public enum AAJPALBMJPF
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>NONE = 0;</code>
+       */
+      NONE(0, 0),
+      /**
+       * <code>PEPPOHPHJOJ = 1753;</code>
+       */
+      PEPPOHPHJOJ(1, 1753),
+      /**
+       * <code>NNBKOLMPOEA = 1;</code>
+       */
+      NNBKOLMPOEA(3, 1),
+      UNRECOGNIZED(-1, -1),
+      ;
+
+      /**
+       * <code>DCDNILFDFLB = 0;</code>
+       */
+      public static final AAJPALBMJPF DCDNILFDFLB = NONE;
+      /**
+       * <code>NONE = 0;</code>
+       */
+      public static final int NONE_VALUE = 0;
+      /**
+       * <code>PEPPOHPHJOJ = 1753;</code>
+       */
+      public static final int PEPPOHPHJOJ_VALUE = 1753;
+      /**
+       * <code>DCDNILFDFLB = 0;</code>
+       */
+      public static final int DCDNILFDFLB_VALUE = 0;
+      /**
+       * <code>NNBKOLMPOEA = 1;</code>
+       */
+      public static final int NNBKOLMPOEA_VALUE = 1;
+
+
+      public final int getNumber() {
+        if (index == -1) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static AAJPALBMJPF valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static AAJPALBMJPF forNumber(int value) {
+        switch (value) {
+          case 0: return NONE;
+          case 1753: return PEPPOHPHJOJ;
+          case 1: return NNBKOLMPOEA;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<AAJPALBMJPF>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          AAJPALBMJPF> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<AAJPALBMJPF>() {
+              public AAJPALBMJPF findValueByNumber(int number) {
+                return AAJPALBMJPF.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (index == -1) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(index);
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return emu.grasscutter.net.proto.AvatarChangeCostumeRspOuterClass.AvatarChangeCostumeRsp.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final AAJPALBMJPF[] VALUES = getStaticValuesArray();
+      private static AAJPALBMJPF[] getStaticValuesArray() {
+        return new AAJPALBMJPF[] {
+          NONE, PEPPOHPHJOJ, DCDNILFDFLB, NNBKOLMPOEA, 
+        };
+      }
+      public static AAJPALBMJPF valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int index;
+      private final int value;
+
+      private AAJPALBMJPF(int index, int value) {
+        this.index = index;
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:AvatarChangeCostumeRsp.AAJPALBMJPF)
+    }
+
+    public static final int COSTUMEID_FIELD_NUMBER = 15;
+    private int costumeId_;
+    /**
+     * <code>uint32 costumeId = 15;</code>
+     * @return The costumeId.
+     */
+    @java.lang.Override
+    public int getCostumeId() {
+      return costumeId_;
+    }
+
+    public static final int AVATARGUID_FIELD_NUMBER = 5;
     private long avatarGuid_;
     /**
-     * <code>uint64 avatar_guid = 12;</code>
+     * <code>uint64 avatarGuid = 5;</code>
      * @return The avatarGuid.
      */
     @java.lang.Override
@@ -157,17 +292,6 @@ public final class AvatarChangeCostumeRspOuterClass {
       return retcode_;
     }
 
-    public static final int COSTUME_ID_FIELD_NUMBER = 13;
-    private int costumeId_;
-    /**
-     * <code>uint32 costume_id = 13;</code>
-     * @return The costumeId.
-     */
-    @java.lang.Override
-    public int getCostumeId() {
-      return costumeId_;
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -182,14 +306,14 @@ public final class AvatarChangeCostumeRspOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (avatarGuid_ != 0L) {
+        output.writeUInt64(5, avatarGuid_);
+      }
       if (retcode_ != 0) {
         output.writeInt32(7, retcode_);
       }
-      if (avatarGuid_ != 0L) {
-        output.writeUInt64(12, avatarGuid_);
-      }
       if (costumeId_ != 0) {
-        output.writeUInt32(13, costumeId_);
+        output.writeUInt32(15, costumeId_);
       }
       unknownFields.writeTo(output);
     }
@@ -200,17 +324,17 @@ public final class AvatarChangeCostumeRspOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      if (avatarGuid_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(5, avatarGuid_);
+      }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(7, retcode_);
       }
-      if (avatarGuid_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(12, avatarGuid_);
-      }
       if (costumeId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(13, costumeId_);
+          .computeUInt32Size(15, costumeId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -227,12 +351,12 @@ public final class AvatarChangeCostumeRspOuterClass {
       }
       emu.grasscutter.net.proto.AvatarChangeCostumeRspOuterClass.AvatarChangeCostumeRsp other = (emu.grasscutter.net.proto.AvatarChangeCostumeRspOuterClass.AvatarChangeCostumeRsp) obj;
 
+      if (getCostumeId()
+          != other.getCostumeId()) return false;
       if (getAvatarGuid()
           != other.getAvatarGuid()) return false;
       if (getRetcode()
           != other.getRetcode()) return false;
-      if (getCostumeId()
-          != other.getCostumeId()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -244,13 +368,13 @@ public final class AvatarChangeCostumeRspOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + AVATAR_GUID_FIELD_NUMBER;
+      hash = (37 * hash) + COSTUMEID_FIELD_NUMBER;
+      hash = (53 * hash) + getCostumeId();
+      hash = (37 * hash) + AVATARGUID_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getAvatarGuid());
       hash = (37 * hash) + RETCODE_FIELD_NUMBER;
       hash = (53 * hash) + getRetcode();
-      hash = (37 * hash) + COSTUME_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getCostumeId();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -347,13 +471,6 @@ public final class AvatarChangeCostumeRspOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 1645
-     * EnetChannelId: 0
-     * EnetIsReliable: false
-     * IsAllowClient: true
-     * </pre>
-     *
      * Protobuf type {@code AvatarChangeCostumeRsp}
      */
     public static final class Builder extends
@@ -391,11 +508,11 @@ public final class AvatarChangeCostumeRspOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        costumeId_ = 0;
+
         avatarGuid_ = 0L;
 
         retcode_ = 0;
-
-        costumeId_ = 0;
 
         return this;
       }
@@ -423,9 +540,9 @@ public final class AvatarChangeCostumeRspOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.AvatarChangeCostumeRspOuterClass.AvatarChangeCostumeRsp buildPartial() {
         emu.grasscutter.net.proto.AvatarChangeCostumeRspOuterClass.AvatarChangeCostumeRsp result = new emu.grasscutter.net.proto.AvatarChangeCostumeRspOuterClass.AvatarChangeCostumeRsp(this);
+        result.costumeId_ = costumeId_;
         result.avatarGuid_ = avatarGuid_;
         result.retcode_ = retcode_;
-        result.costumeId_ = costumeId_;
         onBuilt();
         return result;
       }
@@ -474,14 +591,14 @@ public final class AvatarChangeCostumeRspOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.AvatarChangeCostumeRspOuterClass.AvatarChangeCostumeRsp other) {
         if (other == emu.grasscutter.net.proto.AvatarChangeCostumeRspOuterClass.AvatarChangeCostumeRsp.getDefaultInstance()) return this;
+        if (other.getCostumeId() != 0) {
+          setCostumeId(other.getCostumeId());
+        }
         if (other.getAvatarGuid() != 0L) {
           setAvatarGuid(other.getAvatarGuid());
         }
         if (other.getRetcode() != 0) {
           setRetcode(other.getRetcode());
-        }
-        if (other.getCostumeId() != 0) {
-          setCostumeId(other.getCostumeId());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -512,9 +629,40 @@ public final class AvatarChangeCostumeRspOuterClass {
         return this;
       }
 
+      private int costumeId_ ;
+      /**
+       * <code>uint32 costumeId = 15;</code>
+       * @return The costumeId.
+       */
+      @java.lang.Override
+      public int getCostumeId() {
+        return costumeId_;
+      }
+      /**
+       * <code>uint32 costumeId = 15;</code>
+       * @param value The costumeId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCostumeId(int value) {
+        
+        costumeId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 costumeId = 15;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCostumeId() {
+        
+        costumeId_ = 0;
+        onChanged();
+        return this;
+      }
+
       private long avatarGuid_ ;
       /**
-       * <code>uint64 avatar_guid = 12;</code>
+       * <code>uint64 avatarGuid = 5;</code>
        * @return The avatarGuid.
        */
       @java.lang.Override
@@ -522,7 +670,7 @@ public final class AvatarChangeCostumeRspOuterClass {
         return avatarGuid_;
       }
       /**
-       * <code>uint64 avatar_guid = 12;</code>
+       * <code>uint64 avatarGuid = 5;</code>
        * @param value The avatarGuid to set.
        * @return This builder for chaining.
        */
@@ -533,7 +681,7 @@ public final class AvatarChangeCostumeRspOuterClass {
         return this;
       }
       /**
-       * <code>uint64 avatar_guid = 12;</code>
+       * <code>uint64 avatarGuid = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearAvatarGuid() {
@@ -570,37 +718,6 @@ public final class AvatarChangeCostumeRspOuterClass {
       public Builder clearRetcode() {
         
         retcode_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int costumeId_ ;
-      /**
-       * <code>uint32 costume_id = 13;</code>
-       * @return The costumeId.
-       */
-      @java.lang.Override
-      public int getCostumeId() {
-        return costumeId_;
-      }
-      /**
-       * <code>uint32 costume_id = 13;</code>
-       * @param value The costumeId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCostumeId(int value) {
-        
-        costumeId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 costume_id = 13;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCostumeId() {
-        
-        costumeId_ = 0;
         onChanged();
         return this;
       }
@@ -671,9 +788,11 @@ public final class AvatarChangeCostumeRspOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\034AvatarChangeCostumeRsp.proto\"R\n\026Avatar" +
-      "ChangeCostumeRsp\022\023\n\013avatar_guid\030\014 \001(\004\022\017\n" +
-      "\007retcode\030\007 \001(\005\022\022\n\ncostume_id\030\r \001(\rB\033\n\031em" +
+      "\n\034AvatarChangeCostumeRsp.proto\"\241\001\n\026Avata" +
+      "rChangeCostumeRsp\022\021\n\tcostumeId\030\017 \001(\r\022\022\n\n" +
+      "avatarGuid\030\005 \001(\004\022\017\n\007retcode\030\007 \001(\005\"O\n\013AAJ" +
+      "PALBMJPF\022\010\n\004NONE\020\000\022\020\n\013PEPPOHPHJOJ\020\331\r\022\017\n\013" +
+      "DCDNILFDFLB\020\000\022\017\n\013NNBKOLMPOEA\020\001\032\002\020\001B\033\n\031em" +
       "u.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -685,7 +804,7 @@ public final class AvatarChangeCostumeRspOuterClass {
     internal_static_AvatarChangeCostumeRsp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_AvatarChangeCostumeRsp_descriptor,
-        new java.lang.String[] { "AvatarGuid", "Retcode", "CostumeId", });
+        new java.lang.String[] { "CostumeId", "AvatarGuid", "Retcode", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

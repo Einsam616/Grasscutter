@@ -19,17 +19,17 @@ public final class WeekendDjinnInfoOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.Vector rot = 14;</code>
+     * <code>.Vector rot = 11;</code>
      * @return Whether the rot field is set.
      */
     boolean hasRot();
     /**
-     * <code>.Vector rot = 14;</code>
+     * <code>.Vector rot = 11;</code>
      * @return The rot.
      */
     emu.grasscutter.net.proto.VectorOuterClass.Vector getRot();
     /**
-     * <code>.Vector rot = 14;</code>
+     * <code>.Vector rot = 11;</code>
      */
     emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getRotOrBuilder();
 
@@ -106,7 +106,7 @@ public final class WeekendDjinnInfoOuterClass {
 
               break;
             }
-            case 114: {
+            case 90: {
               emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
               if (rot_ != null) {
                 subBuilder = rot_.toBuilder();
@@ -151,10 +151,10 @@ public final class WeekendDjinnInfoOuterClass {
               emu.grasscutter.net.proto.WeekendDjinnInfoOuterClass.WeekendDjinnInfo.class, emu.grasscutter.net.proto.WeekendDjinnInfoOuterClass.WeekendDjinnInfo.Builder.class);
     }
 
-    public static final int ROT_FIELD_NUMBER = 14;
+    public static final int ROT_FIELD_NUMBER = 11;
     private emu.grasscutter.net.proto.VectorOuterClass.Vector rot_;
     /**
-     * <code>.Vector rot = 14;</code>
+     * <code>.Vector rot = 11;</code>
      * @return Whether the rot field is set.
      */
     @java.lang.Override
@@ -162,7 +162,7 @@ public final class WeekendDjinnInfoOuterClass {
       return rot_ != null;
     }
     /**
-     * <code>.Vector rot = 14;</code>
+     * <code>.Vector rot = 11;</code>
      * @return The rot.
      */
     @java.lang.Override
@@ -170,7 +170,7 @@ public final class WeekendDjinnInfoOuterClass {
       return rot_ == null ? emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : rot_;
     }
     /**
-     * <code>.Vector rot = 14;</code>
+     * <code>.Vector rot = 11;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getRotOrBuilder() {
@@ -221,7 +221,7 @@ public final class WeekendDjinnInfoOuterClass {
         output.writeMessage(10, getPos());
       }
       if (rot_ != null) {
-        output.writeMessage(14, getRot());
+        output.writeMessage(11, getRot());
       }
       unknownFields.writeTo(output);
     }
@@ -238,7 +238,7 @@ public final class WeekendDjinnInfoOuterClass {
       }
       if (rot_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(14, getRot());
+          .computeMessageSize(11, getRot());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -552,14 +552,14 @@ public final class WeekendDjinnInfoOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> rotBuilder_;
       /**
-       * <code>.Vector rot = 14;</code>
+       * <code>.Vector rot = 11;</code>
        * @return Whether the rot field is set.
        */
       public boolean hasRot() {
         return rotBuilder_ != null || rot_ != null;
       }
       /**
-       * <code>.Vector rot = 14;</code>
+       * <code>.Vector rot = 11;</code>
        * @return The rot.
        */
       public emu.grasscutter.net.proto.VectorOuterClass.Vector getRot() {
@@ -570,7 +570,7 @@ public final class WeekendDjinnInfoOuterClass {
         }
       }
       /**
-       * <code>.Vector rot = 14;</code>
+       * <code>.Vector rot = 11;</code>
        */
       public Builder setRot(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
         if (rotBuilder_ == null) {
@@ -586,7 +586,7 @@ public final class WeekendDjinnInfoOuterClass {
         return this;
       }
       /**
-       * <code>.Vector rot = 14;</code>
+       * <code>.Vector rot = 11;</code>
        */
       public Builder setRot(
           emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder builderForValue) {
@@ -600,7 +600,7 @@ public final class WeekendDjinnInfoOuterClass {
         return this;
       }
       /**
-       * <code>.Vector rot = 14;</code>
+       * <code>.Vector rot = 11;</code>
        */
       public Builder mergeRot(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
         if (rotBuilder_ == null) {
@@ -618,7 +618,7 @@ public final class WeekendDjinnInfoOuterClass {
         return this;
       }
       /**
-       * <code>.Vector rot = 14;</code>
+       * <code>.Vector rot = 11;</code>
        */
       public Builder clearRot() {
         if (rotBuilder_ == null) {
@@ -632,7 +632,7 @@ public final class WeekendDjinnInfoOuterClass {
         return this;
       }
       /**
-       * <code>.Vector rot = 14;</code>
+       * <code>.Vector rot = 11;</code>
        */
       public emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder getRotBuilder() {
         
@@ -640,7 +640,7 @@ public final class WeekendDjinnInfoOuterClass {
         return getRotFieldBuilder().getBuilder();
       }
       /**
-       * <code>.Vector rot = 14;</code>
+       * <code>.Vector rot = 11;</code>
        */
       public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getRotOrBuilder() {
         if (rotBuilder_ != null) {
@@ -651,7 +651,7 @@ public final class WeekendDjinnInfoOuterClass {
         }
       }
       /**
-       * <code>.Vector rot = 14;</code>
+       * <code>.Vector rot = 11;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> 
@@ -853,7 +853,7 @@ public final class WeekendDjinnInfoOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\026WeekendDjinnInfo.proto\032\014Vector.proto\">" +
-      "\n\020WeekendDjinnInfo\022\024\n\003rot\030\016 \001(\0132\007.Vector" +
+      "\n\020WeekendDjinnInfo\022\024\n\003rot\030\013 \001(\0132\007.Vector" +
       "\022\024\n\003pos\030\n \001(\0132\007.VectorB\033\n\031emu.grasscutte" +
       "r.net.protob\006proto3"
     };

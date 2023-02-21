@@ -37,7 +37,6 @@ import javax.script.Bindings;
 import javax.script.CompiledScript;
 import javax.script.ScriptException;
 
-import static emu.grasscutter.config.Configuration.SCRIPT;
 
 @Entity(value = "quests", useDiscriminator = false)
 public class GameMainQuest {
@@ -133,14 +132,16 @@ public class GameMainQuest {
 
         // Add rewards
         MainQuestData mainQuestData = GameData.getMainQuestDataMap().get(this.getParentQuestId());
-        for (int rewardId : mainQuestData.getRewardIdList()) {
-            RewardData rewardData = GameData.getRewardDataMap().get(rewardId);
+        if (mainQuestData != null && mainQuestData.getRewardIdList() != null) {
+            for (int rewardId : mainQuestData.getRewardIdList()) {
+                RewardData rewardData = GameData.getRewardDataMap().get(rewardId);
 
-            if (rewardData == null) {
-                continue;
+                if (rewardData == null) {
+                    continue;
+                }
+
+                getOwner().getInventory().addItemParamDatas(rewardData.getRewardItemList(), ActionReason.QuestReward);
             }
-
-            getOwner().getInventory().addItemParamDatas(rewardData.getRewardItemList(), ActionReason.QuestReward);
         }
 
         // handoff main quest
@@ -356,7 +357,7 @@ public class GameMainQuest {
                 .setIsFinished(isFinished());
 
             proto.setParentQuestState(getState().getValue())
-                .setCutsceneEncryptionKey(QuestManager.getQuestKey(parentQuestId));
+                .setVideoKey(QuestManager.getQuestKey(parentQuestId));
             for (GameQuest quest : this.getChildQuests().values()) {
                 if (quest.getState() != QuestState.QUEST_STATE_UNSTARTED) {
                     ChildQuest childQuest = ChildQuest.newBuilder()

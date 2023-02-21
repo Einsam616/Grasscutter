@@ -19,31 +19,24 @@ public final class TakePlayerLevelRewardRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 reward_id = 9;</code>
+     * <code>uint32 level = 7;</code>
+     * @return The level.
+     */
+    int getLevel();
+
+    /**
+     * <code>uint32 rewardId = 4;</code>
      * @return The rewardId.
      */
     int getRewardId();
 
     /**
-     * <code>int32 retcode = 13;</code>
+     * <code>int32 retcode = 5;</code>
      * @return The retcode.
      */
     int getRetcode();
-
-    /**
-     * <code>uint32 level = 6;</code>
-     * @return The level.
-     */
-    int getLevel();
   }
   /**
-   * <pre>
-   * CmdId: 157
-   * EnetChannelId: 0
-   * EnetIsReliable: false
-   * IsAllowClient: true
-   * </pre>
-   *
    * Protobuf type {@code TakePlayerLevelRewardRsp}
    */
   public static final class TakePlayerLevelRewardRsp extends
@@ -88,19 +81,19 @@ public final class TakePlayerLevelRewardRspOuterClass {
             case 0:
               done = true;
               break;
-            case 48: {
-
-              level_ = input.readUInt32();
-              break;
-            }
-            case 72: {
+            case 32: {
 
               rewardId_ = input.readUInt32();
               break;
             }
-            case 104: {
+            case 40: {
 
               retcode_ = input.readInt32();
+              break;
+            }
+            case 56: {
+
+              level_ = input.readUInt32();
               break;
             }
             default: {
@@ -135,10 +128,152 @@ public final class TakePlayerLevelRewardRspOuterClass {
               emu.grasscutter.net.proto.TakePlayerLevelRewardRspOuterClass.TakePlayerLevelRewardRsp.class, emu.grasscutter.net.proto.TakePlayerLevelRewardRspOuterClass.TakePlayerLevelRewardRsp.Builder.class);
     }
 
-    public static final int REWARD_ID_FIELD_NUMBER = 9;
+    /**
+     * Protobuf enum {@code TakePlayerLevelRewardRsp.EPMMHGGMHIC}
+     */
+    public enum EPMMHGGMHIC
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>NONE = 0;</code>
+       */
+      NONE(0, 0),
+      /**
+       * <code>PEPPOHPHJOJ = 190;</code>
+       */
+      PEPPOHPHJOJ(1, 190),
+      /**
+       * <code>NNBKOLMPOEA = 1;</code>
+       */
+      NNBKOLMPOEA(3, 1),
+      UNRECOGNIZED(-1, -1),
+      ;
+
+      /**
+       * <code>DCDNILFDFLB = 0;</code>
+       */
+      public static final EPMMHGGMHIC DCDNILFDFLB = NONE;
+      /**
+       * <code>NONE = 0;</code>
+       */
+      public static final int NONE_VALUE = 0;
+      /**
+       * <code>PEPPOHPHJOJ = 190;</code>
+       */
+      public static final int PEPPOHPHJOJ_VALUE = 190;
+      /**
+       * <code>DCDNILFDFLB = 0;</code>
+       */
+      public static final int DCDNILFDFLB_VALUE = 0;
+      /**
+       * <code>NNBKOLMPOEA = 1;</code>
+       */
+      public static final int NNBKOLMPOEA_VALUE = 1;
+
+
+      public final int getNumber() {
+        if (index == -1) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static EPMMHGGMHIC valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static EPMMHGGMHIC forNumber(int value) {
+        switch (value) {
+          case 0: return NONE;
+          case 190: return PEPPOHPHJOJ;
+          case 1: return NNBKOLMPOEA;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<EPMMHGGMHIC>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          EPMMHGGMHIC> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<EPMMHGGMHIC>() {
+              public EPMMHGGMHIC findValueByNumber(int number) {
+                return EPMMHGGMHIC.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (index == -1) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(index);
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return emu.grasscutter.net.proto.TakePlayerLevelRewardRspOuterClass.TakePlayerLevelRewardRsp.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final EPMMHGGMHIC[] VALUES = getStaticValuesArray();
+      private static EPMMHGGMHIC[] getStaticValuesArray() {
+        return new EPMMHGGMHIC[] {
+          NONE, PEPPOHPHJOJ, DCDNILFDFLB, NNBKOLMPOEA, 
+        };
+      }
+      public static EPMMHGGMHIC valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int index;
+      private final int value;
+
+      private EPMMHGGMHIC(int index, int value) {
+        this.index = index;
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:TakePlayerLevelRewardRsp.EPMMHGGMHIC)
+    }
+
+    public static final int LEVEL_FIELD_NUMBER = 7;
+    private int level_;
+    /**
+     * <code>uint32 level = 7;</code>
+     * @return The level.
+     */
+    @java.lang.Override
+    public int getLevel() {
+      return level_;
+    }
+
+    public static final int REWARDID_FIELD_NUMBER = 4;
     private int rewardId_;
     /**
-     * <code>uint32 reward_id = 9;</code>
+     * <code>uint32 rewardId = 4;</code>
      * @return The rewardId.
      */
     @java.lang.Override
@@ -146,26 +281,15 @@ public final class TakePlayerLevelRewardRspOuterClass {
       return rewardId_;
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 13;
+    public static final int RETCODE_FIELD_NUMBER = 5;
     private int retcode_;
     /**
-     * <code>int32 retcode = 13;</code>
+     * <code>int32 retcode = 5;</code>
      * @return The retcode.
      */
     @java.lang.Override
     public int getRetcode() {
       return retcode_;
-    }
-
-    public static final int LEVEL_FIELD_NUMBER = 6;
-    private int level_;
-    /**
-     * <code>uint32 level = 6;</code>
-     * @return The level.
-     */
-    @java.lang.Override
-    public int getLevel() {
-      return level_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -182,14 +306,14 @@ public final class TakePlayerLevelRewardRspOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (level_ != 0) {
-        output.writeUInt32(6, level_);
-      }
       if (rewardId_ != 0) {
-        output.writeUInt32(9, rewardId_);
+        output.writeUInt32(4, rewardId_);
       }
       if (retcode_ != 0) {
-        output.writeInt32(13, retcode_);
+        output.writeInt32(5, retcode_);
+      }
+      if (level_ != 0) {
+        output.writeUInt32(7, level_);
       }
       unknownFields.writeTo(output);
     }
@@ -200,17 +324,17 @@ public final class TakePlayerLevelRewardRspOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (level_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(6, level_);
-      }
       if (rewardId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(9, rewardId_);
+          .computeUInt32Size(4, rewardId_);
       }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(13, retcode_);
+          .computeInt32Size(5, retcode_);
+      }
+      if (level_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(7, level_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -227,12 +351,12 @@ public final class TakePlayerLevelRewardRspOuterClass {
       }
       emu.grasscutter.net.proto.TakePlayerLevelRewardRspOuterClass.TakePlayerLevelRewardRsp other = (emu.grasscutter.net.proto.TakePlayerLevelRewardRspOuterClass.TakePlayerLevelRewardRsp) obj;
 
+      if (getLevel()
+          != other.getLevel()) return false;
       if (getRewardId()
           != other.getRewardId()) return false;
       if (getRetcode()
           != other.getRetcode()) return false;
-      if (getLevel()
-          != other.getLevel()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -244,12 +368,12 @@ public final class TakePlayerLevelRewardRspOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + REWARD_ID_FIELD_NUMBER;
+      hash = (37 * hash) + LEVEL_FIELD_NUMBER;
+      hash = (53 * hash) + getLevel();
+      hash = (37 * hash) + REWARDID_FIELD_NUMBER;
       hash = (53 * hash) + getRewardId();
       hash = (37 * hash) + RETCODE_FIELD_NUMBER;
       hash = (53 * hash) + getRetcode();
-      hash = (37 * hash) + LEVEL_FIELD_NUMBER;
-      hash = (53 * hash) + getLevel();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -346,13 +470,6 @@ public final class TakePlayerLevelRewardRspOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 157
-     * EnetChannelId: 0
-     * EnetIsReliable: false
-     * IsAllowClient: true
-     * </pre>
-     *
      * Protobuf type {@code TakePlayerLevelRewardRsp}
      */
     public static final class Builder extends
@@ -390,11 +507,11 @@ public final class TakePlayerLevelRewardRspOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        level_ = 0;
+
         rewardId_ = 0;
 
         retcode_ = 0;
-
-        level_ = 0;
 
         return this;
       }
@@ -422,9 +539,9 @@ public final class TakePlayerLevelRewardRspOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.TakePlayerLevelRewardRspOuterClass.TakePlayerLevelRewardRsp buildPartial() {
         emu.grasscutter.net.proto.TakePlayerLevelRewardRspOuterClass.TakePlayerLevelRewardRsp result = new emu.grasscutter.net.proto.TakePlayerLevelRewardRspOuterClass.TakePlayerLevelRewardRsp(this);
+        result.level_ = level_;
         result.rewardId_ = rewardId_;
         result.retcode_ = retcode_;
-        result.level_ = level_;
         onBuilt();
         return result;
       }
@@ -473,14 +590,14 @@ public final class TakePlayerLevelRewardRspOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.TakePlayerLevelRewardRspOuterClass.TakePlayerLevelRewardRsp other) {
         if (other == emu.grasscutter.net.proto.TakePlayerLevelRewardRspOuterClass.TakePlayerLevelRewardRsp.getDefaultInstance()) return this;
+        if (other.getLevel() != 0) {
+          setLevel(other.getLevel());
+        }
         if (other.getRewardId() != 0) {
           setRewardId(other.getRewardId());
         }
         if (other.getRetcode() != 0) {
           setRetcode(other.getRetcode());
-        }
-        if (other.getLevel() != 0) {
-          setLevel(other.getLevel());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -511,9 +628,40 @@ public final class TakePlayerLevelRewardRspOuterClass {
         return this;
       }
 
+      private int level_ ;
+      /**
+       * <code>uint32 level = 7;</code>
+       * @return The level.
+       */
+      @java.lang.Override
+      public int getLevel() {
+        return level_;
+      }
+      /**
+       * <code>uint32 level = 7;</code>
+       * @param value The level to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLevel(int value) {
+        
+        level_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 level = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLevel() {
+        
+        level_ = 0;
+        onChanged();
+        return this;
+      }
+
       private int rewardId_ ;
       /**
-       * <code>uint32 reward_id = 9;</code>
+       * <code>uint32 rewardId = 4;</code>
        * @return The rewardId.
        */
       @java.lang.Override
@@ -521,7 +669,7 @@ public final class TakePlayerLevelRewardRspOuterClass {
         return rewardId_;
       }
       /**
-       * <code>uint32 reward_id = 9;</code>
+       * <code>uint32 rewardId = 4;</code>
        * @param value The rewardId to set.
        * @return This builder for chaining.
        */
@@ -532,7 +680,7 @@ public final class TakePlayerLevelRewardRspOuterClass {
         return this;
       }
       /**
-       * <code>uint32 reward_id = 9;</code>
+       * <code>uint32 rewardId = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearRewardId() {
@@ -544,7 +692,7 @@ public final class TakePlayerLevelRewardRspOuterClass {
 
       private int retcode_ ;
       /**
-       * <code>int32 retcode = 13;</code>
+       * <code>int32 retcode = 5;</code>
        * @return The retcode.
        */
       @java.lang.Override
@@ -552,7 +700,7 @@ public final class TakePlayerLevelRewardRspOuterClass {
         return retcode_;
       }
       /**
-       * <code>int32 retcode = 13;</code>
+       * <code>int32 retcode = 5;</code>
        * @param value The retcode to set.
        * @return This builder for chaining.
        */
@@ -563,43 +711,12 @@ public final class TakePlayerLevelRewardRspOuterClass {
         return this;
       }
       /**
-       * <code>int32 retcode = 13;</code>
+       * <code>int32 retcode = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearRetcode() {
         
         retcode_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int level_ ;
-      /**
-       * <code>uint32 level = 6;</code>
-       * @return The level.
-       */
-      @java.lang.Override
-      public int getLevel() {
-        return level_;
-      }
-      /**
-       * <code>uint32 level = 6;</code>
-       * @param value The level to set.
-       * @return This builder for chaining.
-       */
-      public Builder setLevel(int value) {
-        
-        level_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 level = 6;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearLevel() {
-        
-        level_ = 0;
         onChanged();
         return this;
       }
@@ -670,10 +787,12 @@ public final class TakePlayerLevelRewardRspOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\036TakePlayerLevelRewardRsp.proto\"M\n\030Take" +
-      "PlayerLevelRewardRsp\022\021\n\treward_id\030\t \001(\r\022" +
-      "\017\n\007retcode\030\r \001(\005\022\r\n\005level\030\006 \001(\rB\033\n\031emu.g" +
-      "rasscutter.net.protob\006proto3"
+      "\n\036TakePlayerLevelRewardRsp.proto\"\235\001\n\030Tak" +
+      "ePlayerLevelRewardRsp\022\r\n\005level\030\007 \001(\r\022\020\n\010" +
+      "rewardId\030\004 \001(\r\022\017\n\007retcode\030\005 \001(\005\"O\n\013EPMMH" +
+      "GGMHIC\022\010\n\004NONE\020\000\022\020\n\013PEPPOHPHJOJ\020\276\001\022\017\n\013DC" +
+      "DNILFDFLB\020\000\022\017\n\013NNBKOLMPOEA\020\001\032\002\020\001B\033\n\031emu." +
+      "grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -684,7 +803,7 @@ public final class TakePlayerLevelRewardRspOuterClass {
     internal_static_TakePlayerLevelRewardRsp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_TakePlayerLevelRewardRsp_descriptor,
-        new java.lang.String[] { "RewardId", "Retcode", "Level", });
+        new java.lang.String[] { "Level", "RewardId", "Retcode", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

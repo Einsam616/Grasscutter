@@ -49,12 +49,6 @@ public final class FireworkSetNotifyOuterClass {
         int index);
   }
   /**
-   * <pre>
-   * CmdId: 5934
-   * EnetChannelId: 0
-   * EnetIsReliable: true
-   * </pre>
-   *
    * Protobuf type {@code FireworkSetNotify}
    */
   public static final class FireworkSetNotify extends
@@ -370,12 +364,6 @@ public final class FireworkSetNotifyOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 5934
-     * EnetChannelId: 0
-     * EnetIsReliable: true
-     * </pre>
-     *
      * Protobuf type {@code FireworkSetNotify}
      */
     public static final class Builder extends

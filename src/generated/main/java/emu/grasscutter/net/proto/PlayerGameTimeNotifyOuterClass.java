@@ -19,31 +19,24 @@ public final class PlayerGameTimeNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 uid = 7;</code>
-     * @return The uid.
-     */
-    int getUid();
-
-    /**
-     * <code>uint32 game_time = 3;</code>
+     * <code>uint32 gameTime = 1;</code>
      * @return The gameTime.
      */
     int getGameTime();
 
     /**
-     * <code>bool is_home = 13;</code>
+     * <code>bool isHome = 3;</code>
      * @return The isHome.
      */
     boolean getIsHome();
+
+    /**
+     * <code>uint32 uid = 14;</code>
+     * @return The uid.
+     */
+    int getUid();
   }
   /**
-   * <pre>
-   * CmdId: 131
-   * EnetChannelId: 0
-   * EnetIsReliable: false
-   * IsAllowClient: true
-   * </pre>
-   *
    * Protobuf type {@code PlayerGameTimeNotify}
    */
   public static final class PlayerGameTimeNotify extends
@@ -88,19 +81,19 @@ public final class PlayerGameTimeNotifyOuterClass {
             case 0:
               done = true;
               break;
-            case 24: {
+            case 8: {
 
               gameTime_ = input.readUInt32();
               break;
             }
-            case 56: {
-
-              uid_ = input.readUInt32();
-              break;
-            }
-            case 104: {
+            case 24: {
 
               isHome_ = input.readBool();
+              break;
+            }
+            case 112: {
+
+              uid_ = input.readUInt32();
               break;
             }
             default: {
@@ -135,21 +128,149 @@ public final class PlayerGameTimeNotifyOuterClass {
               emu.grasscutter.net.proto.PlayerGameTimeNotifyOuterClass.PlayerGameTimeNotify.class, emu.grasscutter.net.proto.PlayerGameTimeNotifyOuterClass.PlayerGameTimeNotify.Builder.class);
     }
 
-    public static final int UID_FIELD_NUMBER = 7;
-    private int uid_;
     /**
-     * <code>uint32 uid = 7;</code>
-     * @return The uid.
+     * Protobuf enum {@code PlayerGameTimeNotify.FAMEPMJBHAJ}
      */
-    @java.lang.Override
-    public int getUid() {
-      return uid_;
+    public enum FAMEPMJBHAJ
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>NONE = 0;</code>
+       */
+      NONE(0, 0),
+      /**
+       * <code>PEPPOHPHJOJ = 124;</code>
+       */
+      PEPPOHPHJOJ(1, 124),
+      /**
+       * <code>NNBKOLMPOEA = 1;</code>
+       */
+      NNBKOLMPOEA(3, 1),
+      UNRECOGNIZED(-1, -1),
+      ;
+
+      /**
+       * <code>DCDNILFDFLB = 0;</code>
+       */
+      public static final FAMEPMJBHAJ DCDNILFDFLB = NONE;
+      /**
+       * <code>EAJIABGAOCI = 1;</code>
+       */
+      public static final FAMEPMJBHAJ EAJIABGAOCI = NNBKOLMPOEA;
+      /**
+       * <code>NONE = 0;</code>
+       */
+      public static final int NONE_VALUE = 0;
+      /**
+       * <code>PEPPOHPHJOJ = 124;</code>
+       */
+      public static final int PEPPOHPHJOJ_VALUE = 124;
+      /**
+       * <code>DCDNILFDFLB = 0;</code>
+       */
+      public static final int DCDNILFDFLB_VALUE = 0;
+      /**
+       * <code>NNBKOLMPOEA = 1;</code>
+       */
+      public static final int NNBKOLMPOEA_VALUE = 1;
+      /**
+       * <code>EAJIABGAOCI = 1;</code>
+       */
+      public static final int EAJIABGAOCI_VALUE = 1;
+
+
+      public final int getNumber() {
+        if (index == -1) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static FAMEPMJBHAJ valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static FAMEPMJBHAJ forNumber(int value) {
+        switch (value) {
+          case 0: return NONE;
+          case 124: return PEPPOHPHJOJ;
+          case 1: return NNBKOLMPOEA;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<FAMEPMJBHAJ>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          FAMEPMJBHAJ> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<FAMEPMJBHAJ>() {
+              public FAMEPMJBHAJ findValueByNumber(int number) {
+                return FAMEPMJBHAJ.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (index == -1) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(index);
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return emu.grasscutter.net.proto.PlayerGameTimeNotifyOuterClass.PlayerGameTimeNotify.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final FAMEPMJBHAJ[] VALUES = getStaticValuesArray();
+      private static FAMEPMJBHAJ[] getStaticValuesArray() {
+        return new FAMEPMJBHAJ[] {
+          NONE, PEPPOHPHJOJ, DCDNILFDFLB, NNBKOLMPOEA, EAJIABGAOCI, 
+        };
+      }
+      public static FAMEPMJBHAJ valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int index;
+      private final int value;
+
+      private FAMEPMJBHAJ(int index, int value) {
+        this.index = index;
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:PlayerGameTimeNotify.FAMEPMJBHAJ)
     }
 
-    public static final int GAME_TIME_FIELD_NUMBER = 3;
+    public static final int GAMETIME_FIELD_NUMBER = 1;
     private int gameTime_;
     /**
-     * <code>uint32 game_time = 3;</code>
+     * <code>uint32 gameTime = 1;</code>
      * @return The gameTime.
      */
     @java.lang.Override
@@ -157,15 +278,26 @@ public final class PlayerGameTimeNotifyOuterClass {
       return gameTime_;
     }
 
-    public static final int IS_HOME_FIELD_NUMBER = 13;
+    public static final int ISHOME_FIELD_NUMBER = 3;
     private boolean isHome_;
     /**
-     * <code>bool is_home = 13;</code>
+     * <code>bool isHome = 3;</code>
      * @return The isHome.
      */
     @java.lang.Override
     public boolean getIsHome() {
       return isHome_;
+    }
+
+    public static final int UID_FIELD_NUMBER = 14;
+    private int uid_;
+    /**
+     * <code>uint32 uid = 14;</code>
+     * @return The uid.
+     */
+    @java.lang.Override
+    public int getUid() {
+      return uid_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -183,13 +315,13 @@ public final class PlayerGameTimeNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (gameTime_ != 0) {
-        output.writeUInt32(3, gameTime_);
-      }
-      if (uid_ != 0) {
-        output.writeUInt32(7, uid_);
+        output.writeUInt32(1, gameTime_);
       }
       if (isHome_ != false) {
-        output.writeBool(13, isHome_);
+        output.writeBool(3, isHome_);
+      }
+      if (uid_ != 0) {
+        output.writeUInt32(14, uid_);
       }
       unknownFields.writeTo(output);
     }
@@ -202,15 +334,15 @@ public final class PlayerGameTimeNotifyOuterClass {
       size = 0;
       if (gameTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(3, gameTime_);
-      }
-      if (uid_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(7, uid_);
+          .computeUInt32Size(1, gameTime_);
       }
       if (isHome_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(13, isHome_);
+          .computeBoolSize(3, isHome_);
+      }
+      if (uid_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(14, uid_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -227,12 +359,12 @@ public final class PlayerGameTimeNotifyOuterClass {
       }
       emu.grasscutter.net.proto.PlayerGameTimeNotifyOuterClass.PlayerGameTimeNotify other = (emu.grasscutter.net.proto.PlayerGameTimeNotifyOuterClass.PlayerGameTimeNotify) obj;
 
-      if (getUid()
-          != other.getUid()) return false;
       if (getGameTime()
           != other.getGameTime()) return false;
       if (getIsHome()
           != other.getIsHome()) return false;
+      if (getUid()
+          != other.getUid()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -244,13 +376,13 @@ public final class PlayerGameTimeNotifyOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + UID_FIELD_NUMBER;
-      hash = (53 * hash) + getUid();
-      hash = (37 * hash) + GAME_TIME_FIELD_NUMBER;
+      hash = (37 * hash) + GAMETIME_FIELD_NUMBER;
       hash = (53 * hash) + getGameTime();
-      hash = (37 * hash) + IS_HOME_FIELD_NUMBER;
+      hash = (37 * hash) + ISHOME_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsHome());
+      hash = (37 * hash) + UID_FIELD_NUMBER;
+      hash = (53 * hash) + getUid();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -347,13 +479,6 @@ public final class PlayerGameTimeNotifyOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 131
-     * EnetChannelId: 0
-     * EnetIsReliable: false
-     * IsAllowClient: true
-     * </pre>
-     *
      * Protobuf type {@code PlayerGameTimeNotify}
      */
     public static final class Builder extends
@@ -391,11 +516,11 @@ public final class PlayerGameTimeNotifyOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        uid_ = 0;
-
         gameTime_ = 0;
 
         isHome_ = false;
+
+        uid_ = 0;
 
         return this;
       }
@@ -423,9 +548,9 @@ public final class PlayerGameTimeNotifyOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.PlayerGameTimeNotifyOuterClass.PlayerGameTimeNotify buildPartial() {
         emu.grasscutter.net.proto.PlayerGameTimeNotifyOuterClass.PlayerGameTimeNotify result = new emu.grasscutter.net.proto.PlayerGameTimeNotifyOuterClass.PlayerGameTimeNotify(this);
-        result.uid_ = uid_;
         result.gameTime_ = gameTime_;
         result.isHome_ = isHome_;
+        result.uid_ = uid_;
         onBuilt();
         return result;
       }
@@ -474,14 +599,14 @@ public final class PlayerGameTimeNotifyOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.PlayerGameTimeNotifyOuterClass.PlayerGameTimeNotify other) {
         if (other == emu.grasscutter.net.proto.PlayerGameTimeNotifyOuterClass.PlayerGameTimeNotify.getDefaultInstance()) return this;
-        if (other.getUid() != 0) {
-          setUid(other.getUid());
-        }
         if (other.getGameTime() != 0) {
           setGameTime(other.getGameTime());
         }
         if (other.getIsHome() != false) {
           setIsHome(other.getIsHome());
+        }
+        if (other.getUid() != 0) {
+          setUid(other.getUid());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -512,40 +637,9 @@ public final class PlayerGameTimeNotifyOuterClass {
         return this;
       }
 
-      private int uid_ ;
-      /**
-       * <code>uint32 uid = 7;</code>
-       * @return The uid.
-       */
-      @java.lang.Override
-      public int getUid() {
-        return uid_;
-      }
-      /**
-       * <code>uint32 uid = 7;</code>
-       * @param value The uid to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUid(int value) {
-        
-        uid_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 uid = 7;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearUid() {
-        
-        uid_ = 0;
-        onChanged();
-        return this;
-      }
-
       private int gameTime_ ;
       /**
-       * <code>uint32 game_time = 3;</code>
+       * <code>uint32 gameTime = 1;</code>
        * @return The gameTime.
        */
       @java.lang.Override
@@ -553,7 +647,7 @@ public final class PlayerGameTimeNotifyOuterClass {
         return gameTime_;
       }
       /**
-       * <code>uint32 game_time = 3;</code>
+       * <code>uint32 gameTime = 1;</code>
        * @param value The gameTime to set.
        * @return This builder for chaining.
        */
@@ -564,7 +658,7 @@ public final class PlayerGameTimeNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint32 game_time = 3;</code>
+       * <code>uint32 gameTime = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearGameTime() {
@@ -576,7 +670,7 @@ public final class PlayerGameTimeNotifyOuterClass {
 
       private boolean isHome_ ;
       /**
-       * <code>bool is_home = 13;</code>
+       * <code>bool isHome = 3;</code>
        * @return The isHome.
        */
       @java.lang.Override
@@ -584,7 +678,7 @@ public final class PlayerGameTimeNotifyOuterClass {
         return isHome_;
       }
       /**
-       * <code>bool is_home = 13;</code>
+       * <code>bool isHome = 3;</code>
        * @param value The isHome to set.
        * @return This builder for chaining.
        */
@@ -595,12 +689,43 @@ public final class PlayerGameTimeNotifyOuterClass {
         return this;
       }
       /**
-       * <code>bool is_home = 13;</code>
+       * <code>bool isHome = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearIsHome() {
         
         isHome_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int uid_ ;
+      /**
+       * <code>uint32 uid = 14;</code>
+       * @return The uid.
+       */
+      @java.lang.Override
+      public int getUid() {
+        return uid_;
+      }
+      /**
+       * <code>uint32 uid = 14;</code>
+       * @param value The uid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUid(int value) {
+        
+        uid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 uid = 14;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUid() {
+        
+        uid_ = 0;
         onChanged();
         return this;
       }
@@ -671,10 +796,12 @@ public final class PlayerGameTimeNotifyOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\032PlayerGameTimeNotify.proto\"G\n\024PlayerGa" +
-      "meTimeNotify\022\013\n\003uid\030\007 \001(\r\022\021\n\tgame_time\030\003" +
-      " \001(\r\022\017\n\007is_home\030\r \001(\010B\033\n\031emu.grasscutter" +
-      ".net.protob\006proto3"
+      "\n\032PlayerGameTimeNotify.proto\"\246\001\n\024PlayerG" +
+      "ameTimeNotify\022\020\n\010gameTime\030\001 \001(\r\022\016\n\006isHom" +
+      "e\030\003 \001(\010\022\013\n\003uid\030\016 \001(\r\"_\n\013FAMEPMJBHAJ\022\010\n\004N" +
+      "ONE\020\000\022\017\n\013PEPPOHPHJOJ\020|\022\017\n\013DCDNILFDFLB\020\000\022" +
+      "\017\n\013NNBKOLMPOEA\020\001\022\017\n\013EAJIABGAOCI\020\001\032\002\020\001B\033\n" +
+      "\031emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -685,7 +812,7 @@ public final class PlayerGameTimeNotifyOuterClass {
     internal_static_PlayerGameTimeNotify_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_PlayerGameTimeNotify_descriptor,
-        new java.lang.String[] { "Uid", "GameTime", "IsHome", });
+        new java.lang.String[] { "GameTime", "IsHome", "Uid", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -53,12 +53,6 @@ public final class MusicGameStartToPlayOthersBeatmapRspOuterClass {
     long getAMNODOLNOIM(int index);
   }
   /**
-   * <pre>
-   * CmdId: 6313
-   * EnetChannelId: 0
-   * EnetIsReliable: true
-   * </pre>
-   *
    * Protobuf type {@code MusicGameStartToPlayOthersBeatmapRsp}
    */
   public static final class MusicGameStartToPlayOthersBeatmapRsp extends
@@ -425,12 +419,6 @@ public final class MusicGameStartToPlayOthersBeatmapRspOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 6313
-     * EnetChannelId: 0
-     * EnetIsReliable: true
-     * </pre>
-     *
      * Protobuf type {@code MusicGameStartToPlayOthersBeatmapRsp}
      */
     public static final class Builder extends

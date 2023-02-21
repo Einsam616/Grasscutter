@@ -58,6 +58,7 @@ import emu.grasscutter.net.proto.ShowAvatarInfoOuterClass.ShowAvatarInfo;
 import emu.grasscutter.net.proto.ShowEquipOuterClass.ShowEquip;
 import emu.grasscutter.server.packet.send.*;
 import emu.grasscutter.utils.ProtoHelper;
+import it.unimi.dsi.fastutil.ints.Int2FloatMap;
 import it.unimi.dsi.fastutil.ints.Int2FloatOpenHashMap;
 import it.unimi.dsi.fastutil.ints.Int2IntArrayMap;
 import it.unimi.dsi.fastutil.ints.Int2IntOpenHashMap;
@@ -83,13 +84,13 @@ public class Avatar {
     @Getter @Setter private int level = 1;
     @Getter @Setter private int exp;
     @Getter @Setter private int promoteLevel;
-    @Getter @Setter private int satiation; // ?
-    @Getter @Setter private int satiationPenalty; // ?
+    @Getter @Setter private int satiation; // Fullness
+    @Getter @Setter private int satiationPenalty; // When eating too much
     @Getter @Setter private float currentHp;
     private float currentEnergy;
 
     @Transient @Getter private final Int2ObjectMap<GameItem> equips;
-    @Transient private final Int2FloatOpenHashMap fightProp;
+    @Transient @Getter private final Int2FloatOpenHashMap fightProperties;
     @Transient @Getter private final Int2FloatOpenHashMap fightPropOverrides;
     @Transient @Getter private Set<String> extraAbilityEmbryos;
 
@@ -115,7 +116,7 @@ public class Avatar {
     @Deprecated // Do not use. Morhpia only!
     public Avatar() {
         this.equips = new Int2ObjectOpenHashMap<>();
-        this.fightProp = new Int2FloatOpenHashMap();
+        this.fightProperties = new Int2FloatOpenHashMap();
         this.fightPropOverrides = new Int2FloatOpenHashMap();
         this.extraAbilityEmbryos = new HashSet<>();
         this.fetters = new ArrayList<>(); // TODO Move to avatar
@@ -203,10 +204,28 @@ public class Avatar {
         return 0;
     }
 
-    public boolean addSatiation(float value) {
-        if (this.satiation >= 100) return false;
+    public boolean addSatiation(int value) {
+        if (this.satiation >= 10000) return false;
         this.satiation += value;
         return true;
+    }
+
+    public float reduceSatiation(int value) {
+        if (this.satiation == 0) return 0;
+        this.satiation -= value;
+        if(this.satiation < 0) {
+            this.satiation = 0;
+        }
+        return this.satiation;
+    }
+
+    public float reduceSatiationPenalty(int value) {
+        if (this.satiationPenalty == 0) return 0;
+        this.satiationPenalty -= value;
+        if(this.satiationPenalty < 0) {
+            this.satiationPenalty = 0;
+        }
+        return this.satiationPenalty;
     }
 
     public GameItem getEquipBySlot(EquipType slot) {
@@ -274,10 +293,6 @@ public class Avatar {
             this.currentEnergy = currentEnergy;
             this.save();
         }
-    }
-
-    public Int2FloatOpenHashMap getFightProperties() {
-        return fightProp;
     }
 
     public void setFightProperty(FightProperty prop, float value) {
@@ -399,9 +414,9 @@ public class Avatar {
 
     public void recalcStats(boolean forceSendAbilityChange) {
         // Setup
-        AvatarData data = this.getAvatarData();
-        AvatarPromoteData promoteData = GameData.getAvatarPromoteData(data.getAvatarPromoteId(), this.getPromoteLevel());
-        Int2IntOpenHashMap setMap = new Int2IntOpenHashMap();
+        var data = this.getAvatarData();
+        var promoteData = GameData.getAvatarPromoteData(data.getAvatarPromoteId(), this.getPromoteLevel());
+        var setMap = new Int2IntOpenHashMap();
 
         // Extra ability embryos
         Set<String> prevExtraAbilityEmbryos = this.getExtraAbilityEmbryos();
@@ -579,21 +594,11 @@ public class Avatar {
             // Add any skill strings from this constellation
 
         // Set % stats
-        this.setFightProperty(
-            FightProperty.FIGHT_PROP_MAX_HP,
-            (getFightProperty(FightProperty.FIGHT_PROP_BASE_HP) * (1f + getFightProperty(FightProperty.FIGHT_PROP_HP_PERCENT))) + getFightProperty(FightProperty.FIGHT_PROP_HP)
-        );
-        this.setFightProperty(
-            FightProperty.FIGHT_PROP_CUR_ATTACK,
-            (getFightProperty(FightProperty.FIGHT_PROP_BASE_ATTACK) * (1f + getFightProperty(FightProperty.FIGHT_PROP_ATTACK_PERCENT))) + getFightProperty(FightProperty.FIGHT_PROP_ATTACK)
-        );
-        this.setFightProperty(
-            FightProperty.FIGHT_PROP_CUR_DEFENSE,
-            (getFightProperty(FightProperty.FIGHT_PROP_BASE_DEFENSE) * (1f + getFightProperty(FightProperty.FIGHT_PROP_DEFENSE_PERCENT))) + getFightProperty(FightProperty.FIGHT_PROP_DEFENSE)
-        );
+        FightProperty.forEachCompoundProperty(c -> this.setFightProperty(c.getResult(),
+            this.getFightProperty(c.getFlat()) + (this.getFightProperty(c.getBase()) * (1f + this.getFightProperty(c.getPercent())))));
 
         // Reapply all overrides
-        this.fightProp.putAll(this.fightPropOverrides);
+        this.fightProperties.putAll(this.fightPropOverrides);
 
         // Set current hp
         this.setFightProperty(FightProperty.FIGHT_PROP_CUR_HP, this.getFightProperty(FightProperty.FIGHT_PROP_MAX_HP) * hpPercent);
@@ -892,8 +897,8 @@ public class Avatar {
         avatarInfo.putPropMap(PlayerProperty.PROP_LEVEL.getId(), ProtoHelper.newPropValue(PlayerProperty.PROP_LEVEL, this.getLevel()));
         avatarInfo.putPropMap(PlayerProperty.PROP_EXP.getId(), ProtoHelper.newPropValue(PlayerProperty.PROP_EXP, this.getExp()));
         avatarInfo.putPropMap(PlayerProperty.PROP_BREAK_LEVEL.getId(), ProtoHelper.newPropValue(PlayerProperty.PROP_BREAK_LEVEL, this.getPromoteLevel()));
-        avatarInfo.putPropMap(PlayerProperty.PROP_SATIATION_VAL.getId(), ProtoHelper.newPropValue(PlayerProperty.PROP_SATIATION_VAL, 0));
-        avatarInfo.putPropMap(PlayerProperty.PROP_SATIATION_PENALTY_TIME.getId(), ProtoHelper.newPropValue(PlayerProperty.PROP_SATIATION_PENALTY_TIME, 0));
+        avatarInfo.putPropMap(PlayerProperty.PROP_SATIATION_VAL.getId(), ProtoHelper.newPropValue(PlayerProperty.PROP_SATIATION_VAL, this.getSatiation()));
+        avatarInfo.putPropMap(PlayerProperty.PROP_SATIATION_PENALTY_TIME.getId(), ProtoHelper.newPropValue(PlayerProperty.PROP_SATIATION_PENALTY_TIME, this.getSatiationPenalty()));
 
         return avatarInfo.build();
     }

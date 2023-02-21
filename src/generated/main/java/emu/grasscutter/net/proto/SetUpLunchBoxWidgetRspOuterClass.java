@@ -19,34 +19,27 @@ public final class SetUpLunchBoxWidgetRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.LunchBoxData lunch_box_data = 3;</code>
+     * <code>.LunchBoxData lunchBoxData = 15;</code>
      * @return Whether the lunchBoxData field is set.
      */
     boolean hasLunchBoxData();
     /**
-     * <code>.LunchBoxData lunch_box_data = 3;</code>
+     * <code>.LunchBoxData lunchBoxData = 15;</code>
      * @return The lunchBoxData.
      */
     emu.grasscutter.net.proto.LunchBoxDataOuterClass.LunchBoxData getLunchBoxData();
     /**
-     * <code>.LunchBoxData lunch_box_data = 3;</code>
+     * <code>.LunchBoxData lunchBoxData = 15;</code>
      */
     emu.grasscutter.net.proto.LunchBoxDataOuterClass.LunchBoxDataOrBuilder getLunchBoxDataOrBuilder();
 
     /**
-     * <code>int32 retcode = 13;</code>
+     * <code>int32 retcode = 3;</code>
      * @return The retcode.
      */
     int getRetcode();
   }
   /**
-   * <pre>
-   * CmdId: 4294
-   * EnetChannelId: 0
-   * EnetIsReliable: false
-   * IsAllowClient: true
-   * </pre>
-   *
    * Protobuf type {@code SetUpLunchBoxWidgetRsp}
    */
   public static final class SetUpLunchBoxWidgetRsp extends
@@ -91,7 +84,12 @@ public final class SetUpLunchBoxWidgetRspOuterClass {
             case 0:
               done = true;
               break;
-            case 26: {
+            case 24: {
+
+              retcode_ = input.readInt32();
+              break;
+            }
+            case 122: {
               emu.grasscutter.net.proto.LunchBoxDataOuterClass.LunchBoxData.Builder subBuilder = null;
               if (lunchBoxData_ != null) {
                 subBuilder = lunchBoxData_.toBuilder();
@@ -102,11 +100,6 @@ public final class SetUpLunchBoxWidgetRspOuterClass {
                 lunchBoxData_ = subBuilder.buildPartial();
               }
 
-              break;
-            }
-            case 104: {
-
-              retcode_ = input.readInt32();
               break;
             }
             default: {
@@ -141,10 +134,141 @@ public final class SetUpLunchBoxWidgetRspOuterClass {
               emu.grasscutter.net.proto.SetUpLunchBoxWidgetRspOuterClass.SetUpLunchBoxWidgetRsp.class, emu.grasscutter.net.proto.SetUpLunchBoxWidgetRspOuterClass.SetUpLunchBoxWidgetRsp.Builder.class);
     }
 
-    public static final int LUNCH_BOX_DATA_FIELD_NUMBER = 3;
+    /**
+     * Protobuf enum {@code SetUpLunchBoxWidgetRsp.MEJCKKOKEFL}
+     */
+    public enum MEJCKKOKEFL
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>NONE = 0;</code>
+       */
+      NONE(0, 0),
+      /**
+       * <code>PEPPOHPHJOJ = 4266;</code>
+       */
+      PEPPOHPHJOJ(1, 4266),
+      /**
+       * <code>NNBKOLMPOEA = 1;</code>
+       */
+      NNBKOLMPOEA(3, 1),
+      UNRECOGNIZED(-1, -1),
+      ;
+
+      /**
+       * <code>DCDNILFDFLB = 0;</code>
+       */
+      public static final MEJCKKOKEFL DCDNILFDFLB = NONE;
+      /**
+       * <code>NONE = 0;</code>
+       */
+      public static final int NONE_VALUE = 0;
+      /**
+       * <code>PEPPOHPHJOJ = 4266;</code>
+       */
+      public static final int PEPPOHPHJOJ_VALUE = 4266;
+      /**
+       * <code>DCDNILFDFLB = 0;</code>
+       */
+      public static final int DCDNILFDFLB_VALUE = 0;
+      /**
+       * <code>NNBKOLMPOEA = 1;</code>
+       */
+      public static final int NNBKOLMPOEA_VALUE = 1;
+
+
+      public final int getNumber() {
+        if (index == -1) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static MEJCKKOKEFL valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static MEJCKKOKEFL forNumber(int value) {
+        switch (value) {
+          case 0: return NONE;
+          case 4266: return PEPPOHPHJOJ;
+          case 1: return NNBKOLMPOEA;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<MEJCKKOKEFL>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          MEJCKKOKEFL> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<MEJCKKOKEFL>() {
+              public MEJCKKOKEFL findValueByNumber(int number) {
+                return MEJCKKOKEFL.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (index == -1) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(index);
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return emu.grasscutter.net.proto.SetUpLunchBoxWidgetRspOuterClass.SetUpLunchBoxWidgetRsp.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final MEJCKKOKEFL[] VALUES = getStaticValuesArray();
+      private static MEJCKKOKEFL[] getStaticValuesArray() {
+        return new MEJCKKOKEFL[] {
+          NONE, PEPPOHPHJOJ, DCDNILFDFLB, NNBKOLMPOEA, 
+        };
+      }
+      public static MEJCKKOKEFL valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int index;
+      private final int value;
+
+      private MEJCKKOKEFL(int index, int value) {
+        this.index = index;
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:SetUpLunchBoxWidgetRsp.MEJCKKOKEFL)
+    }
+
+    public static final int LUNCHBOXDATA_FIELD_NUMBER = 15;
     private emu.grasscutter.net.proto.LunchBoxDataOuterClass.LunchBoxData lunchBoxData_;
     /**
-     * <code>.LunchBoxData lunch_box_data = 3;</code>
+     * <code>.LunchBoxData lunchBoxData = 15;</code>
      * @return Whether the lunchBoxData field is set.
      */
     @java.lang.Override
@@ -152,7 +276,7 @@ public final class SetUpLunchBoxWidgetRspOuterClass {
       return lunchBoxData_ != null;
     }
     /**
-     * <code>.LunchBoxData lunch_box_data = 3;</code>
+     * <code>.LunchBoxData lunchBoxData = 15;</code>
      * @return The lunchBoxData.
      */
     @java.lang.Override
@@ -160,17 +284,17 @@ public final class SetUpLunchBoxWidgetRspOuterClass {
       return lunchBoxData_ == null ? emu.grasscutter.net.proto.LunchBoxDataOuterClass.LunchBoxData.getDefaultInstance() : lunchBoxData_;
     }
     /**
-     * <code>.LunchBoxData lunch_box_data = 3;</code>
+     * <code>.LunchBoxData lunchBoxData = 15;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.LunchBoxDataOuterClass.LunchBoxDataOrBuilder getLunchBoxDataOrBuilder() {
       return getLunchBoxData();
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 13;
+    public static final int RETCODE_FIELD_NUMBER = 3;
     private int retcode_;
     /**
-     * <code>int32 retcode = 13;</code>
+     * <code>int32 retcode = 3;</code>
      * @return The retcode.
      */
     @java.lang.Override
@@ -192,11 +316,11 @@ public final class SetUpLunchBoxWidgetRspOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (lunchBoxData_ != null) {
-        output.writeMessage(3, getLunchBoxData());
-      }
       if (retcode_ != 0) {
-        output.writeInt32(13, retcode_);
+        output.writeInt32(3, retcode_);
+      }
+      if (lunchBoxData_ != null) {
+        output.writeMessage(15, getLunchBoxData());
       }
       unknownFields.writeTo(output);
     }
@@ -207,13 +331,13 @@ public final class SetUpLunchBoxWidgetRspOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (lunchBoxData_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getLunchBoxData());
-      }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(13, retcode_);
+          .computeInt32Size(3, retcode_);
+      }
+      if (lunchBoxData_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(15, getLunchBoxData());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -249,7 +373,7 @@ public final class SetUpLunchBoxWidgetRspOuterClass {
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
       if (hasLunchBoxData()) {
-        hash = (37 * hash) + LUNCH_BOX_DATA_FIELD_NUMBER;
+        hash = (37 * hash) + LUNCHBOXDATA_FIELD_NUMBER;
         hash = (53 * hash) + getLunchBoxData().hashCode();
       }
       hash = (37 * hash) + RETCODE_FIELD_NUMBER;
@@ -350,13 +474,6 @@ public final class SetUpLunchBoxWidgetRspOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 4294
-     * EnetChannelId: 0
-     * EnetIsReliable: false
-     * IsAllowClient: true
-     * </pre>
-     *
      * Protobuf type {@code SetUpLunchBoxWidgetRsp}
      */
     public static final class Builder extends
@@ -521,14 +638,14 @@ public final class SetUpLunchBoxWidgetRspOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.LunchBoxDataOuterClass.LunchBoxData, emu.grasscutter.net.proto.LunchBoxDataOuterClass.LunchBoxData.Builder, emu.grasscutter.net.proto.LunchBoxDataOuterClass.LunchBoxDataOrBuilder> lunchBoxDataBuilder_;
       /**
-       * <code>.LunchBoxData lunch_box_data = 3;</code>
+       * <code>.LunchBoxData lunchBoxData = 15;</code>
        * @return Whether the lunchBoxData field is set.
        */
       public boolean hasLunchBoxData() {
         return lunchBoxDataBuilder_ != null || lunchBoxData_ != null;
       }
       /**
-       * <code>.LunchBoxData lunch_box_data = 3;</code>
+       * <code>.LunchBoxData lunchBoxData = 15;</code>
        * @return The lunchBoxData.
        */
       public emu.grasscutter.net.proto.LunchBoxDataOuterClass.LunchBoxData getLunchBoxData() {
@@ -539,7 +656,7 @@ public final class SetUpLunchBoxWidgetRspOuterClass {
         }
       }
       /**
-       * <code>.LunchBoxData lunch_box_data = 3;</code>
+       * <code>.LunchBoxData lunchBoxData = 15;</code>
        */
       public Builder setLunchBoxData(emu.grasscutter.net.proto.LunchBoxDataOuterClass.LunchBoxData value) {
         if (lunchBoxDataBuilder_ == null) {
@@ -555,7 +672,7 @@ public final class SetUpLunchBoxWidgetRspOuterClass {
         return this;
       }
       /**
-       * <code>.LunchBoxData lunch_box_data = 3;</code>
+       * <code>.LunchBoxData lunchBoxData = 15;</code>
        */
       public Builder setLunchBoxData(
           emu.grasscutter.net.proto.LunchBoxDataOuterClass.LunchBoxData.Builder builderForValue) {
@@ -569,7 +686,7 @@ public final class SetUpLunchBoxWidgetRspOuterClass {
         return this;
       }
       /**
-       * <code>.LunchBoxData lunch_box_data = 3;</code>
+       * <code>.LunchBoxData lunchBoxData = 15;</code>
        */
       public Builder mergeLunchBoxData(emu.grasscutter.net.proto.LunchBoxDataOuterClass.LunchBoxData value) {
         if (lunchBoxDataBuilder_ == null) {
@@ -587,7 +704,7 @@ public final class SetUpLunchBoxWidgetRspOuterClass {
         return this;
       }
       /**
-       * <code>.LunchBoxData lunch_box_data = 3;</code>
+       * <code>.LunchBoxData lunchBoxData = 15;</code>
        */
       public Builder clearLunchBoxData() {
         if (lunchBoxDataBuilder_ == null) {
@@ -601,7 +718,7 @@ public final class SetUpLunchBoxWidgetRspOuterClass {
         return this;
       }
       /**
-       * <code>.LunchBoxData lunch_box_data = 3;</code>
+       * <code>.LunchBoxData lunchBoxData = 15;</code>
        */
       public emu.grasscutter.net.proto.LunchBoxDataOuterClass.LunchBoxData.Builder getLunchBoxDataBuilder() {
         
@@ -609,7 +726,7 @@ public final class SetUpLunchBoxWidgetRspOuterClass {
         return getLunchBoxDataFieldBuilder().getBuilder();
       }
       /**
-       * <code>.LunchBoxData lunch_box_data = 3;</code>
+       * <code>.LunchBoxData lunchBoxData = 15;</code>
        */
       public emu.grasscutter.net.proto.LunchBoxDataOuterClass.LunchBoxDataOrBuilder getLunchBoxDataOrBuilder() {
         if (lunchBoxDataBuilder_ != null) {
@@ -620,7 +737,7 @@ public final class SetUpLunchBoxWidgetRspOuterClass {
         }
       }
       /**
-       * <code>.LunchBoxData lunch_box_data = 3;</code>
+       * <code>.LunchBoxData lunchBoxData = 15;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.LunchBoxDataOuterClass.LunchBoxData, emu.grasscutter.net.proto.LunchBoxDataOuterClass.LunchBoxData.Builder, emu.grasscutter.net.proto.LunchBoxDataOuterClass.LunchBoxDataOrBuilder> 
@@ -638,7 +755,7 @@ public final class SetUpLunchBoxWidgetRspOuterClass {
 
       private int retcode_ ;
       /**
-       * <code>int32 retcode = 13;</code>
+       * <code>int32 retcode = 3;</code>
        * @return The retcode.
        */
       @java.lang.Override
@@ -646,7 +763,7 @@ public final class SetUpLunchBoxWidgetRspOuterClass {
         return retcode_;
       }
       /**
-       * <code>int32 retcode = 13;</code>
+       * <code>int32 retcode = 3;</code>
        * @param value The retcode to set.
        * @return This builder for chaining.
        */
@@ -657,7 +774,7 @@ public final class SetUpLunchBoxWidgetRspOuterClass {
         return this;
       }
       /**
-       * <code>int32 retcode = 13;</code>
+       * <code>int32 retcode = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearRetcode() {
@@ -734,9 +851,11 @@ public final class SetUpLunchBoxWidgetRspOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\034SetUpLunchBoxWidgetRsp.proto\032\022LunchBox" +
-      "Data.proto\"P\n\026SetUpLunchBoxWidgetRsp\022%\n\016" +
-      "lunch_box_data\030\003 \001(\0132\r.LunchBoxData\022\017\n\007r" +
-      "etcode\030\r \001(\005B\033\n\031emu.grasscutter.net.prot" +
+      "Data.proto\"\237\001\n\026SetUpLunchBoxWidgetRsp\022#\n" +
+      "\014lunchBoxData\030\017 \001(\0132\r.LunchBoxData\022\017\n\007re" +
+      "tcode\030\003 \001(\005\"O\n\013MEJCKKOKEFL\022\010\n\004NONE\020\000\022\020\n\013" +
+      "PEPPOHPHJOJ\020\252!\022\017\n\013DCDNILFDFLB\020\000\022\017\n\013NNBKO" +
+      "LMPOEA\020\001\032\002\020\001B\033\n\031emu.grasscutter.net.prot" +
       "ob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

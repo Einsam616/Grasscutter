@@ -19,25 +19,25 @@ public final class TakeCompoundOutputRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .ItemParam item_list = 6;</code>
+     * <code>repeated .ItemParam itemList = 13;</code>
      */
     java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> 
         getItemListList();
     /**
-     * <code>repeated .ItemParam item_list = 6;</code>
+     * <code>repeated .ItemParam itemList = 13;</code>
      */
     emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam getItemList(int index);
     /**
-     * <code>repeated .ItemParam item_list = 6;</code>
+     * <code>repeated .ItemParam itemList = 13;</code>
      */
     int getItemListCount();
     /**
-     * <code>repeated .ItemParam item_list = 6;</code>
+     * <code>repeated .ItemParam itemList = 13;</code>
      */
     java.util.List<? extends emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder> 
         getItemListOrBuilderList();
     /**
-     * <code>repeated .ItemParam item_list = 6;</code>
+     * <code>repeated .ItemParam itemList = 13;</code>
      */
     emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder getItemListOrBuilder(
         int index);
@@ -49,12 +49,6 @@ public final class TakeCompoundOutputRspOuterClass {
     int getRetcode();
   }
   /**
-   * <pre>
-   * CmdId: 176
-   * EnetChannelId: 0
-   * EnetIsReliable: true
-   * </pre>
-   *
    * Protobuf type {@code TakeCompoundOutputRsp}
    */
   public static final class TakeCompoundOutputRsp extends
@@ -106,7 +100,7 @@ public final class TakeCompoundOutputRspOuterClass {
               retcode_ = input.readInt32();
               break;
             }
-            case 50: {
+            case 106: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 itemList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam>();
                 mutable_bitField0_ |= 0x00000001;
@@ -150,17 +144,148 @@ public final class TakeCompoundOutputRspOuterClass {
               emu.grasscutter.net.proto.TakeCompoundOutputRspOuterClass.TakeCompoundOutputRsp.class, emu.grasscutter.net.proto.TakeCompoundOutputRspOuterClass.TakeCompoundOutputRsp.Builder.class);
     }
 
-    public static final int ITEM_LIST_FIELD_NUMBER = 6;
+    /**
+     * Protobuf enum {@code TakeCompoundOutputRsp.DAFKGPGFPJP}
+     */
+    public enum DAFKGPGFPJP
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>NONE = 0;</code>
+       */
+      NONE(0, 0),
+      /**
+       * <code>PEPPOHPHJOJ = 143;</code>
+       */
+      PEPPOHPHJOJ(1, 143),
+      /**
+       * <code>NNBKOLMPOEA = 1;</code>
+       */
+      NNBKOLMPOEA(3, 1),
+      UNRECOGNIZED(-1, -1),
+      ;
+
+      /**
+       * <code>DCDNILFDFLB = 0;</code>
+       */
+      public static final DAFKGPGFPJP DCDNILFDFLB = NONE;
+      /**
+       * <code>NONE = 0;</code>
+       */
+      public static final int NONE_VALUE = 0;
+      /**
+       * <code>PEPPOHPHJOJ = 143;</code>
+       */
+      public static final int PEPPOHPHJOJ_VALUE = 143;
+      /**
+       * <code>DCDNILFDFLB = 0;</code>
+       */
+      public static final int DCDNILFDFLB_VALUE = 0;
+      /**
+       * <code>NNBKOLMPOEA = 1;</code>
+       */
+      public static final int NNBKOLMPOEA_VALUE = 1;
+
+
+      public final int getNumber() {
+        if (index == -1) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static DAFKGPGFPJP valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static DAFKGPGFPJP forNumber(int value) {
+        switch (value) {
+          case 0: return NONE;
+          case 143: return PEPPOHPHJOJ;
+          case 1: return NNBKOLMPOEA;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<DAFKGPGFPJP>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          DAFKGPGFPJP> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<DAFKGPGFPJP>() {
+              public DAFKGPGFPJP findValueByNumber(int number) {
+                return DAFKGPGFPJP.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (index == -1) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(index);
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return emu.grasscutter.net.proto.TakeCompoundOutputRspOuterClass.TakeCompoundOutputRsp.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final DAFKGPGFPJP[] VALUES = getStaticValuesArray();
+      private static DAFKGPGFPJP[] getStaticValuesArray() {
+        return new DAFKGPGFPJP[] {
+          NONE, PEPPOHPHJOJ, DCDNILFDFLB, NNBKOLMPOEA, 
+        };
+      }
+      public static DAFKGPGFPJP valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int index;
+      private final int value;
+
+      private DAFKGPGFPJP(int index, int value) {
+        this.index = index;
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:TakeCompoundOutputRsp.DAFKGPGFPJP)
+    }
+
+    public static final int ITEMLIST_FIELD_NUMBER = 13;
     private java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> itemList_;
     /**
-     * <code>repeated .ItemParam item_list = 6;</code>
+     * <code>repeated .ItemParam itemList = 13;</code>
      */
     @java.lang.Override
     public java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> getItemListList() {
       return itemList_;
     }
     /**
-     * <code>repeated .ItemParam item_list = 6;</code>
+     * <code>repeated .ItemParam itemList = 13;</code>
      */
     @java.lang.Override
     public java.util.List<? extends emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder> 
@@ -168,21 +293,21 @@ public final class TakeCompoundOutputRspOuterClass {
       return itemList_;
     }
     /**
-     * <code>repeated .ItemParam item_list = 6;</code>
+     * <code>repeated .ItemParam itemList = 13;</code>
      */
     @java.lang.Override
     public int getItemListCount() {
       return itemList_.size();
     }
     /**
-     * <code>repeated .ItemParam item_list = 6;</code>
+     * <code>repeated .ItemParam itemList = 13;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam getItemList(int index) {
       return itemList_.get(index);
     }
     /**
-     * <code>repeated .ItemParam item_list = 6;</code>
+     * <code>repeated .ItemParam itemList = 13;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder getItemListOrBuilder(
@@ -219,7 +344,7 @@ public final class TakeCompoundOutputRspOuterClass {
         output.writeInt32(2, retcode_);
       }
       for (int i = 0; i < itemList_.size(); i++) {
-        output.writeMessage(6, itemList_.get(i));
+        output.writeMessage(13, itemList_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -236,7 +361,7 @@ public final class TakeCompoundOutputRspOuterClass {
       }
       for (int i = 0; i < itemList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, itemList_.get(i));
+          .computeMessageSize(13, itemList_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -269,7 +394,7 @@ public final class TakeCompoundOutputRspOuterClass {
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
       if (getItemListCount() > 0) {
-        hash = (37 * hash) + ITEM_LIST_FIELD_NUMBER;
+        hash = (37 * hash) + ITEMLIST_FIELD_NUMBER;
         hash = (53 * hash) + getItemListList().hashCode();
       }
       hash = (37 * hash) + RETCODE_FIELD_NUMBER;
@@ -370,12 +495,6 @@ public final class TakeCompoundOutputRspOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 176
-     * EnetChannelId: 0
-     * EnetIsReliable: true
-     * </pre>
-     *
      * Protobuf type {@code TakeCompoundOutputRsp}
      */
     public static final class Builder extends
@@ -579,7 +698,7 @@ public final class TakeCompoundOutputRspOuterClass {
           emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder> itemListBuilder_;
 
       /**
-       * <code>repeated .ItemParam item_list = 6;</code>
+       * <code>repeated .ItemParam itemList = 13;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> getItemListList() {
         if (itemListBuilder_ == null) {
@@ -589,7 +708,7 @@ public final class TakeCompoundOutputRspOuterClass {
         }
       }
       /**
-       * <code>repeated .ItemParam item_list = 6;</code>
+       * <code>repeated .ItemParam itemList = 13;</code>
        */
       public int getItemListCount() {
         if (itemListBuilder_ == null) {
@@ -599,7 +718,7 @@ public final class TakeCompoundOutputRspOuterClass {
         }
       }
       /**
-       * <code>repeated .ItemParam item_list = 6;</code>
+       * <code>repeated .ItemParam itemList = 13;</code>
        */
       public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam getItemList(int index) {
         if (itemListBuilder_ == null) {
@@ -609,7 +728,7 @@ public final class TakeCompoundOutputRspOuterClass {
         }
       }
       /**
-       * <code>repeated .ItemParam item_list = 6;</code>
+       * <code>repeated .ItemParam itemList = 13;</code>
        */
       public Builder setItemList(
           int index, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam value) {
@@ -626,7 +745,7 @@ public final class TakeCompoundOutputRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam item_list = 6;</code>
+       * <code>repeated .ItemParam itemList = 13;</code>
        */
       public Builder setItemList(
           int index, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder builderForValue) {
@@ -640,7 +759,7 @@ public final class TakeCompoundOutputRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam item_list = 6;</code>
+       * <code>repeated .ItemParam itemList = 13;</code>
        */
       public Builder addItemList(emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam value) {
         if (itemListBuilder_ == null) {
@@ -656,7 +775,7 @@ public final class TakeCompoundOutputRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam item_list = 6;</code>
+       * <code>repeated .ItemParam itemList = 13;</code>
        */
       public Builder addItemList(
           int index, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam value) {
@@ -673,7 +792,7 @@ public final class TakeCompoundOutputRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam item_list = 6;</code>
+       * <code>repeated .ItemParam itemList = 13;</code>
        */
       public Builder addItemList(
           emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder builderForValue) {
@@ -687,7 +806,7 @@ public final class TakeCompoundOutputRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam item_list = 6;</code>
+       * <code>repeated .ItemParam itemList = 13;</code>
        */
       public Builder addItemList(
           int index, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder builderForValue) {
@@ -701,7 +820,7 @@ public final class TakeCompoundOutputRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam item_list = 6;</code>
+       * <code>repeated .ItemParam itemList = 13;</code>
        */
       public Builder addAllItemList(
           java.lang.Iterable<? extends emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> values) {
@@ -716,7 +835,7 @@ public final class TakeCompoundOutputRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam item_list = 6;</code>
+       * <code>repeated .ItemParam itemList = 13;</code>
        */
       public Builder clearItemList() {
         if (itemListBuilder_ == null) {
@@ -729,7 +848,7 @@ public final class TakeCompoundOutputRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam item_list = 6;</code>
+       * <code>repeated .ItemParam itemList = 13;</code>
        */
       public Builder removeItemList(int index) {
         if (itemListBuilder_ == null) {
@@ -742,14 +861,14 @@ public final class TakeCompoundOutputRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam item_list = 6;</code>
+       * <code>repeated .ItemParam itemList = 13;</code>
        */
       public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder getItemListBuilder(
           int index) {
         return getItemListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ItemParam item_list = 6;</code>
+       * <code>repeated .ItemParam itemList = 13;</code>
        */
       public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder getItemListOrBuilder(
           int index) {
@@ -759,7 +878,7 @@ public final class TakeCompoundOutputRspOuterClass {
         }
       }
       /**
-       * <code>repeated .ItemParam item_list = 6;</code>
+       * <code>repeated .ItemParam itemList = 13;</code>
        */
       public java.util.List<? extends emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder> 
            getItemListOrBuilderList() {
@@ -770,14 +889,14 @@ public final class TakeCompoundOutputRspOuterClass {
         }
       }
       /**
-       * <code>repeated .ItemParam item_list = 6;</code>
+       * <code>repeated .ItemParam itemList = 13;</code>
        */
       public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder addItemListBuilder() {
         return getItemListFieldBuilder().addBuilder(
             emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.getDefaultInstance());
       }
       /**
-       * <code>repeated .ItemParam item_list = 6;</code>
+       * <code>repeated .ItemParam itemList = 13;</code>
        */
       public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder addItemListBuilder(
           int index) {
@@ -785,7 +904,7 @@ public final class TakeCompoundOutputRspOuterClass {
             index, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.getDefaultInstance());
       }
       /**
-       * <code>repeated .ItemParam item_list = 6;</code>
+       * <code>repeated .ItemParam itemList = 13;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder> 
            getItemListBuilderList() {
@@ -904,9 +1023,11 @@ public final class TakeCompoundOutputRspOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\033TakeCompoundOutputRsp.proto\032\017ItemParam" +
-      ".proto\"G\n\025TakeCompoundOutputRsp\022\035\n\titem_" +
-      "list\030\006 \003(\0132\n.ItemParam\022\017\n\007retcode\030\002 \001(\005B" +
-      "\033\n\031emu.grasscutter.net.protob\006proto3"
+      ".proto\"\227\001\n\025TakeCompoundOutputRsp\022\034\n\010item" +
+      "List\030\r \003(\0132\n.ItemParam\022\017\n\007retcode\030\002 \001(\005\"" +
+      "O\n\013DAFKGPGFPJP\022\010\n\004NONE\020\000\022\020\n\013PEPPOHPHJOJ\020" +
+      "\217\001\022\017\n\013DCDNILFDFLB\020\000\022\017\n\013NNBKOLMPOEA\020\001\032\002\020\001" +
+      "B\033\n\031emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

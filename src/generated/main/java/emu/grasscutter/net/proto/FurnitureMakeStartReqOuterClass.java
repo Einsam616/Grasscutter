@@ -19,25 +19,18 @@ public final class FurnitureMakeStartReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 avatar_id = 9;</code>
-     * @return The avatarId.
-     */
-    int getAvatarId();
-
-    /**
-     * <code>uint32 make_id = 1;</code>
+     * <code>uint32 makeId = 15;</code>
      * @return The makeId.
      */
     int getMakeId();
+
+    /**
+     * <code>uint32 avatarId = 13;</code>
+     * @return The avatarId.
+     */
+    int getAvatarId();
   }
   /**
-   * <pre>
-   * CmdId: 4633
-   * EnetChannelId: 0
-   * EnetIsReliable: false
-   * IsAllowClient: true
-   * </pre>
-   *
    * Protobuf type {@code FurnitureMakeStartReq}
    */
   public static final class FurnitureMakeStartReq extends
@@ -82,14 +75,14 @@ public final class FurnitureMakeStartReqOuterClass {
             case 0:
               done = true;
               break;
-            case 8: {
-
-              makeId_ = input.readUInt32();
-              break;
-            }
-            case 72: {
+            case 104: {
 
               avatarId_ = input.readUInt32();
+              break;
+            }
+            case 120: {
+
+              makeId_ = input.readUInt32();
               break;
             }
             default: {
@@ -124,26 +117,165 @@ public final class FurnitureMakeStartReqOuterClass {
               emu.grasscutter.net.proto.FurnitureMakeStartReqOuterClass.FurnitureMakeStartReq.class, emu.grasscutter.net.proto.FurnitureMakeStartReqOuterClass.FurnitureMakeStartReq.Builder.class);
     }
 
-    public static final int AVATAR_ID_FIELD_NUMBER = 9;
-    private int avatarId_;
     /**
-     * <code>uint32 avatar_id = 9;</code>
-     * @return The avatarId.
+     * Protobuf enum {@code FurnitureMakeStartReq.MEJIFGHCCJP}
      */
-    @java.lang.Override
-    public int getAvatarId() {
-      return avatarId_;
+    public enum MEJIFGHCCJP
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>NONE = 0;</code>
+       */
+      NONE(0, 0),
+      /**
+       * <code>PEPPOHPHJOJ = 4740;</code>
+       */
+      PEPPOHPHJOJ(1, 4740),
+      /**
+       * <code>NNBKOLMPOEA = 1;</code>
+       */
+      NNBKOLMPOEA(3, 1),
+      UNRECOGNIZED(-1, -1),
+      ;
+
+      /**
+       * <code>DCDNILFDFLB = 0;</code>
+       */
+      public static final MEJIFGHCCJP DCDNILFDFLB = NONE;
+      /**
+       * <code>EAJIABGAOCI = 1;</code>
+       */
+      public static final MEJIFGHCCJP EAJIABGAOCI = NNBKOLMPOEA;
+      /**
+       * <code>NONE = 0;</code>
+       */
+      public static final int NONE_VALUE = 0;
+      /**
+       * <code>PEPPOHPHJOJ = 4740;</code>
+       */
+      public static final int PEPPOHPHJOJ_VALUE = 4740;
+      /**
+       * <code>DCDNILFDFLB = 0;</code>
+       */
+      public static final int DCDNILFDFLB_VALUE = 0;
+      /**
+       * <code>NNBKOLMPOEA = 1;</code>
+       */
+      public static final int NNBKOLMPOEA_VALUE = 1;
+      /**
+       * <code>EAJIABGAOCI = 1;</code>
+       */
+      public static final int EAJIABGAOCI_VALUE = 1;
+
+
+      public final int getNumber() {
+        if (index == -1) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static MEJIFGHCCJP valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static MEJIFGHCCJP forNumber(int value) {
+        switch (value) {
+          case 0: return NONE;
+          case 4740: return PEPPOHPHJOJ;
+          case 1: return NNBKOLMPOEA;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<MEJIFGHCCJP>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          MEJIFGHCCJP> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<MEJIFGHCCJP>() {
+              public MEJIFGHCCJP findValueByNumber(int number) {
+                return MEJIFGHCCJP.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (index == -1) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(index);
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return emu.grasscutter.net.proto.FurnitureMakeStartReqOuterClass.FurnitureMakeStartReq.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final MEJIFGHCCJP[] VALUES = getStaticValuesArray();
+      private static MEJIFGHCCJP[] getStaticValuesArray() {
+        return new MEJIFGHCCJP[] {
+          NONE, PEPPOHPHJOJ, DCDNILFDFLB, NNBKOLMPOEA, EAJIABGAOCI, 
+        };
+      }
+      public static MEJIFGHCCJP valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int index;
+      private final int value;
+
+      private MEJIFGHCCJP(int index, int value) {
+        this.index = index;
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:FurnitureMakeStartReq.MEJIFGHCCJP)
     }
 
-    public static final int MAKE_ID_FIELD_NUMBER = 1;
+    public static final int MAKEID_FIELD_NUMBER = 15;
     private int makeId_;
     /**
-     * <code>uint32 make_id = 1;</code>
+     * <code>uint32 makeId = 15;</code>
      * @return The makeId.
      */
     @java.lang.Override
     public int getMakeId() {
       return makeId_;
+    }
+
+    public static final int AVATARID_FIELD_NUMBER = 13;
+    private int avatarId_;
+    /**
+     * <code>uint32 avatarId = 13;</code>
+     * @return The avatarId.
+     */
+    @java.lang.Override
+    public int getAvatarId() {
+      return avatarId_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -160,11 +292,11 @@ public final class FurnitureMakeStartReqOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (makeId_ != 0) {
-        output.writeUInt32(1, makeId_);
-      }
       if (avatarId_ != 0) {
-        output.writeUInt32(9, avatarId_);
+        output.writeUInt32(13, avatarId_);
+      }
+      if (makeId_ != 0) {
+        output.writeUInt32(15, makeId_);
       }
       unknownFields.writeTo(output);
     }
@@ -175,13 +307,13 @@ public final class FurnitureMakeStartReqOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (makeId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, makeId_);
-      }
       if (avatarId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(9, avatarId_);
+          .computeUInt32Size(13, avatarId_);
+      }
+      if (makeId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(15, makeId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -198,10 +330,10 @@ public final class FurnitureMakeStartReqOuterClass {
       }
       emu.grasscutter.net.proto.FurnitureMakeStartReqOuterClass.FurnitureMakeStartReq other = (emu.grasscutter.net.proto.FurnitureMakeStartReqOuterClass.FurnitureMakeStartReq) obj;
 
-      if (getAvatarId()
-          != other.getAvatarId()) return false;
       if (getMakeId()
           != other.getMakeId()) return false;
+      if (getAvatarId()
+          != other.getAvatarId()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -213,10 +345,10 @@ public final class FurnitureMakeStartReqOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + AVATAR_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getAvatarId();
-      hash = (37 * hash) + MAKE_ID_FIELD_NUMBER;
+      hash = (37 * hash) + MAKEID_FIELD_NUMBER;
       hash = (53 * hash) + getMakeId();
+      hash = (37 * hash) + AVATARID_FIELD_NUMBER;
+      hash = (53 * hash) + getAvatarId();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -313,13 +445,6 @@ public final class FurnitureMakeStartReqOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 4633
-     * EnetChannelId: 0
-     * EnetIsReliable: false
-     * IsAllowClient: true
-     * </pre>
-     *
      * Protobuf type {@code FurnitureMakeStartReq}
      */
     public static final class Builder extends
@@ -357,9 +482,9 @@ public final class FurnitureMakeStartReqOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        avatarId_ = 0;
-
         makeId_ = 0;
+
+        avatarId_ = 0;
 
         return this;
       }
@@ -387,8 +512,8 @@ public final class FurnitureMakeStartReqOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.FurnitureMakeStartReqOuterClass.FurnitureMakeStartReq buildPartial() {
         emu.grasscutter.net.proto.FurnitureMakeStartReqOuterClass.FurnitureMakeStartReq result = new emu.grasscutter.net.proto.FurnitureMakeStartReqOuterClass.FurnitureMakeStartReq(this);
-        result.avatarId_ = avatarId_;
         result.makeId_ = makeId_;
+        result.avatarId_ = avatarId_;
         onBuilt();
         return result;
       }
@@ -437,11 +562,11 @@ public final class FurnitureMakeStartReqOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.FurnitureMakeStartReqOuterClass.FurnitureMakeStartReq other) {
         if (other == emu.grasscutter.net.proto.FurnitureMakeStartReqOuterClass.FurnitureMakeStartReq.getDefaultInstance()) return this;
-        if (other.getAvatarId() != 0) {
-          setAvatarId(other.getAvatarId());
-        }
         if (other.getMakeId() != 0) {
           setMakeId(other.getMakeId());
+        }
+        if (other.getAvatarId() != 0) {
+          setAvatarId(other.getAvatarId());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -472,40 +597,9 @@ public final class FurnitureMakeStartReqOuterClass {
         return this;
       }
 
-      private int avatarId_ ;
-      /**
-       * <code>uint32 avatar_id = 9;</code>
-       * @return The avatarId.
-       */
-      @java.lang.Override
-      public int getAvatarId() {
-        return avatarId_;
-      }
-      /**
-       * <code>uint32 avatar_id = 9;</code>
-       * @param value The avatarId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAvatarId(int value) {
-        
-        avatarId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 avatar_id = 9;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearAvatarId() {
-        
-        avatarId_ = 0;
-        onChanged();
-        return this;
-      }
-
       private int makeId_ ;
       /**
-       * <code>uint32 make_id = 1;</code>
+       * <code>uint32 makeId = 15;</code>
        * @return The makeId.
        */
       @java.lang.Override
@@ -513,7 +607,7 @@ public final class FurnitureMakeStartReqOuterClass {
         return makeId_;
       }
       /**
-       * <code>uint32 make_id = 1;</code>
+       * <code>uint32 makeId = 15;</code>
        * @param value The makeId to set.
        * @return This builder for chaining.
        */
@@ -524,12 +618,43 @@ public final class FurnitureMakeStartReqOuterClass {
         return this;
       }
       /**
-       * <code>uint32 make_id = 1;</code>
+       * <code>uint32 makeId = 15;</code>
        * @return This builder for chaining.
        */
       public Builder clearMakeId() {
         
         makeId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int avatarId_ ;
+      /**
+       * <code>uint32 avatarId = 13;</code>
+       * @return The avatarId.
+       */
+      @java.lang.Override
+      public int getAvatarId() {
+        return avatarId_;
+      }
+      /**
+       * <code>uint32 avatarId = 13;</code>
+       * @param value The avatarId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAvatarId(int value) {
+        
+        avatarId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 avatarId = 13;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAvatarId() {
+        
+        avatarId_ = 0;
         onChanged();
         return this;
       }
@@ -600,10 +725,12 @@ public final class FurnitureMakeStartReqOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\033FurnitureMakeStartReq.proto\";\n\025Furnitu" +
-      "reMakeStartReq\022\021\n\tavatar_id\030\t \001(\r\022\017\n\007mak" +
-      "e_id\030\001 \001(\rB\033\n\031emu.grasscutter.net.protob" +
-      "\006proto3"
+      "\n\033FurnitureMakeStartReq.proto\"\233\001\n\025Furnit" +
+      "ureMakeStartReq\022\016\n\006makeId\030\017 \001(\r\022\020\n\010avata" +
+      "rId\030\r \001(\r\"`\n\013MEJIFGHCCJP\022\010\n\004NONE\020\000\022\020\n\013PE" +
+      "PPOHPHJOJ\020\204%\022\017\n\013DCDNILFDFLB\020\000\022\017\n\013NNBKOLM" +
+      "POEA\020\001\022\017\n\013EAJIABGAOCI\020\001\032\002\020\001B\033\n\031emu.grass" +
+      "cutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -614,7 +741,7 @@ public final class FurnitureMakeStartReqOuterClass {
     internal_static_FurnitureMakeStartReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_FurnitureMakeStartReq_descriptor,
-        new java.lang.String[] { "AvatarId", "MakeId", });
+        new java.lang.String[] { "MakeId", "AvatarId", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -19,49 +19,42 @@ public final class GachaWishRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 gacha_type = 8;</code>
-     * @return The gachaType.
-     */
-    int getGachaType();
-
-    /**
-     * <code>uint32 gacha_schedule_id = 7;</code>
-     * @return The gachaScheduleId.
-     */
-    int getGachaScheduleId();
-
-    /**
-     * <code>uint32 wish_max_progress = 2;</code>
-     * @return The wishMaxProgress.
-     */
-    int getWishMaxProgress();
-
-    /**
-     * <code>uint32 wish_progress = 5;</code>
+     * <code>uint32 wishProgress = 3;</code>
      * @return The wishProgress.
      */
     int getWishProgress();
 
     /**
-     * <code>uint32 wish_item_id = 3;</code>
-     * @return The wishItemId.
+     * <code>uint32 wishMaxProgress = 7;</code>
+     * @return The wishMaxProgress.
      */
-    int getWishItemId();
+    int getWishMaxProgress();
 
     /**
-     * <code>int32 retcode = 14;</code>
+     * <code>uint32 gachaType = 6;</code>
+     * @return The gachaType.
+     */
+    int getGachaType();
+
+    /**
+     * <code>uint32 gachaScheduleId = 11;</code>
+     * @return The gachaScheduleId.
+     */
+    int getGachaScheduleId();
+
+    /**
+     * <code>int32 retcode = 9;</code>
      * @return The retcode.
      */
     int getRetcode();
+
+    /**
+     * <code>uint32 wishItemId = 5;</code>
+     * @return The wishItemId.
+     */
+    int getWishItemId();
   }
   /**
-   * <pre>
-   * CmdId: 1521
-   * EnetChannelId: 0
-   * EnetIsReliable: false
-   * IsAllowClient: true
-   * </pre>
-   *
    * Protobuf type {@code GachaWishRsp}
    */
   public static final class GachaWishRsp extends
@@ -106,34 +99,34 @@ public final class GachaWishRspOuterClass {
             case 0:
               done = true;
               break;
-            case 16: {
-
-              wishMaxProgress_ = input.readUInt32();
-              break;
-            }
             case 24: {
-
-              wishItemId_ = input.readUInt32();
-              break;
-            }
-            case 40: {
 
               wishProgress_ = input.readUInt32();
               break;
             }
-            case 56: {
+            case 40: {
 
-              gachaScheduleId_ = input.readUInt32();
+              wishItemId_ = input.readUInt32();
               break;
             }
-            case 64: {
+            case 48: {
 
               gachaType_ = input.readUInt32();
               break;
             }
-            case 112: {
+            case 56: {
+
+              wishMaxProgress_ = input.readUInt32();
+              break;
+            }
+            case 72: {
 
               retcode_ = input.readInt32();
+              break;
+            }
+            case 88: {
+
+              gachaScheduleId_ = input.readUInt32();
               break;
             }
             default: {
@@ -168,43 +161,141 @@ public final class GachaWishRspOuterClass {
               emu.grasscutter.net.proto.GachaWishRspOuterClass.GachaWishRsp.class, emu.grasscutter.net.proto.GachaWishRspOuterClass.GachaWishRsp.Builder.class);
     }
 
-    public static final int GACHA_TYPE_FIELD_NUMBER = 8;
-    private int gachaType_;
     /**
-     * <code>uint32 gacha_type = 8;</code>
-     * @return The gachaType.
+     * Protobuf enum {@code GachaWishRsp.COIIDDMDPIL}
      */
-    @java.lang.Override
-    public int getGachaType() {
-      return gachaType_;
+    public enum COIIDDMDPIL
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>NONE = 0;</code>
+       */
+      NONE(0, 0),
+      /**
+       * <code>PEPPOHPHJOJ = 1574;</code>
+       */
+      PEPPOHPHJOJ(1, 1574),
+      /**
+       * <code>NNBKOLMPOEA = 1;</code>
+       */
+      NNBKOLMPOEA(3, 1),
+      UNRECOGNIZED(-1, -1),
+      ;
+
+      /**
+       * <code>DCDNILFDFLB = 0;</code>
+       */
+      public static final COIIDDMDPIL DCDNILFDFLB = NONE;
+      /**
+       * <code>NONE = 0;</code>
+       */
+      public static final int NONE_VALUE = 0;
+      /**
+       * <code>PEPPOHPHJOJ = 1574;</code>
+       */
+      public static final int PEPPOHPHJOJ_VALUE = 1574;
+      /**
+       * <code>DCDNILFDFLB = 0;</code>
+       */
+      public static final int DCDNILFDFLB_VALUE = 0;
+      /**
+       * <code>NNBKOLMPOEA = 1;</code>
+       */
+      public static final int NNBKOLMPOEA_VALUE = 1;
+
+
+      public final int getNumber() {
+        if (index == -1) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static COIIDDMDPIL valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static COIIDDMDPIL forNumber(int value) {
+        switch (value) {
+          case 0: return NONE;
+          case 1574: return PEPPOHPHJOJ;
+          case 1: return NNBKOLMPOEA;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<COIIDDMDPIL>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          COIIDDMDPIL> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<COIIDDMDPIL>() {
+              public COIIDDMDPIL findValueByNumber(int number) {
+                return COIIDDMDPIL.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (index == -1) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(index);
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return emu.grasscutter.net.proto.GachaWishRspOuterClass.GachaWishRsp.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final COIIDDMDPIL[] VALUES = getStaticValuesArray();
+      private static COIIDDMDPIL[] getStaticValuesArray() {
+        return new COIIDDMDPIL[] {
+          NONE, PEPPOHPHJOJ, DCDNILFDFLB, NNBKOLMPOEA, 
+        };
+      }
+      public static COIIDDMDPIL valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int index;
+      private final int value;
+
+      private COIIDDMDPIL(int index, int value) {
+        this.index = index;
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:GachaWishRsp.COIIDDMDPIL)
     }
 
-    public static final int GACHA_SCHEDULE_ID_FIELD_NUMBER = 7;
-    private int gachaScheduleId_;
-    /**
-     * <code>uint32 gacha_schedule_id = 7;</code>
-     * @return The gachaScheduleId.
-     */
-    @java.lang.Override
-    public int getGachaScheduleId() {
-      return gachaScheduleId_;
-    }
-
-    public static final int WISH_MAX_PROGRESS_FIELD_NUMBER = 2;
-    private int wishMaxProgress_;
-    /**
-     * <code>uint32 wish_max_progress = 2;</code>
-     * @return The wishMaxProgress.
-     */
-    @java.lang.Override
-    public int getWishMaxProgress() {
-      return wishMaxProgress_;
-    }
-
-    public static final int WISH_PROGRESS_FIELD_NUMBER = 5;
+    public static final int WISHPROGRESS_FIELD_NUMBER = 3;
     private int wishProgress_;
     /**
-     * <code>uint32 wish_progress = 5;</code>
+     * <code>uint32 wishProgress = 3;</code>
      * @return The wishProgress.
      */
     @java.lang.Override
@@ -212,26 +303,59 @@ public final class GachaWishRspOuterClass {
       return wishProgress_;
     }
 
-    public static final int WISH_ITEM_ID_FIELD_NUMBER = 3;
-    private int wishItemId_;
+    public static final int WISHMAXPROGRESS_FIELD_NUMBER = 7;
+    private int wishMaxProgress_;
     /**
-     * <code>uint32 wish_item_id = 3;</code>
-     * @return The wishItemId.
+     * <code>uint32 wishMaxProgress = 7;</code>
+     * @return The wishMaxProgress.
      */
     @java.lang.Override
-    public int getWishItemId() {
-      return wishItemId_;
+    public int getWishMaxProgress() {
+      return wishMaxProgress_;
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 14;
+    public static final int GACHATYPE_FIELD_NUMBER = 6;
+    private int gachaType_;
+    /**
+     * <code>uint32 gachaType = 6;</code>
+     * @return The gachaType.
+     */
+    @java.lang.Override
+    public int getGachaType() {
+      return gachaType_;
+    }
+
+    public static final int GACHASCHEDULEID_FIELD_NUMBER = 11;
+    private int gachaScheduleId_;
+    /**
+     * <code>uint32 gachaScheduleId = 11;</code>
+     * @return The gachaScheduleId.
+     */
+    @java.lang.Override
+    public int getGachaScheduleId() {
+      return gachaScheduleId_;
+    }
+
+    public static final int RETCODE_FIELD_NUMBER = 9;
     private int retcode_;
     /**
-     * <code>int32 retcode = 14;</code>
+     * <code>int32 retcode = 9;</code>
      * @return The retcode.
      */
     @java.lang.Override
     public int getRetcode() {
       return retcode_;
+    }
+
+    public static final int WISHITEMID_FIELD_NUMBER = 5;
+    private int wishItemId_;
+    /**
+     * <code>uint32 wishItemId = 5;</code>
+     * @return The wishItemId.
+     */
+    @java.lang.Override
+    public int getWishItemId() {
+      return wishItemId_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -248,23 +372,23 @@ public final class GachaWishRspOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (wishMaxProgress_ != 0) {
-        output.writeUInt32(2, wishMaxProgress_);
+      if (wishProgress_ != 0) {
+        output.writeUInt32(3, wishProgress_);
       }
       if (wishItemId_ != 0) {
-        output.writeUInt32(3, wishItemId_);
-      }
-      if (wishProgress_ != 0) {
-        output.writeUInt32(5, wishProgress_);
-      }
-      if (gachaScheduleId_ != 0) {
-        output.writeUInt32(7, gachaScheduleId_);
+        output.writeUInt32(5, wishItemId_);
       }
       if (gachaType_ != 0) {
-        output.writeUInt32(8, gachaType_);
+        output.writeUInt32(6, gachaType_);
+      }
+      if (wishMaxProgress_ != 0) {
+        output.writeUInt32(7, wishMaxProgress_);
       }
       if (retcode_ != 0) {
-        output.writeInt32(14, retcode_);
+        output.writeInt32(9, retcode_);
+      }
+      if (gachaScheduleId_ != 0) {
+        output.writeUInt32(11, gachaScheduleId_);
       }
       unknownFields.writeTo(output);
     }
@@ -275,29 +399,29 @@ public final class GachaWishRspOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (wishMaxProgress_ != 0) {
+      if (wishProgress_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, wishMaxProgress_);
+          .computeUInt32Size(3, wishProgress_);
       }
       if (wishItemId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(3, wishItemId_);
-      }
-      if (wishProgress_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(5, wishProgress_);
-      }
-      if (gachaScheduleId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(7, gachaScheduleId_);
+          .computeUInt32Size(5, wishItemId_);
       }
       if (gachaType_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(8, gachaType_);
+          .computeUInt32Size(6, gachaType_);
+      }
+      if (wishMaxProgress_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(7, wishMaxProgress_);
       }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(14, retcode_);
+          .computeInt32Size(9, retcode_);
+      }
+      if (gachaScheduleId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(11, gachaScheduleId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -314,18 +438,18 @@ public final class GachaWishRspOuterClass {
       }
       emu.grasscutter.net.proto.GachaWishRspOuterClass.GachaWishRsp other = (emu.grasscutter.net.proto.GachaWishRspOuterClass.GachaWishRsp) obj;
 
+      if (getWishProgress()
+          != other.getWishProgress()) return false;
+      if (getWishMaxProgress()
+          != other.getWishMaxProgress()) return false;
       if (getGachaType()
           != other.getGachaType()) return false;
       if (getGachaScheduleId()
           != other.getGachaScheduleId()) return false;
-      if (getWishMaxProgress()
-          != other.getWishMaxProgress()) return false;
-      if (getWishProgress()
-          != other.getWishProgress()) return false;
-      if (getWishItemId()
-          != other.getWishItemId()) return false;
       if (getRetcode()
           != other.getRetcode()) return false;
+      if (getWishItemId()
+          != other.getWishItemId()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -337,18 +461,18 @@ public final class GachaWishRspOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + GACHA_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getGachaType();
-      hash = (37 * hash) + GACHA_SCHEDULE_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getGachaScheduleId();
-      hash = (37 * hash) + WISH_MAX_PROGRESS_FIELD_NUMBER;
-      hash = (53 * hash) + getWishMaxProgress();
-      hash = (37 * hash) + WISH_PROGRESS_FIELD_NUMBER;
+      hash = (37 * hash) + WISHPROGRESS_FIELD_NUMBER;
       hash = (53 * hash) + getWishProgress();
-      hash = (37 * hash) + WISH_ITEM_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getWishItemId();
+      hash = (37 * hash) + WISHMAXPROGRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getWishMaxProgress();
+      hash = (37 * hash) + GACHATYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getGachaType();
+      hash = (37 * hash) + GACHASCHEDULEID_FIELD_NUMBER;
+      hash = (53 * hash) + getGachaScheduleId();
       hash = (37 * hash) + RETCODE_FIELD_NUMBER;
       hash = (53 * hash) + getRetcode();
+      hash = (37 * hash) + WISHITEMID_FIELD_NUMBER;
+      hash = (53 * hash) + getWishItemId();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -445,13 +569,6 @@ public final class GachaWishRspOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 1521
-     * EnetChannelId: 0
-     * EnetIsReliable: false
-     * IsAllowClient: true
-     * </pre>
-     *
      * Protobuf type {@code GachaWishRsp}
      */
     public static final class Builder extends
@@ -489,17 +606,17 @@ public final class GachaWishRspOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        wishProgress_ = 0;
+
+        wishMaxProgress_ = 0;
+
         gachaType_ = 0;
 
         gachaScheduleId_ = 0;
 
-        wishMaxProgress_ = 0;
-
-        wishProgress_ = 0;
+        retcode_ = 0;
 
         wishItemId_ = 0;
-
-        retcode_ = 0;
 
         return this;
       }
@@ -527,12 +644,12 @@ public final class GachaWishRspOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.GachaWishRspOuterClass.GachaWishRsp buildPartial() {
         emu.grasscutter.net.proto.GachaWishRspOuterClass.GachaWishRsp result = new emu.grasscutter.net.proto.GachaWishRspOuterClass.GachaWishRsp(this);
+        result.wishProgress_ = wishProgress_;
+        result.wishMaxProgress_ = wishMaxProgress_;
         result.gachaType_ = gachaType_;
         result.gachaScheduleId_ = gachaScheduleId_;
-        result.wishMaxProgress_ = wishMaxProgress_;
-        result.wishProgress_ = wishProgress_;
-        result.wishItemId_ = wishItemId_;
         result.retcode_ = retcode_;
+        result.wishItemId_ = wishItemId_;
         onBuilt();
         return result;
       }
@@ -581,23 +698,23 @@ public final class GachaWishRspOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.GachaWishRspOuterClass.GachaWishRsp other) {
         if (other == emu.grasscutter.net.proto.GachaWishRspOuterClass.GachaWishRsp.getDefaultInstance()) return this;
+        if (other.getWishProgress() != 0) {
+          setWishProgress(other.getWishProgress());
+        }
+        if (other.getWishMaxProgress() != 0) {
+          setWishMaxProgress(other.getWishMaxProgress());
+        }
         if (other.getGachaType() != 0) {
           setGachaType(other.getGachaType());
         }
         if (other.getGachaScheduleId() != 0) {
           setGachaScheduleId(other.getGachaScheduleId());
         }
-        if (other.getWishMaxProgress() != 0) {
-          setWishMaxProgress(other.getWishMaxProgress());
-        }
-        if (other.getWishProgress() != 0) {
-          setWishProgress(other.getWishProgress());
+        if (other.getRetcode() != 0) {
+          setRetcode(other.getRetcode());
         }
         if (other.getWishItemId() != 0) {
           setWishItemId(other.getWishItemId());
-        }
-        if (other.getRetcode() != 0) {
-          setRetcode(other.getRetcode());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -628,9 +745,71 @@ public final class GachaWishRspOuterClass {
         return this;
       }
 
+      private int wishProgress_ ;
+      /**
+       * <code>uint32 wishProgress = 3;</code>
+       * @return The wishProgress.
+       */
+      @java.lang.Override
+      public int getWishProgress() {
+        return wishProgress_;
+      }
+      /**
+       * <code>uint32 wishProgress = 3;</code>
+       * @param value The wishProgress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWishProgress(int value) {
+        
+        wishProgress_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 wishProgress = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWishProgress() {
+        
+        wishProgress_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int wishMaxProgress_ ;
+      /**
+       * <code>uint32 wishMaxProgress = 7;</code>
+       * @return The wishMaxProgress.
+       */
+      @java.lang.Override
+      public int getWishMaxProgress() {
+        return wishMaxProgress_;
+      }
+      /**
+       * <code>uint32 wishMaxProgress = 7;</code>
+       * @param value The wishMaxProgress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWishMaxProgress(int value) {
+        
+        wishMaxProgress_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 wishMaxProgress = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWishMaxProgress() {
+        
+        wishMaxProgress_ = 0;
+        onChanged();
+        return this;
+      }
+
       private int gachaType_ ;
       /**
-       * <code>uint32 gacha_type = 8;</code>
+       * <code>uint32 gachaType = 6;</code>
        * @return The gachaType.
        */
       @java.lang.Override
@@ -638,7 +817,7 @@ public final class GachaWishRspOuterClass {
         return gachaType_;
       }
       /**
-       * <code>uint32 gacha_type = 8;</code>
+       * <code>uint32 gachaType = 6;</code>
        * @param value The gachaType to set.
        * @return This builder for chaining.
        */
@@ -649,7 +828,7 @@ public final class GachaWishRspOuterClass {
         return this;
       }
       /**
-       * <code>uint32 gacha_type = 8;</code>
+       * <code>uint32 gachaType = 6;</code>
        * @return This builder for chaining.
        */
       public Builder clearGachaType() {
@@ -661,7 +840,7 @@ public final class GachaWishRspOuterClass {
 
       private int gachaScheduleId_ ;
       /**
-       * <code>uint32 gacha_schedule_id = 7;</code>
+       * <code>uint32 gachaScheduleId = 11;</code>
        * @return The gachaScheduleId.
        */
       @java.lang.Override
@@ -669,7 +848,7 @@ public final class GachaWishRspOuterClass {
         return gachaScheduleId_;
       }
       /**
-       * <code>uint32 gacha_schedule_id = 7;</code>
+       * <code>uint32 gachaScheduleId = 11;</code>
        * @param value The gachaScheduleId to set.
        * @return This builder for chaining.
        */
@@ -680,7 +859,7 @@ public final class GachaWishRspOuterClass {
         return this;
       }
       /**
-       * <code>uint32 gacha_schedule_id = 7;</code>
+       * <code>uint32 gachaScheduleId = 11;</code>
        * @return This builder for chaining.
        */
       public Builder clearGachaScheduleId() {
@@ -690,102 +869,9 @@ public final class GachaWishRspOuterClass {
         return this;
       }
 
-      private int wishMaxProgress_ ;
-      /**
-       * <code>uint32 wish_max_progress = 2;</code>
-       * @return The wishMaxProgress.
-       */
-      @java.lang.Override
-      public int getWishMaxProgress() {
-        return wishMaxProgress_;
-      }
-      /**
-       * <code>uint32 wish_max_progress = 2;</code>
-       * @param value The wishMaxProgress to set.
-       * @return This builder for chaining.
-       */
-      public Builder setWishMaxProgress(int value) {
-        
-        wishMaxProgress_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 wish_max_progress = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearWishMaxProgress() {
-        
-        wishMaxProgress_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int wishProgress_ ;
-      /**
-       * <code>uint32 wish_progress = 5;</code>
-       * @return The wishProgress.
-       */
-      @java.lang.Override
-      public int getWishProgress() {
-        return wishProgress_;
-      }
-      /**
-       * <code>uint32 wish_progress = 5;</code>
-       * @param value The wishProgress to set.
-       * @return This builder for chaining.
-       */
-      public Builder setWishProgress(int value) {
-        
-        wishProgress_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 wish_progress = 5;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearWishProgress() {
-        
-        wishProgress_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int wishItemId_ ;
-      /**
-       * <code>uint32 wish_item_id = 3;</code>
-       * @return The wishItemId.
-       */
-      @java.lang.Override
-      public int getWishItemId() {
-        return wishItemId_;
-      }
-      /**
-       * <code>uint32 wish_item_id = 3;</code>
-       * @param value The wishItemId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setWishItemId(int value) {
-        
-        wishItemId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 wish_item_id = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearWishItemId() {
-        
-        wishItemId_ = 0;
-        onChanged();
-        return this;
-      }
-
       private int retcode_ ;
       /**
-       * <code>int32 retcode = 14;</code>
+       * <code>int32 retcode = 9;</code>
        * @return The retcode.
        */
       @java.lang.Override
@@ -793,7 +879,7 @@ public final class GachaWishRspOuterClass {
         return retcode_;
       }
       /**
-       * <code>int32 retcode = 14;</code>
+       * <code>int32 retcode = 9;</code>
        * @param value The retcode to set.
        * @return This builder for chaining.
        */
@@ -804,12 +890,43 @@ public final class GachaWishRspOuterClass {
         return this;
       }
       /**
-       * <code>int32 retcode = 14;</code>
+       * <code>int32 retcode = 9;</code>
        * @return This builder for chaining.
        */
       public Builder clearRetcode() {
         
         retcode_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int wishItemId_ ;
+      /**
+       * <code>uint32 wishItemId = 5;</code>
+       * @return The wishItemId.
+       */
+      @java.lang.Override
+      public int getWishItemId() {
+        return wishItemId_;
+      }
+      /**
+       * <code>uint32 wishItemId = 5;</code>
+       * @param value The wishItemId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWishItemId(int value) {
+        
+        wishItemId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 wishItemId = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWishItemId() {
+        
+        wishItemId_ = 0;
         onChanged();
         return this;
       }
@@ -880,12 +997,14 @@ public final class GachaWishRspOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\022GachaWishRsp.proto\"\226\001\n\014GachaWishRsp\022\022\n" +
-      "\ngacha_type\030\010 \001(\r\022\031\n\021gacha_schedule_id\030\007" +
-      " \001(\r\022\031\n\021wish_max_progress\030\002 \001(\r\022\025\n\rwish_" +
-      "progress\030\005 \001(\r\022\024\n\014wish_item_id\030\003 \001(\r\022\017\n\007" +
-      "retcode\030\016 \001(\005B\033\n\031emu.grasscutter.net.pro" +
-      "tob\006proto3"
+      "\n\022GachaWishRsp.proto\"\337\001\n\014GachaWishRsp\022\024\n" +
+      "\014wishProgress\030\003 \001(\r\022\027\n\017wishMaxProgress\030\007" +
+      " \001(\r\022\021\n\tgachaType\030\006 \001(\r\022\027\n\017gachaSchedule" +
+      "Id\030\013 \001(\r\022\017\n\007retcode\030\t \001(\005\022\022\n\nwishItemId\030" +
+      "\005 \001(\r\"O\n\013COIIDDMDPIL\022\010\n\004NONE\020\000\022\020\n\013PEPPOH" +
+      "PHJOJ\020\246\014\022\017\n\013DCDNILFDFLB\020\000\022\017\n\013NNBKOLMPOEA" +
+      "\020\001\032\002\020\001B\033\n\031emu.grasscutter.net.protob\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -896,7 +1015,7 @@ public final class GachaWishRspOuterClass {
     internal_static_GachaWishRsp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_GachaWishRsp_descriptor,
-        new java.lang.String[] { "GachaType", "GachaScheduleId", "WishMaxProgress", "WishProgress", "WishItemId", "Retcode", });
+        new java.lang.String[] { "WishProgress", "WishMaxProgress", "GachaType", "GachaScheduleId", "Retcode", "WishItemId", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

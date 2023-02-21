@@ -19,36 +19,29 @@ public final class GetAllUnlockNameCardRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int32 retcode = 4;</code>
+     * <code>int32 retcode = 15;</code>
      * @return The retcode.
      */
     int getRetcode();
 
     /**
-     * <code>repeated uint32 name_card_list = 14;</code>
+     * <code>repeated uint32 nameCardList = 12;</code>
      * @return A list containing the nameCardList.
      */
     java.util.List<java.lang.Integer> getNameCardListList();
     /**
-     * <code>repeated uint32 name_card_list = 14;</code>
+     * <code>repeated uint32 nameCardList = 12;</code>
      * @return The count of nameCardList.
      */
     int getNameCardListCount();
     /**
-     * <code>repeated uint32 name_card_list = 14;</code>
+     * <code>repeated uint32 nameCardList = 12;</code>
      * @param index The index of the element to return.
      * @return The nameCardList at the given index.
      */
     int getNameCardList(int index);
   }
   /**
-   * <pre>
-   * CmdId: 4094
-   * EnetChannelId: 0
-   * EnetIsReliable: false
-   * IsAllowClient: true
-   * </pre>
-   *
    * Protobuf type {@code GetAllUnlockNameCardRsp}
    */
   public static final class GetAllUnlockNameCardRsp extends
@@ -95,12 +88,7 @@ public final class GetAllUnlockNameCardRspOuterClass {
             case 0:
               done = true;
               break;
-            case 32: {
-
-              retcode_ = input.readInt32();
-              break;
-            }
-            case 112: {
+            case 96: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 nameCardList_ = newIntList();
                 mutable_bitField0_ |= 0x00000001;
@@ -108,7 +96,7 @@ public final class GetAllUnlockNameCardRspOuterClass {
               nameCardList_.addInt(input.readUInt32());
               break;
             }
-            case 114: {
+            case 98: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
@@ -119,6 +107,11 @@ public final class GetAllUnlockNameCardRspOuterClass {
                 nameCardList_.addInt(input.readUInt32());
               }
               input.popLimit(limit);
+              break;
+            }
+            case 120: {
+
+              retcode_ = input.readInt32();
               break;
             }
             default: {
@@ -156,10 +149,149 @@ public final class GetAllUnlockNameCardRspOuterClass {
               emu.grasscutter.net.proto.GetAllUnlockNameCardRspOuterClass.GetAllUnlockNameCardRsp.class, emu.grasscutter.net.proto.GetAllUnlockNameCardRspOuterClass.GetAllUnlockNameCardRsp.Builder.class);
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 4;
+    /**
+     * Protobuf enum {@code GetAllUnlockNameCardRsp.IAAKEJCGPIB}
+     */
+    public enum IAAKEJCGPIB
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>NONE = 0;</code>
+       */
+      NONE(0, 0),
+      /**
+       * <code>PEPPOHPHJOJ = 4075;</code>
+       */
+      PEPPOHPHJOJ(1, 4075),
+      /**
+       * <code>NNBKOLMPOEA = 1;</code>
+       */
+      NNBKOLMPOEA(3, 1),
+      UNRECOGNIZED(-1, -1),
+      ;
+
+      /**
+       * <code>DCDNILFDFLB = 0;</code>
+       */
+      public static final IAAKEJCGPIB DCDNILFDFLB = NONE;
+      /**
+       * <code>EAJIABGAOCI = 1;</code>
+       */
+      public static final IAAKEJCGPIB EAJIABGAOCI = NNBKOLMPOEA;
+      /**
+       * <code>NONE = 0;</code>
+       */
+      public static final int NONE_VALUE = 0;
+      /**
+       * <code>PEPPOHPHJOJ = 4075;</code>
+       */
+      public static final int PEPPOHPHJOJ_VALUE = 4075;
+      /**
+       * <code>DCDNILFDFLB = 0;</code>
+       */
+      public static final int DCDNILFDFLB_VALUE = 0;
+      /**
+       * <code>NNBKOLMPOEA = 1;</code>
+       */
+      public static final int NNBKOLMPOEA_VALUE = 1;
+      /**
+       * <code>EAJIABGAOCI = 1;</code>
+       */
+      public static final int EAJIABGAOCI_VALUE = 1;
+
+
+      public final int getNumber() {
+        if (index == -1) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static IAAKEJCGPIB valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static IAAKEJCGPIB forNumber(int value) {
+        switch (value) {
+          case 0: return NONE;
+          case 4075: return PEPPOHPHJOJ;
+          case 1: return NNBKOLMPOEA;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<IAAKEJCGPIB>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          IAAKEJCGPIB> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<IAAKEJCGPIB>() {
+              public IAAKEJCGPIB findValueByNumber(int number) {
+                return IAAKEJCGPIB.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (index == -1) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(index);
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return emu.grasscutter.net.proto.GetAllUnlockNameCardRspOuterClass.GetAllUnlockNameCardRsp.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final IAAKEJCGPIB[] VALUES = getStaticValuesArray();
+      private static IAAKEJCGPIB[] getStaticValuesArray() {
+        return new IAAKEJCGPIB[] {
+          NONE, PEPPOHPHJOJ, DCDNILFDFLB, NNBKOLMPOEA, EAJIABGAOCI, 
+        };
+      }
+      public static IAAKEJCGPIB valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int index;
+      private final int value;
+
+      private IAAKEJCGPIB(int index, int value) {
+        this.index = index;
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:GetAllUnlockNameCardRsp.IAAKEJCGPIB)
+    }
+
+    public static final int RETCODE_FIELD_NUMBER = 15;
     private int retcode_;
     /**
-     * <code>int32 retcode = 4;</code>
+     * <code>int32 retcode = 15;</code>
      * @return The retcode.
      */
     @java.lang.Override
@@ -167,10 +299,10 @@ public final class GetAllUnlockNameCardRspOuterClass {
       return retcode_;
     }
 
-    public static final int NAME_CARD_LIST_FIELD_NUMBER = 14;
+    public static final int NAMECARDLIST_FIELD_NUMBER = 12;
     private com.google.protobuf.Internal.IntList nameCardList_;
     /**
-     * <code>repeated uint32 name_card_list = 14;</code>
+     * <code>repeated uint32 nameCardList = 12;</code>
      * @return A list containing the nameCardList.
      */
     @java.lang.Override
@@ -179,14 +311,14 @@ public final class GetAllUnlockNameCardRspOuterClass {
       return nameCardList_;
     }
     /**
-     * <code>repeated uint32 name_card_list = 14;</code>
+     * <code>repeated uint32 nameCardList = 12;</code>
      * @return The count of nameCardList.
      */
     public int getNameCardListCount() {
       return nameCardList_.size();
     }
     /**
-     * <code>repeated uint32 name_card_list = 14;</code>
+     * <code>repeated uint32 nameCardList = 12;</code>
      * @param index The index of the element to return.
      * @return The nameCardList at the given index.
      */
@@ -210,15 +342,15 @@ public final class GetAllUnlockNameCardRspOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      if (retcode_ != 0) {
-        output.writeInt32(4, retcode_);
-      }
       if (getNameCardListList().size() > 0) {
-        output.writeUInt32NoTag(114);
+        output.writeUInt32NoTag(98);
         output.writeUInt32NoTag(nameCardListMemoizedSerializedSize);
       }
       for (int i = 0; i < nameCardList_.size(); i++) {
         output.writeUInt32NoTag(nameCardList_.getInt(i));
+      }
+      if (retcode_ != 0) {
+        output.writeInt32(15, retcode_);
       }
       unknownFields.writeTo(output);
     }
@@ -229,10 +361,6 @@ public final class GetAllUnlockNameCardRspOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (retcode_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(4, retcode_);
-      }
       {
         int dataSize = 0;
         for (int i = 0; i < nameCardList_.size(); i++) {
@@ -246,6 +374,10 @@ public final class GetAllUnlockNameCardRspOuterClass {
               .computeInt32SizeNoTag(dataSize);
         }
         nameCardListMemoizedSerializedSize = dataSize;
+      }
+      if (retcode_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(15, retcode_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -280,7 +412,7 @@ public final class GetAllUnlockNameCardRspOuterClass {
       hash = (37 * hash) + RETCODE_FIELD_NUMBER;
       hash = (53 * hash) + getRetcode();
       if (getNameCardListCount() > 0) {
-        hash = (37 * hash) + NAME_CARD_LIST_FIELD_NUMBER;
+        hash = (37 * hash) + NAMECARDLIST_FIELD_NUMBER;
         hash = (53 * hash) + getNameCardListList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
@@ -379,13 +511,6 @@ public final class GetAllUnlockNameCardRspOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 4094
-     * EnetChannelId: 0
-     * EnetIsReliable: false
-     * IsAllowClient: true
-     * </pre>
-     *
      * Protobuf type {@code GetAllUnlockNameCardRsp}
      */
     public static final class Builder extends
@@ -553,7 +678,7 @@ public final class GetAllUnlockNameCardRspOuterClass {
 
       private int retcode_ ;
       /**
-       * <code>int32 retcode = 4;</code>
+       * <code>int32 retcode = 15;</code>
        * @return The retcode.
        */
       @java.lang.Override
@@ -561,7 +686,7 @@ public final class GetAllUnlockNameCardRspOuterClass {
         return retcode_;
       }
       /**
-       * <code>int32 retcode = 4;</code>
+       * <code>int32 retcode = 15;</code>
        * @param value The retcode to set.
        * @return This builder for chaining.
        */
@@ -572,7 +697,7 @@ public final class GetAllUnlockNameCardRspOuterClass {
         return this;
       }
       /**
-       * <code>int32 retcode = 4;</code>
+       * <code>int32 retcode = 15;</code>
        * @return This builder for chaining.
        */
       public Builder clearRetcode() {
@@ -590,7 +715,7 @@ public final class GetAllUnlockNameCardRspOuterClass {
          }
       }
       /**
-       * <code>repeated uint32 name_card_list = 14;</code>
+       * <code>repeated uint32 nameCardList = 12;</code>
        * @return A list containing the nameCardList.
        */
       public java.util.List<java.lang.Integer>
@@ -599,14 +724,14 @@ public final class GetAllUnlockNameCardRspOuterClass {
                  java.util.Collections.unmodifiableList(nameCardList_) : nameCardList_;
       }
       /**
-       * <code>repeated uint32 name_card_list = 14;</code>
+       * <code>repeated uint32 nameCardList = 12;</code>
        * @return The count of nameCardList.
        */
       public int getNameCardListCount() {
         return nameCardList_.size();
       }
       /**
-       * <code>repeated uint32 name_card_list = 14;</code>
+       * <code>repeated uint32 nameCardList = 12;</code>
        * @param index The index of the element to return.
        * @return The nameCardList at the given index.
        */
@@ -614,7 +739,7 @@ public final class GetAllUnlockNameCardRspOuterClass {
         return nameCardList_.getInt(index);
       }
       /**
-       * <code>repeated uint32 name_card_list = 14;</code>
+       * <code>repeated uint32 nameCardList = 12;</code>
        * @param index The index to set the value at.
        * @param value The nameCardList to set.
        * @return This builder for chaining.
@@ -627,7 +752,7 @@ public final class GetAllUnlockNameCardRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 name_card_list = 14;</code>
+       * <code>repeated uint32 nameCardList = 12;</code>
        * @param value The nameCardList to add.
        * @return This builder for chaining.
        */
@@ -638,7 +763,7 @@ public final class GetAllUnlockNameCardRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 name_card_list = 14;</code>
+       * <code>repeated uint32 nameCardList = 12;</code>
        * @param values The nameCardList to add.
        * @return This builder for chaining.
        */
@@ -651,7 +776,7 @@ public final class GetAllUnlockNameCardRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 name_card_list = 14;</code>
+       * <code>repeated uint32 nameCardList = 12;</code>
        * @return This builder for chaining.
        */
       public Builder clearNameCardList() {
@@ -727,10 +852,12 @@ public final class GetAllUnlockNameCardRspOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\035GetAllUnlockNameCardRsp.proto\"B\n\027GetAl" +
-      "lUnlockNameCardRsp\022\017\n\007retcode\030\004 \001(\005\022\026\n\016n" +
-      "ame_card_list\030\016 \003(\rB\033\n\031emu.grasscutter.n" +
-      "et.protob\006proto3"
+      "\n\035GetAllUnlockNameCardRsp.proto\"\242\001\n\027GetA" +
+      "llUnlockNameCardRsp\022\017\n\007retcode\030\017 \001(\005\022\024\n\014" +
+      "nameCardList\030\014 \003(\r\"`\n\013IAAKEJCGPIB\022\010\n\004NON" +
+      "E\020\000\022\020\n\013PEPPOHPHJOJ\020\353\037\022\017\n\013DCDNILFDFLB\020\000\022\017" +
+      "\n\013NNBKOLMPOEA\020\001\022\017\n\013EAJIABGAOCI\020\001\032\002\020\001B\033\n\031" +
+      "emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

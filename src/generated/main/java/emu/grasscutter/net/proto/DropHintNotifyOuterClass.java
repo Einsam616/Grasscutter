@@ -19,45 +19,38 @@ public final class DropHintNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.Vector position = 7;</code>
+     * <code>.Vector position = 9;</code>
      * @return Whether the position field is set.
      */
     boolean hasPosition();
     /**
-     * <code>.Vector position = 7;</code>
+     * <code>.Vector position = 9;</code>
      * @return The position.
      */
     emu.grasscutter.net.proto.VectorOuterClass.Vector getPosition();
     /**
-     * <code>.Vector position = 7;</code>
+     * <code>.Vector position = 9;</code>
      */
     emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getPositionOrBuilder();
 
     /**
-     * <code>repeated uint32 item_id_list = 14;</code>
+     * <code>repeated uint32 itemIdList = 10;</code>
      * @return A list containing the itemIdList.
      */
     java.util.List<java.lang.Integer> getItemIdListList();
     /**
-     * <code>repeated uint32 item_id_list = 14;</code>
+     * <code>repeated uint32 itemIdList = 10;</code>
      * @return The count of itemIdList.
      */
     int getItemIdListCount();
     /**
-     * <code>repeated uint32 item_id_list = 14;</code>
+     * <code>repeated uint32 itemIdList = 10;</code>
      * @param index The index of the element to return.
      * @return The itemIdList at the given index.
      */
     int getItemIdList(int index);
   }
   /**
-   * <pre>
-   * CmdId: 650
-   * EnetChannelId: 0
-   * EnetIsReliable: false
-   * IsAllowClient: true
-   * </pre>
-   *
    * Protobuf type {@code DropHintNotify}
    */
   public static final class DropHintNotify extends
@@ -104,7 +97,7 @@ public final class DropHintNotifyOuterClass {
             case 0:
               done = true;
               break;
-            case 58: {
+            case 74: {
               emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
               if (position_ != null) {
                 subBuilder = position_.toBuilder();
@@ -117,7 +110,7 @@ public final class DropHintNotifyOuterClass {
 
               break;
             }
-            case 112: {
+            case 80: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 itemIdList_ = newIntList();
                 mutable_bitField0_ |= 0x00000001;
@@ -125,7 +118,7 @@ public final class DropHintNotifyOuterClass {
               itemIdList_.addInt(input.readUInt32());
               break;
             }
-            case 114: {
+            case 82: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
@@ -173,10 +166,141 @@ public final class DropHintNotifyOuterClass {
               emu.grasscutter.net.proto.DropHintNotifyOuterClass.DropHintNotify.class, emu.grasscutter.net.proto.DropHintNotifyOuterClass.DropHintNotify.Builder.class);
     }
 
-    public static final int POSITION_FIELD_NUMBER = 7;
+    /**
+     * Protobuf enum {@code DropHintNotify.MDFCGFMGDNI}
+     */
+    public enum MDFCGFMGDNI
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>NONE = 0;</code>
+       */
+      NONE(0, 0),
+      /**
+       * <code>PEPPOHPHJOJ = 642;</code>
+       */
+      PEPPOHPHJOJ(1, 642),
+      /**
+       * <code>NNBKOLMPOEA = 1;</code>
+       */
+      NNBKOLMPOEA(3, 1),
+      UNRECOGNIZED(-1, -1),
+      ;
+
+      /**
+       * <code>DCDNILFDFLB = 0;</code>
+       */
+      public static final MDFCGFMGDNI DCDNILFDFLB = NONE;
+      /**
+       * <code>NONE = 0;</code>
+       */
+      public static final int NONE_VALUE = 0;
+      /**
+       * <code>PEPPOHPHJOJ = 642;</code>
+       */
+      public static final int PEPPOHPHJOJ_VALUE = 642;
+      /**
+       * <code>DCDNILFDFLB = 0;</code>
+       */
+      public static final int DCDNILFDFLB_VALUE = 0;
+      /**
+       * <code>NNBKOLMPOEA = 1;</code>
+       */
+      public static final int NNBKOLMPOEA_VALUE = 1;
+
+
+      public final int getNumber() {
+        if (index == -1) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static MDFCGFMGDNI valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static MDFCGFMGDNI forNumber(int value) {
+        switch (value) {
+          case 0: return NONE;
+          case 642: return PEPPOHPHJOJ;
+          case 1: return NNBKOLMPOEA;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<MDFCGFMGDNI>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          MDFCGFMGDNI> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<MDFCGFMGDNI>() {
+              public MDFCGFMGDNI findValueByNumber(int number) {
+                return MDFCGFMGDNI.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (index == -1) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(index);
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return emu.grasscutter.net.proto.DropHintNotifyOuterClass.DropHintNotify.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final MDFCGFMGDNI[] VALUES = getStaticValuesArray();
+      private static MDFCGFMGDNI[] getStaticValuesArray() {
+        return new MDFCGFMGDNI[] {
+          NONE, PEPPOHPHJOJ, DCDNILFDFLB, NNBKOLMPOEA, 
+        };
+      }
+      public static MDFCGFMGDNI valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int index;
+      private final int value;
+
+      private MDFCGFMGDNI(int index, int value) {
+        this.index = index;
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:DropHintNotify.MDFCGFMGDNI)
+    }
+
+    public static final int POSITION_FIELD_NUMBER = 9;
     private emu.grasscutter.net.proto.VectorOuterClass.Vector position_;
     /**
-     * <code>.Vector position = 7;</code>
+     * <code>.Vector position = 9;</code>
      * @return Whether the position field is set.
      */
     @java.lang.Override
@@ -184,7 +308,7 @@ public final class DropHintNotifyOuterClass {
       return position_ != null;
     }
     /**
-     * <code>.Vector position = 7;</code>
+     * <code>.Vector position = 9;</code>
      * @return The position.
      */
     @java.lang.Override
@@ -192,17 +316,17 @@ public final class DropHintNotifyOuterClass {
       return position_ == null ? emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : position_;
     }
     /**
-     * <code>.Vector position = 7;</code>
+     * <code>.Vector position = 9;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getPositionOrBuilder() {
       return getPosition();
     }
 
-    public static final int ITEM_ID_LIST_FIELD_NUMBER = 14;
+    public static final int ITEMIDLIST_FIELD_NUMBER = 10;
     private com.google.protobuf.Internal.IntList itemIdList_;
     /**
-     * <code>repeated uint32 item_id_list = 14;</code>
+     * <code>repeated uint32 itemIdList = 10;</code>
      * @return A list containing the itemIdList.
      */
     @java.lang.Override
@@ -211,14 +335,14 @@ public final class DropHintNotifyOuterClass {
       return itemIdList_;
     }
     /**
-     * <code>repeated uint32 item_id_list = 14;</code>
+     * <code>repeated uint32 itemIdList = 10;</code>
      * @return The count of itemIdList.
      */
     public int getItemIdListCount() {
       return itemIdList_.size();
     }
     /**
-     * <code>repeated uint32 item_id_list = 14;</code>
+     * <code>repeated uint32 itemIdList = 10;</code>
      * @param index The index of the element to return.
      * @return The itemIdList at the given index.
      */
@@ -243,10 +367,10 @@ public final class DropHintNotifyOuterClass {
                         throws java.io.IOException {
       getSerializedSize();
       if (position_ != null) {
-        output.writeMessage(7, getPosition());
+        output.writeMessage(9, getPosition());
       }
       if (getItemIdListList().size() > 0) {
-        output.writeUInt32NoTag(114);
+        output.writeUInt32NoTag(82);
         output.writeUInt32NoTag(itemIdListMemoizedSerializedSize);
       }
       for (int i = 0; i < itemIdList_.size(); i++) {
@@ -263,7 +387,7 @@ public final class DropHintNotifyOuterClass {
       size = 0;
       if (position_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, getPosition());
+          .computeMessageSize(9, getPosition());
       }
       {
         int dataSize = 0;
@@ -317,7 +441,7 @@ public final class DropHintNotifyOuterClass {
         hash = (53 * hash) + getPosition().hashCode();
       }
       if (getItemIdListCount() > 0) {
-        hash = (37 * hash) + ITEM_ID_LIST_FIELD_NUMBER;
+        hash = (37 * hash) + ITEMIDLIST_FIELD_NUMBER;
         hash = (53 * hash) + getItemIdListList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
@@ -416,13 +540,6 @@ public final class DropHintNotifyOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 650
-     * EnetChannelId: 0
-     * EnetIsReliable: false
-     * IsAllowClient: true
-     * </pre>
-     *
      * Protobuf type {@code DropHintNotify}
      */
     public static final class Builder extends
@@ -600,14 +717,14 @@ public final class DropHintNotifyOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> positionBuilder_;
       /**
-       * <code>.Vector position = 7;</code>
+       * <code>.Vector position = 9;</code>
        * @return Whether the position field is set.
        */
       public boolean hasPosition() {
         return positionBuilder_ != null || position_ != null;
       }
       /**
-       * <code>.Vector position = 7;</code>
+       * <code>.Vector position = 9;</code>
        * @return The position.
        */
       public emu.grasscutter.net.proto.VectorOuterClass.Vector getPosition() {
@@ -618,7 +735,7 @@ public final class DropHintNotifyOuterClass {
         }
       }
       /**
-       * <code>.Vector position = 7;</code>
+       * <code>.Vector position = 9;</code>
        */
       public Builder setPosition(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
         if (positionBuilder_ == null) {
@@ -634,7 +751,7 @@ public final class DropHintNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.Vector position = 7;</code>
+       * <code>.Vector position = 9;</code>
        */
       public Builder setPosition(
           emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder builderForValue) {
@@ -648,7 +765,7 @@ public final class DropHintNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.Vector position = 7;</code>
+       * <code>.Vector position = 9;</code>
        */
       public Builder mergePosition(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
         if (positionBuilder_ == null) {
@@ -666,7 +783,7 @@ public final class DropHintNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.Vector position = 7;</code>
+       * <code>.Vector position = 9;</code>
        */
       public Builder clearPosition() {
         if (positionBuilder_ == null) {
@@ -680,7 +797,7 @@ public final class DropHintNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.Vector position = 7;</code>
+       * <code>.Vector position = 9;</code>
        */
       public emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder getPositionBuilder() {
         
@@ -688,7 +805,7 @@ public final class DropHintNotifyOuterClass {
         return getPositionFieldBuilder().getBuilder();
       }
       /**
-       * <code>.Vector position = 7;</code>
+       * <code>.Vector position = 9;</code>
        */
       public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getPositionOrBuilder() {
         if (positionBuilder_ != null) {
@@ -699,7 +816,7 @@ public final class DropHintNotifyOuterClass {
         }
       }
       /**
-       * <code>.Vector position = 7;</code>
+       * <code>.Vector position = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> 
@@ -723,7 +840,7 @@ public final class DropHintNotifyOuterClass {
          }
       }
       /**
-       * <code>repeated uint32 item_id_list = 14;</code>
+       * <code>repeated uint32 itemIdList = 10;</code>
        * @return A list containing the itemIdList.
        */
       public java.util.List<java.lang.Integer>
@@ -732,14 +849,14 @@ public final class DropHintNotifyOuterClass {
                  java.util.Collections.unmodifiableList(itemIdList_) : itemIdList_;
       }
       /**
-       * <code>repeated uint32 item_id_list = 14;</code>
+       * <code>repeated uint32 itemIdList = 10;</code>
        * @return The count of itemIdList.
        */
       public int getItemIdListCount() {
         return itemIdList_.size();
       }
       /**
-       * <code>repeated uint32 item_id_list = 14;</code>
+       * <code>repeated uint32 itemIdList = 10;</code>
        * @param index The index of the element to return.
        * @return The itemIdList at the given index.
        */
@@ -747,7 +864,7 @@ public final class DropHintNotifyOuterClass {
         return itemIdList_.getInt(index);
       }
       /**
-       * <code>repeated uint32 item_id_list = 14;</code>
+       * <code>repeated uint32 itemIdList = 10;</code>
        * @param index The index to set the value at.
        * @param value The itemIdList to set.
        * @return This builder for chaining.
@@ -760,7 +877,7 @@ public final class DropHintNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 item_id_list = 14;</code>
+       * <code>repeated uint32 itemIdList = 10;</code>
        * @param value The itemIdList to add.
        * @return This builder for chaining.
        */
@@ -771,7 +888,7 @@ public final class DropHintNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 item_id_list = 14;</code>
+       * <code>repeated uint32 itemIdList = 10;</code>
        * @param values The itemIdList to add.
        * @return This builder for chaining.
        */
@@ -784,7 +901,7 @@ public final class DropHintNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 item_id_list = 14;</code>
+       * <code>repeated uint32 itemIdList = 10;</code>
        * @return This builder for chaining.
        */
       public Builder clearItemIdList() {
@@ -860,9 +977,11 @@ public final class DropHintNotifyOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\024DropHintNotify.proto\032\014Vector.proto\"A\n\016" +
-      "DropHintNotify\022\031\n\010position\030\007 \001(\0132\007.Vecto" +
-      "r\022\024\n\014item_id_list\030\016 \003(\rB\033\n\031emu.grasscutt" +
+      "\n\024DropHintNotify.proto\032\014Vector.proto\"\220\001\n" +
+      "\016DropHintNotify\022\031\n\010position\030\t \001(\0132\007.Vect" +
+      "or\022\022\n\nitemIdList\030\n \003(\r\"O\n\013MDFCGFMGDNI\022\010\n" +
+      "\004NONE\020\000\022\020\n\013PEPPOHPHJOJ\020\202\005\022\017\n\013DCDNILFDFLB" +
+      "\020\000\022\017\n\013NNBKOLMPOEA\020\001\032\002\020\001B\033\n\031emu.grasscutt" +
       "er.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

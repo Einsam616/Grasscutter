@@ -19,34 +19,27 @@ public final class ActivityUpdateWatcherNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.ActivityWatcherInfo watcher_info = 2;</code>
+     * <code>.ActivityWatcherInfo watcherInfo = 11;</code>
      * @return Whether the watcherInfo field is set.
      */
     boolean hasWatcherInfo();
     /**
-     * <code>.ActivityWatcherInfo watcher_info = 2;</code>
+     * <code>.ActivityWatcherInfo watcherInfo = 11;</code>
      * @return The watcherInfo.
      */
     emu.grasscutter.net.proto.ActivityWatcherInfoOuterClass.ActivityWatcherInfo getWatcherInfo();
     /**
-     * <code>.ActivityWatcherInfo watcher_info = 2;</code>
+     * <code>.ActivityWatcherInfo watcherInfo = 11;</code>
      */
     emu.grasscutter.net.proto.ActivityWatcherInfoOuterClass.ActivityWatcherInfoOrBuilder getWatcherInfoOrBuilder();
 
     /**
-     * <code>uint32 activity_id = 1;</code>
+     * <code>uint32 activityId = 3;</code>
      * @return The activityId.
      */
     int getActivityId();
   }
   /**
-   * <pre>
-   * CmdId: 2156
-   * EnetChannelId: 0
-   * EnetIsReliable: false
-   * IsAllowClient: true
-   * </pre>
-   *
    * Protobuf type {@code ActivityUpdateWatcherNotify}
    */
   public static final class ActivityUpdateWatcherNotify extends
@@ -91,12 +84,12 @@ public final class ActivityUpdateWatcherNotifyOuterClass {
             case 0:
               done = true;
               break;
-            case 8: {
+            case 24: {
 
               activityId_ = input.readUInt32();
               break;
             }
-            case 18: {
+            case 90: {
               emu.grasscutter.net.proto.ActivityWatcherInfoOuterClass.ActivityWatcherInfo.Builder subBuilder = null;
               if (watcherInfo_ != null) {
                 subBuilder = watcherInfo_.toBuilder();
@@ -141,10 +134,149 @@ public final class ActivityUpdateWatcherNotifyOuterClass {
               emu.grasscutter.net.proto.ActivityUpdateWatcherNotifyOuterClass.ActivityUpdateWatcherNotify.class, emu.grasscutter.net.proto.ActivityUpdateWatcherNotifyOuterClass.ActivityUpdateWatcherNotify.Builder.class);
     }
 
-    public static final int WATCHER_INFO_FIELD_NUMBER = 2;
+    /**
+     * Protobuf enum {@code ActivityUpdateWatcherNotify.FDMJLLHOHGH}
+     */
+    public enum FDMJLLHOHGH
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>NONE = 0;</code>
+       */
+      NONE(0, 0),
+      /**
+       * <code>PEPPOHPHJOJ = 2079;</code>
+       */
+      PEPPOHPHJOJ(1, 2079),
+      /**
+       * <code>NNBKOLMPOEA = 1;</code>
+       */
+      NNBKOLMPOEA(3, 1),
+      UNRECOGNIZED(-1, -1),
+      ;
+
+      /**
+       * <code>DCDNILFDFLB = 0;</code>
+       */
+      public static final FDMJLLHOHGH DCDNILFDFLB = NONE;
+      /**
+       * <code>EAJIABGAOCI = 1;</code>
+       */
+      public static final FDMJLLHOHGH EAJIABGAOCI = NNBKOLMPOEA;
+      /**
+       * <code>NONE = 0;</code>
+       */
+      public static final int NONE_VALUE = 0;
+      /**
+       * <code>PEPPOHPHJOJ = 2079;</code>
+       */
+      public static final int PEPPOHPHJOJ_VALUE = 2079;
+      /**
+       * <code>DCDNILFDFLB = 0;</code>
+       */
+      public static final int DCDNILFDFLB_VALUE = 0;
+      /**
+       * <code>NNBKOLMPOEA = 1;</code>
+       */
+      public static final int NNBKOLMPOEA_VALUE = 1;
+      /**
+       * <code>EAJIABGAOCI = 1;</code>
+       */
+      public static final int EAJIABGAOCI_VALUE = 1;
+
+
+      public final int getNumber() {
+        if (index == -1) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static FDMJLLHOHGH valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static FDMJLLHOHGH forNumber(int value) {
+        switch (value) {
+          case 0: return NONE;
+          case 2079: return PEPPOHPHJOJ;
+          case 1: return NNBKOLMPOEA;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<FDMJLLHOHGH>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          FDMJLLHOHGH> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<FDMJLLHOHGH>() {
+              public FDMJLLHOHGH findValueByNumber(int number) {
+                return FDMJLLHOHGH.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (index == -1) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(index);
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return emu.grasscutter.net.proto.ActivityUpdateWatcherNotifyOuterClass.ActivityUpdateWatcherNotify.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final FDMJLLHOHGH[] VALUES = getStaticValuesArray();
+      private static FDMJLLHOHGH[] getStaticValuesArray() {
+        return new FDMJLLHOHGH[] {
+          NONE, PEPPOHPHJOJ, DCDNILFDFLB, NNBKOLMPOEA, EAJIABGAOCI, 
+        };
+      }
+      public static FDMJLLHOHGH valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int index;
+      private final int value;
+
+      private FDMJLLHOHGH(int index, int value) {
+        this.index = index;
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:ActivityUpdateWatcherNotify.FDMJLLHOHGH)
+    }
+
+    public static final int WATCHERINFO_FIELD_NUMBER = 11;
     private emu.grasscutter.net.proto.ActivityWatcherInfoOuterClass.ActivityWatcherInfo watcherInfo_;
     /**
-     * <code>.ActivityWatcherInfo watcher_info = 2;</code>
+     * <code>.ActivityWatcherInfo watcherInfo = 11;</code>
      * @return Whether the watcherInfo field is set.
      */
     @java.lang.Override
@@ -152,7 +284,7 @@ public final class ActivityUpdateWatcherNotifyOuterClass {
       return watcherInfo_ != null;
     }
     /**
-     * <code>.ActivityWatcherInfo watcher_info = 2;</code>
+     * <code>.ActivityWatcherInfo watcherInfo = 11;</code>
      * @return The watcherInfo.
      */
     @java.lang.Override
@@ -160,17 +292,17 @@ public final class ActivityUpdateWatcherNotifyOuterClass {
       return watcherInfo_ == null ? emu.grasscutter.net.proto.ActivityWatcherInfoOuterClass.ActivityWatcherInfo.getDefaultInstance() : watcherInfo_;
     }
     /**
-     * <code>.ActivityWatcherInfo watcher_info = 2;</code>
+     * <code>.ActivityWatcherInfo watcherInfo = 11;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.ActivityWatcherInfoOuterClass.ActivityWatcherInfoOrBuilder getWatcherInfoOrBuilder() {
       return getWatcherInfo();
     }
 
-    public static final int ACTIVITY_ID_FIELD_NUMBER = 1;
+    public static final int ACTIVITYID_FIELD_NUMBER = 3;
     private int activityId_;
     /**
-     * <code>uint32 activity_id = 1;</code>
+     * <code>uint32 activityId = 3;</code>
      * @return The activityId.
      */
     @java.lang.Override
@@ -193,10 +325,10 @@ public final class ActivityUpdateWatcherNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (activityId_ != 0) {
-        output.writeUInt32(1, activityId_);
+        output.writeUInt32(3, activityId_);
       }
       if (watcherInfo_ != null) {
-        output.writeMessage(2, getWatcherInfo());
+        output.writeMessage(11, getWatcherInfo());
       }
       unknownFields.writeTo(output);
     }
@@ -209,11 +341,11 @@ public final class ActivityUpdateWatcherNotifyOuterClass {
       size = 0;
       if (activityId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, activityId_);
+          .computeUInt32Size(3, activityId_);
       }
       if (watcherInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getWatcherInfo());
+          .computeMessageSize(11, getWatcherInfo());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -249,10 +381,10 @@ public final class ActivityUpdateWatcherNotifyOuterClass {
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
       if (hasWatcherInfo()) {
-        hash = (37 * hash) + WATCHER_INFO_FIELD_NUMBER;
+        hash = (37 * hash) + WATCHERINFO_FIELD_NUMBER;
         hash = (53 * hash) + getWatcherInfo().hashCode();
       }
-      hash = (37 * hash) + ACTIVITY_ID_FIELD_NUMBER;
+      hash = (37 * hash) + ACTIVITYID_FIELD_NUMBER;
       hash = (53 * hash) + getActivityId();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -350,13 +482,6 @@ public final class ActivityUpdateWatcherNotifyOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 2156
-     * EnetChannelId: 0
-     * EnetIsReliable: false
-     * IsAllowClient: true
-     * </pre>
-     *
      * Protobuf type {@code ActivityUpdateWatcherNotify}
      */
     public static final class Builder extends
@@ -521,14 +646,14 @@ public final class ActivityUpdateWatcherNotifyOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.ActivityWatcherInfoOuterClass.ActivityWatcherInfo, emu.grasscutter.net.proto.ActivityWatcherInfoOuterClass.ActivityWatcherInfo.Builder, emu.grasscutter.net.proto.ActivityWatcherInfoOuterClass.ActivityWatcherInfoOrBuilder> watcherInfoBuilder_;
       /**
-       * <code>.ActivityWatcherInfo watcher_info = 2;</code>
+       * <code>.ActivityWatcherInfo watcherInfo = 11;</code>
        * @return Whether the watcherInfo field is set.
        */
       public boolean hasWatcherInfo() {
         return watcherInfoBuilder_ != null || watcherInfo_ != null;
       }
       /**
-       * <code>.ActivityWatcherInfo watcher_info = 2;</code>
+       * <code>.ActivityWatcherInfo watcherInfo = 11;</code>
        * @return The watcherInfo.
        */
       public emu.grasscutter.net.proto.ActivityWatcherInfoOuterClass.ActivityWatcherInfo getWatcherInfo() {
@@ -539,7 +664,7 @@ public final class ActivityUpdateWatcherNotifyOuterClass {
         }
       }
       /**
-       * <code>.ActivityWatcherInfo watcher_info = 2;</code>
+       * <code>.ActivityWatcherInfo watcherInfo = 11;</code>
        */
       public Builder setWatcherInfo(emu.grasscutter.net.proto.ActivityWatcherInfoOuterClass.ActivityWatcherInfo value) {
         if (watcherInfoBuilder_ == null) {
@@ -555,7 +680,7 @@ public final class ActivityUpdateWatcherNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.ActivityWatcherInfo watcher_info = 2;</code>
+       * <code>.ActivityWatcherInfo watcherInfo = 11;</code>
        */
       public Builder setWatcherInfo(
           emu.grasscutter.net.proto.ActivityWatcherInfoOuterClass.ActivityWatcherInfo.Builder builderForValue) {
@@ -569,7 +694,7 @@ public final class ActivityUpdateWatcherNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.ActivityWatcherInfo watcher_info = 2;</code>
+       * <code>.ActivityWatcherInfo watcherInfo = 11;</code>
        */
       public Builder mergeWatcherInfo(emu.grasscutter.net.proto.ActivityWatcherInfoOuterClass.ActivityWatcherInfo value) {
         if (watcherInfoBuilder_ == null) {
@@ -587,7 +712,7 @@ public final class ActivityUpdateWatcherNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.ActivityWatcherInfo watcher_info = 2;</code>
+       * <code>.ActivityWatcherInfo watcherInfo = 11;</code>
        */
       public Builder clearWatcherInfo() {
         if (watcherInfoBuilder_ == null) {
@@ -601,7 +726,7 @@ public final class ActivityUpdateWatcherNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.ActivityWatcherInfo watcher_info = 2;</code>
+       * <code>.ActivityWatcherInfo watcherInfo = 11;</code>
        */
       public emu.grasscutter.net.proto.ActivityWatcherInfoOuterClass.ActivityWatcherInfo.Builder getWatcherInfoBuilder() {
         
@@ -609,7 +734,7 @@ public final class ActivityUpdateWatcherNotifyOuterClass {
         return getWatcherInfoFieldBuilder().getBuilder();
       }
       /**
-       * <code>.ActivityWatcherInfo watcher_info = 2;</code>
+       * <code>.ActivityWatcherInfo watcherInfo = 11;</code>
        */
       public emu.grasscutter.net.proto.ActivityWatcherInfoOuterClass.ActivityWatcherInfoOrBuilder getWatcherInfoOrBuilder() {
         if (watcherInfoBuilder_ != null) {
@@ -620,7 +745,7 @@ public final class ActivityUpdateWatcherNotifyOuterClass {
         }
       }
       /**
-       * <code>.ActivityWatcherInfo watcher_info = 2;</code>
+       * <code>.ActivityWatcherInfo watcherInfo = 11;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.ActivityWatcherInfoOuterClass.ActivityWatcherInfo, emu.grasscutter.net.proto.ActivityWatcherInfoOuterClass.ActivityWatcherInfo.Builder, emu.grasscutter.net.proto.ActivityWatcherInfoOuterClass.ActivityWatcherInfoOrBuilder> 
@@ -638,7 +763,7 @@ public final class ActivityUpdateWatcherNotifyOuterClass {
 
       private int activityId_ ;
       /**
-       * <code>uint32 activity_id = 1;</code>
+       * <code>uint32 activityId = 3;</code>
        * @return The activityId.
        */
       @java.lang.Override
@@ -646,7 +771,7 @@ public final class ActivityUpdateWatcherNotifyOuterClass {
         return activityId_;
       }
       /**
-       * <code>uint32 activity_id = 1;</code>
+       * <code>uint32 activityId = 3;</code>
        * @param value The activityId to set.
        * @return This builder for chaining.
        */
@@ -657,7 +782,7 @@ public final class ActivityUpdateWatcherNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint32 activity_id = 1;</code>
+       * <code>uint32 activityId = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearActivityId() {
@@ -734,10 +859,13 @@ public final class ActivityUpdateWatcherNotifyOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n!ActivityUpdateWatcherNotify.proto\032\031Act" +
-      "ivityWatcherInfo.proto\"^\n\033ActivityUpdate" +
-      "WatcherNotify\022*\n\014watcher_info\030\002 \001(\0132\024.Ac" +
-      "tivityWatcherInfo\022\023\n\013activity_id\030\001 \001(\rB\033" +
-      "\n\031emu.grasscutter.net.protob\006proto3"
+      "ivityWatcherInfo.proto\"\276\001\n\033ActivityUpdat" +
+      "eWatcherNotify\022)\n\013watcherInfo\030\013 \001(\0132\024.Ac" +
+      "tivityWatcherInfo\022\022\n\nactivityId\030\003 \001(\r\"`\n" +
+      "\013FDMJLLHOHGH\022\010\n\004NONE\020\000\022\020\n\013PEPPOHPHJOJ\020\237\020" +
+      "\022\017\n\013DCDNILFDFLB\020\000\022\017\n\013NNBKOLMPOEA\020\001\022\017\n\013EA" +
+      "JIABGAOCI\020\001\032\002\020\001B\033\n\031emu.grasscutter.net.p" +
+      "rotob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -19,94 +19,87 @@ public final class PlayerCookRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .ItemParam extral_item_list = 15;</code>
-     */
-    java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> 
-        getExtralItemListList();
-    /**
-     * <code>repeated .ItemParam extral_item_list = 15;</code>
-     */
-    emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam getExtralItemList(int index);
-    /**
-     * <code>repeated .ItemParam extral_item_list = 15;</code>
-     */
-    int getExtralItemListCount();
-    /**
-     * <code>repeated .ItemParam extral_item_list = 15;</code>
-     */
-    java.util.List<? extends emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder> 
-        getExtralItemListOrBuilderList();
-    /**
-     * <code>repeated .ItemParam extral_item_list = 15;</code>
-     */
-    emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder getExtralItemListOrBuilder(
-        int index);
-
-    /**
-     * <code>uint32 cook_count = 12;</code>
-     * @return The cookCount.
-     */
-    int getCookCount();
-
-    /**
-     * <code>repeated .ItemParam item_list = 11;</code>
-     */
-    java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> 
-        getItemListList();
-    /**
-     * <code>repeated .ItemParam item_list = 11;</code>
-     */
-    emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam getItemList(int index);
-    /**
-     * <code>repeated .ItemParam item_list = 11;</code>
-     */
-    int getItemListCount();
-    /**
-     * <code>repeated .ItemParam item_list = 11;</code>
-     */
-    java.util.List<? extends emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder> 
-        getItemListOrBuilderList();
-    /**
-     * <code>repeated .ItemParam item_list = 11;</code>
-     */
-    emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder getItemListOrBuilder(
-        int index);
-
-    /**
-     * <code>int32 retcode = 3;</code>
+     * <code>int32 retcode = 7;</code>
      * @return The retcode.
      */
     int getRetcode();
 
     /**
-     * <code>uint32 qte_quality = 5;</code>
-     * @return The qteQuality.
+     * <code>repeated .ItemParam extraItemList = 13;</code>
      */
-    int getQteQuality();
+    java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> 
+        getExtraItemListList();
+    /**
+     * <code>repeated .ItemParam extraItemList = 13;</code>
+     */
+    emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam getExtraItemList(int index);
+    /**
+     * <code>repeated .ItemParam extraItemList = 13;</code>
+     */
+    int getExtraItemListCount();
+    /**
+     * <code>repeated .ItemParam extraItemList = 13;</code>
+     */
+    java.util.List<? extends emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder> 
+        getExtraItemListOrBuilderList();
+    /**
+     * <code>repeated .ItemParam extraItemList = 13;</code>
+     */
+    emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder getExtraItemListOrBuilder(
+        int index);
 
     /**
-     * <code>.CookRecipeData recipe_data = 7;</code>
+     * <code>repeated .ItemParam itemList = 9;</code>
+     */
+    java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> 
+        getItemListList();
+    /**
+     * <code>repeated .ItemParam itemList = 9;</code>
+     */
+    emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam getItemList(int index);
+    /**
+     * <code>repeated .ItemParam itemList = 9;</code>
+     */
+    int getItemListCount();
+    /**
+     * <code>repeated .ItemParam itemList = 9;</code>
+     */
+    java.util.List<? extends emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder> 
+        getItemListOrBuilderList();
+    /**
+     * <code>repeated .ItemParam itemList = 9;</code>
+     */
+    emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder getItemListOrBuilder(
+        int index);
+
+    /**
+     * <code>.CookRecipeData recipeData = 5;</code>
      * @return Whether the recipeData field is set.
      */
     boolean hasRecipeData();
     /**
-     * <code>.CookRecipeData recipe_data = 7;</code>
+     * <code>.CookRecipeData recipeData = 5;</code>
      * @return The recipeData.
      */
     emu.grasscutter.net.proto.CookRecipeDataOuterClass.CookRecipeData getRecipeData();
     /**
-     * <code>.CookRecipeData recipe_data = 7;</code>
+     * <code>.CookRecipeData recipeData = 5;</code>
      */
     emu.grasscutter.net.proto.CookRecipeDataOuterClass.CookRecipeDataOrBuilder getRecipeDataOrBuilder();
+
+    /**
+     * <code>uint32 cookCount = 12;</code>
+     * @return The cookCount.
+     */
+    int getCookCount();
+
+    /**
+     * <code>uint32 qteQuality = 4;</code>
+     * @return The qteQuality.
+     */
+    int getQteQuality();
   }
   /**
-   * <pre>
-   * CmdId: 188
-   * EnetChannelId: 0
-   * EnetIsReliable: false
-   * IsAllowClient: true
-   * </pre>
-   *
    * Protobuf type {@code PlayerCookRsp}
    */
   public static final class PlayerCookRsp extends
@@ -119,7 +112,7 @@ public final class PlayerCookRspOuterClass {
       super(builder);
     }
     private PlayerCookRsp() {
-      extralItemList_ = java.util.Collections.emptyList();
+      extraItemList_ = java.util.Collections.emptyList();
       itemList_ = java.util.Collections.emptyList();
     }
 
@@ -154,17 +147,12 @@ public final class PlayerCookRspOuterClass {
             case 0:
               done = true;
               break;
-            case 24: {
-
-              retcode_ = input.readInt32();
-              break;
-            }
-            case 40: {
+            case 32: {
 
               qteQuality_ = input.readUInt32();
               break;
             }
-            case 58: {
+            case 42: {
               emu.grasscutter.net.proto.CookRecipeDataOuterClass.CookRecipeData.Builder subBuilder = null;
               if (recipeData_ != null) {
                 subBuilder = recipeData_.toBuilder();
@@ -177,7 +165,12 @@ public final class PlayerCookRspOuterClass {
 
               break;
             }
-            case 90: {
+            case 56: {
+
+              retcode_ = input.readInt32();
+              break;
+            }
+            case 74: {
               if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 itemList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam>();
                 mutable_bitField0_ |= 0x00000002;
@@ -191,12 +184,12 @@ public final class PlayerCookRspOuterClass {
               cookCount_ = input.readUInt32();
               break;
             }
-            case 122: {
+            case 106: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                extralItemList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam>();
+                extraItemList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              extralItemList_.add(
+              extraItemList_.add(
                   input.readMessage(emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.parser(), extensionRegistry));
               break;
             }
@@ -219,7 +212,7 @@ public final class PlayerCookRspOuterClass {
           itemList_ = java.util.Collections.unmodifiableList(itemList_);
         }
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          extralItemList_ = java.util.Collections.unmodifiableList(extralItemList_);
+          extraItemList_ = java.util.Collections.unmodifiableList(extraItemList_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -238,101 +231,141 @@ public final class PlayerCookRspOuterClass {
               emu.grasscutter.net.proto.PlayerCookRspOuterClass.PlayerCookRsp.class, emu.grasscutter.net.proto.PlayerCookRspOuterClass.PlayerCookRsp.Builder.class);
     }
 
-    public static final int EXTRAL_ITEM_LIST_FIELD_NUMBER = 15;
-    private java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> extralItemList_;
     /**
-     * <code>repeated .ItemParam extral_item_list = 15;</code>
+     * Protobuf enum {@code PlayerCookRsp.FPFCHMGMNFC}
      */
-    @java.lang.Override
-    public java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> getExtralItemListList() {
-      return extralItemList_;
-    }
-    /**
-     * <code>repeated .ItemParam extral_item_list = 15;</code>
-     */
-    @java.lang.Override
-    public java.util.List<? extends emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder> 
-        getExtralItemListOrBuilderList() {
-      return extralItemList_;
-    }
-    /**
-     * <code>repeated .ItemParam extral_item_list = 15;</code>
-     */
-    @java.lang.Override
-    public int getExtralItemListCount() {
-      return extralItemList_.size();
-    }
-    /**
-     * <code>repeated .ItemParam extral_item_list = 15;</code>
-     */
-    @java.lang.Override
-    public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam getExtralItemList(int index) {
-      return extralItemList_.get(index);
-    }
-    /**
-     * <code>repeated .ItemParam extral_item_list = 15;</code>
-     */
-    @java.lang.Override
-    public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder getExtralItemListOrBuilder(
-        int index) {
-      return extralItemList_.get(index);
+    public enum FPFCHMGMNFC
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>NONE = 0;</code>
+       */
+      NONE(0, 0),
+      /**
+       * <code>PEPPOHPHJOJ = 128;</code>
+       */
+      PEPPOHPHJOJ(1, 128),
+      /**
+       * <code>NNBKOLMPOEA = 1;</code>
+       */
+      NNBKOLMPOEA(3, 1),
+      UNRECOGNIZED(-1, -1),
+      ;
+
+      /**
+       * <code>DCDNILFDFLB = 0;</code>
+       */
+      public static final FPFCHMGMNFC DCDNILFDFLB = NONE;
+      /**
+       * <code>NONE = 0;</code>
+       */
+      public static final int NONE_VALUE = 0;
+      /**
+       * <code>PEPPOHPHJOJ = 128;</code>
+       */
+      public static final int PEPPOHPHJOJ_VALUE = 128;
+      /**
+       * <code>DCDNILFDFLB = 0;</code>
+       */
+      public static final int DCDNILFDFLB_VALUE = 0;
+      /**
+       * <code>NNBKOLMPOEA = 1;</code>
+       */
+      public static final int NNBKOLMPOEA_VALUE = 1;
+
+
+      public final int getNumber() {
+        if (index == -1) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static FPFCHMGMNFC valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static FPFCHMGMNFC forNumber(int value) {
+        switch (value) {
+          case 0: return NONE;
+          case 128: return PEPPOHPHJOJ;
+          case 1: return NNBKOLMPOEA;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<FPFCHMGMNFC>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          FPFCHMGMNFC> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<FPFCHMGMNFC>() {
+              public FPFCHMGMNFC findValueByNumber(int number) {
+                return FPFCHMGMNFC.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (index == -1) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(index);
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return emu.grasscutter.net.proto.PlayerCookRspOuterClass.PlayerCookRsp.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final FPFCHMGMNFC[] VALUES = getStaticValuesArray();
+      private static FPFCHMGMNFC[] getStaticValuesArray() {
+        return new FPFCHMGMNFC[] {
+          NONE, PEPPOHPHJOJ, DCDNILFDFLB, NNBKOLMPOEA, 
+        };
+      }
+      public static FPFCHMGMNFC valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int index;
+      private final int value;
+
+      private FPFCHMGMNFC(int index, int value) {
+        this.index = index;
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:PlayerCookRsp.FPFCHMGMNFC)
     }
 
-    public static final int COOK_COUNT_FIELD_NUMBER = 12;
-    private int cookCount_;
-    /**
-     * <code>uint32 cook_count = 12;</code>
-     * @return The cookCount.
-     */
-    @java.lang.Override
-    public int getCookCount() {
-      return cookCount_;
-    }
-
-    public static final int ITEM_LIST_FIELD_NUMBER = 11;
-    private java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> itemList_;
-    /**
-     * <code>repeated .ItemParam item_list = 11;</code>
-     */
-    @java.lang.Override
-    public java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> getItemListList() {
-      return itemList_;
-    }
-    /**
-     * <code>repeated .ItemParam item_list = 11;</code>
-     */
-    @java.lang.Override
-    public java.util.List<? extends emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder> 
-        getItemListOrBuilderList() {
-      return itemList_;
-    }
-    /**
-     * <code>repeated .ItemParam item_list = 11;</code>
-     */
-    @java.lang.Override
-    public int getItemListCount() {
-      return itemList_.size();
-    }
-    /**
-     * <code>repeated .ItemParam item_list = 11;</code>
-     */
-    @java.lang.Override
-    public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam getItemList(int index) {
-      return itemList_.get(index);
-    }
-    /**
-     * <code>repeated .ItemParam item_list = 11;</code>
-     */
-    @java.lang.Override
-    public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder getItemListOrBuilder(
-        int index) {
-      return itemList_.get(index);
-    }
-
-    public static final int RETCODE_FIELD_NUMBER = 3;
+    public static final int RETCODE_FIELD_NUMBER = 7;
     private int retcode_;
     /**
-     * <code>int32 retcode = 3;</code>
+     * <code>int32 retcode = 7;</code>
      * @return The retcode.
      */
     @java.lang.Override
@@ -340,21 +373,90 @@ public final class PlayerCookRspOuterClass {
       return retcode_;
     }
 
-    public static final int QTE_QUALITY_FIELD_NUMBER = 5;
-    private int qteQuality_;
+    public static final int EXTRAITEMLIST_FIELD_NUMBER = 13;
+    private java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> extraItemList_;
     /**
-     * <code>uint32 qte_quality = 5;</code>
-     * @return The qteQuality.
+     * <code>repeated .ItemParam extraItemList = 13;</code>
      */
     @java.lang.Override
-    public int getQteQuality() {
-      return qteQuality_;
+    public java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> getExtraItemListList() {
+      return extraItemList_;
+    }
+    /**
+     * <code>repeated .ItemParam extraItemList = 13;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder> 
+        getExtraItemListOrBuilderList() {
+      return extraItemList_;
+    }
+    /**
+     * <code>repeated .ItemParam extraItemList = 13;</code>
+     */
+    @java.lang.Override
+    public int getExtraItemListCount() {
+      return extraItemList_.size();
+    }
+    /**
+     * <code>repeated .ItemParam extraItemList = 13;</code>
+     */
+    @java.lang.Override
+    public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam getExtraItemList(int index) {
+      return extraItemList_.get(index);
+    }
+    /**
+     * <code>repeated .ItemParam extraItemList = 13;</code>
+     */
+    @java.lang.Override
+    public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder getExtraItemListOrBuilder(
+        int index) {
+      return extraItemList_.get(index);
     }
 
-    public static final int RECIPE_DATA_FIELD_NUMBER = 7;
+    public static final int ITEMLIST_FIELD_NUMBER = 9;
+    private java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> itemList_;
+    /**
+     * <code>repeated .ItemParam itemList = 9;</code>
+     */
+    @java.lang.Override
+    public java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> getItemListList() {
+      return itemList_;
+    }
+    /**
+     * <code>repeated .ItemParam itemList = 9;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder> 
+        getItemListOrBuilderList() {
+      return itemList_;
+    }
+    /**
+     * <code>repeated .ItemParam itemList = 9;</code>
+     */
+    @java.lang.Override
+    public int getItemListCount() {
+      return itemList_.size();
+    }
+    /**
+     * <code>repeated .ItemParam itemList = 9;</code>
+     */
+    @java.lang.Override
+    public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam getItemList(int index) {
+      return itemList_.get(index);
+    }
+    /**
+     * <code>repeated .ItemParam itemList = 9;</code>
+     */
+    @java.lang.Override
+    public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder getItemListOrBuilder(
+        int index) {
+      return itemList_.get(index);
+    }
+
+    public static final int RECIPEDATA_FIELD_NUMBER = 5;
     private emu.grasscutter.net.proto.CookRecipeDataOuterClass.CookRecipeData recipeData_;
     /**
-     * <code>.CookRecipeData recipe_data = 7;</code>
+     * <code>.CookRecipeData recipeData = 5;</code>
      * @return Whether the recipeData field is set.
      */
     @java.lang.Override
@@ -362,7 +464,7 @@ public final class PlayerCookRspOuterClass {
       return recipeData_ != null;
     }
     /**
-     * <code>.CookRecipeData recipe_data = 7;</code>
+     * <code>.CookRecipeData recipeData = 5;</code>
      * @return The recipeData.
      */
     @java.lang.Override
@@ -370,11 +472,33 @@ public final class PlayerCookRspOuterClass {
       return recipeData_ == null ? emu.grasscutter.net.proto.CookRecipeDataOuterClass.CookRecipeData.getDefaultInstance() : recipeData_;
     }
     /**
-     * <code>.CookRecipeData recipe_data = 7;</code>
+     * <code>.CookRecipeData recipeData = 5;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.CookRecipeDataOuterClass.CookRecipeDataOrBuilder getRecipeDataOrBuilder() {
       return getRecipeData();
+    }
+
+    public static final int COOKCOUNT_FIELD_NUMBER = 12;
+    private int cookCount_;
+    /**
+     * <code>uint32 cookCount = 12;</code>
+     * @return The cookCount.
+     */
+    @java.lang.Override
+    public int getCookCount() {
+      return cookCount_;
+    }
+
+    public static final int QTEQUALITY_FIELD_NUMBER = 4;
+    private int qteQuality_;
+    /**
+     * <code>uint32 qteQuality = 4;</code>
+     * @return The qteQuality.
+     */
+    @java.lang.Override
+    public int getQteQuality() {
+      return qteQuality_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -391,23 +515,23 @@ public final class PlayerCookRspOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (retcode_ != 0) {
-        output.writeInt32(3, retcode_);
-      }
       if (qteQuality_ != 0) {
-        output.writeUInt32(5, qteQuality_);
+        output.writeUInt32(4, qteQuality_);
       }
       if (recipeData_ != null) {
-        output.writeMessage(7, getRecipeData());
+        output.writeMessage(5, getRecipeData());
+      }
+      if (retcode_ != 0) {
+        output.writeInt32(7, retcode_);
       }
       for (int i = 0; i < itemList_.size(); i++) {
-        output.writeMessage(11, itemList_.get(i));
+        output.writeMessage(9, itemList_.get(i));
       }
       if (cookCount_ != 0) {
         output.writeUInt32(12, cookCount_);
       }
-      for (int i = 0; i < extralItemList_.size(); i++) {
-        output.writeMessage(15, extralItemList_.get(i));
+      for (int i = 0; i < extraItemList_.size(); i++) {
+        output.writeMessage(13, extraItemList_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -418,29 +542,29 @@ public final class PlayerCookRspOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (retcode_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(3, retcode_);
-      }
       if (qteQuality_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(5, qteQuality_);
+          .computeUInt32Size(4, qteQuality_);
       }
       if (recipeData_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, getRecipeData());
+          .computeMessageSize(5, getRecipeData());
+      }
+      if (retcode_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(7, retcode_);
       }
       for (int i = 0; i < itemList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(11, itemList_.get(i));
+          .computeMessageSize(9, itemList_.get(i));
       }
       if (cookCount_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(12, cookCount_);
       }
-      for (int i = 0; i < extralItemList_.size(); i++) {
+      for (int i = 0; i < extraItemList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(15, extralItemList_.get(i));
+          .computeMessageSize(13, extraItemList_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -457,21 +581,21 @@ public final class PlayerCookRspOuterClass {
       }
       emu.grasscutter.net.proto.PlayerCookRspOuterClass.PlayerCookRsp other = (emu.grasscutter.net.proto.PlayerCookRspOuterClass.PlayerCookRsp) obj;
 
-      if (!getExtralItemListList()
-          .equals(other.getExtralItemListList())) return false;
-      if (getCookCount()
-          != other.getCookCount()) return false;
-      if (!getItemListList()
-          .equals(other.getItemListList())) return false;
       if (getRetcode()
           != other.getRetcode()) return false;
-      if (getQteQuality()
-          != other.getQteQuality()) return false;
+      if (!getExtraItemListList()
+          .equals(other.getExtraItemListList())) return false;
+      if (!getItemListList()
+          .equals(other.getItemListList())) return false;
       if (hasRecipeData() != other.hasRecipeData()) return false;
       if (hasRecipeData()) {
         if (!getRecipeData()
             .equals(other.getRecipeData())) return false;
       }
+      if (getCookCount()
+          != other.getCookCount()) return false;
+      if (getQteQuality()
+          != other.getQteQuality()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -483,24 +607,24 @@ public final class PlayerCookRspOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (getExtralItemListCount() > 0) {
-        hash = (37 * hash) + EXTRAL_ITEM_LIST_FIELD_NUMBER;
-        hash = (53 * hash) + getExtralItemListList().hashCode();
-      }
-      hash = (37 * hash) + COOK_COUNT_FIELD_NUMBER;
-      hash = (53 * hash) + getCookCount();
-      if (getItemListCount() > 0) {
-        hash = (37 * hash) + ITEM_LIST_FIELD_NUMBER;
-        hash = (53 * hash) + getItemListList().hashCode();
-      }
       hash = (37 * hash) + RETCODE_FIELD_NUMBER;
       hash = (53 * hash) + getRetcode();
-      hash = (37 * hash) + QTE_QUALITY_FIELD_NUMBER;
-      hash = (53 * hash) + getQteQuality();
+      if (getExtraItemListCount() > 0) {
+        hash = (37 * hash) + EXTRAITEMLIST_FIELD_NUMBER;
+        hash = (53 * hash) + getExtraItemListList().hashCode();
+      }
+      if (getItemListCount() > 0) {
+        hash = (37 * hash) + ITEMLIST_FIELD_NUMBER;
+        hash = (53 * hash) + getItemListList().hashCode();
+      }
       if (hasRecipeData()) {
-        hash = (37 * hash) + RECIPE_DATA_FIELD_NUMBER;
+        hash = (37 * hash) + RECIPEDATA_FIELD_NUMBER;
         hash = (53 * hash) + getRecipeData().hashCode();
       }
+      hash = (37 * hash) + COOKCOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getCookCount();
+      hash = (37 * hash) + QTEQUALITY_FIELD_NUMBER;
+      hash = (53 * hash) + getQteQuality();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -597,13 +721,6 @@ public final class PlayerCookRspOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 188
-     * EnetChannelId: 0
-     * EnetIsReliable: false
-     * IsAllowClient: true
-     * </pre>
-     *
      * Protobuf type {@code PlayerCookRsp}
      */
     public static final class Builder extends
@@ -636,37 +753,37 @@ public final class PlayerCookRspOuterClass {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
-          getExtralItemListFieldBuilder();
+          getExtraItemListFieldBuilder();
           getItemListFieldBuilder();
         }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (extralItemListBuilder_ == null) {
-          extralItemList_ = java.util.Collections.emptyList();
+        retcode_ = 0;
+
+        if (extraItemListBuilder_ == null) {
+          extraItemList_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          extralItemListBuilder_.clear();
+          extraItemListBuilder_.clear();
         }
-        cookCount_ = 0;
-
         if (itemListBuilder_ == null) {
           itemList_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           itemListBuilder_.clear();
         }
-        retcode_ = 0;
-
-        qteQuality_ = 0;
-
         if (recipeDataBuilder_ == null) {
           recipeData_ = null;
         } else {
           recipeData_ = null;
           recipeDataBuilder_ = null;
         }
+        cookCount_ = 0;
+
+        qteQuality_ = 0;
+
         return this;
       }
 
@@ -694,16 +811,16 @@ public final class PlayerCookRspOuterClass {
       public emu.grasscutter.net.proto.PlayerCookRspOuterClass.PlayerCookRsp buildPartial() {
         emu.grasscutter.net.proto.PlayerCookRspOuterClass.PlayerCookRsp result = new emu.grasscutter.net.proto.PlayerCookRspOuterClass.PlayerCookRsp(this);
         int from_bitField0_ = bitField0_;
-        if (extralItemListBuilder_ == null) {
+        result.retcode_ = retcode_;
+        if (extraItemListBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
-            extralItemList_ = java.util.Collections.unmodifiableList(extralItemList_);
+            extraItemList_ = java.util.Collections.unmodifiableList(extraItemList_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
-          result.extralItemList_ = extralItemList_;
+          result.extraItemList_ = extraItemList_;
         } else {
-          result.extralItemList_ = extralItemListBuilder_.build();
+          result.extraItemList_ = extraItemListBuilder_.build();
         }
-        result.cookCount_ = cookCount_;
         if (itemListBuilder_ == null) {
           if (((bitField0_ & 0x00000002) != 0)) {
             itemList_ = java.util.Collections.unmodifiableList(itemList_);
@@ -713,13 +830,13 @@ public final class PlayerCookRspOuterClass {
         } else {
           result.itemList_ = itemListBuilder_.build();
         }
-        result.retcode_ = retcode_;
-        result.qteQuality_ = qteQuality_;
         if (recipeDataBuilder_ == null) {
           result.recipeData_ = recipeData_;
         } else {
           result.recipeData_ = recipeDataBuilder_.build();
         }
+        result.cookCount_ = cookCount_;
+        result.qteQuality_ = qteQuality_;
         onBuilt();
         return result;
       }
@@ -768,34 +885,34 @@ public final class PlayerCookRspOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.PlayerCookRspOuterClass.PlayerCookRsp other) {
         if (other == emu.grasscutter.net.proto.PlayerCookRspOuterClass.PlayerCookRsp.getDefaultInstance()) return this;
-        if (extralItemListBuilder_ == null) {
-          if (!other.extralItemList_.isEmpty()) {
-            if (extralItemList_.isEmpty()) {
-              extralItemList_ = other.extralItemList_;
+        if (other.getRetcode() != 0) {
+          setRetcode(other.getRetcode());
+        }
+        if (extraItemListBuilder_ == null) {
+          if (!other.extraItemList_.isEmpty()) {
+            if (extraItemList_.isEmpty()) {
+              extraItemList_ = other.extraItemList_;
               bitField0_ = (bitField0_ & ~0x00000001);
             } else {
-              ensureExtralItemListIsMutable();
-              extralItemList_.addAll(other.extralItemList_);
+              ensureExtraItemListIsMutable();
+              extraItemList_.addAll(other.extraItemList_);
             }
             onChanged();
           }
         } else {
-          if (!other.extralItemList_.isEmpty()) {
-            if (extralItemListBuilder_.isEmpty()) {
-              extralItemListBuilder_.dispose();
-              extralItemListBuilder_ = null;
-              extralItemList_ = other.extralItemList_;
+          if (!other.extraItemList_.isEmpty()) {
+            if (extraItemListBuilder_.isEmpty()) {
+              extraItemListBuilder_.dispose();
+              extraItemListBuilder_ = null;
+              extraItemList_ = other.extraItemList_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              extralItemListBuilder_ = 
+              extraItemListBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getExtralItemListFieldBuilder() : null;
+                   getExtraItemListFieldBuilder() : null;
             } else {
-              extralItemListBuilder_.addAllMessages(other.extralItemList_);
+              extraItemListBuilder_.addAllMessages(other.extraItemList_);
             }
           }
-        }
-        if (other.getCookCount() != 0) {
-          setCookCount(other.getCookCount());
         }
         if (itemListBuilder_ == null) {
           if (!other.itemList_.isEmpty()) {
@@ -823,14 +940,14 @@ public final class PlayerCookRspOuterClass {
             }
           }
         }
-        if (other.getRetcode() != 0) {
-          setRetcode(other.getRetcode());
+        if (other.hasRecipeData()) {
+          mergeRecipeData(other.getRecipeData());
+        }
+        if (other.getCookCount() != 0) {
+          setCookCount(other.getCookCount());
         }
         if (other.getQteQuality() != 0) {
           setQteQuality(other.getQteQuality());
-        }
-        if (other.hasRecipeData()) {
-          mergeRecipeData(other.getRecipeData());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -862,275 +979,275 @@ public final class PlayerCookRspOuterClass {
       }
       private int bitField0_;
 
-      private java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> extralItemList_ =
+      private int retcode_ ;
+      /**
+       * <code>int32 retcode = 7;</code>
+       * @return The retcode.
+       */
+      @java.lang.Override
+      public int getRetcode() {
+        return retcode_;
+      }
+      /**
+       * <code>int32 retcode = 7;</code>
+       * @param value The retcode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRetcode(int value) {
+        
+        retcode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 retcode = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRetcode() {
+        
+        retcode_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> extraItemList_ =
         java.util.Collections.emptyList();
-      private void ensureExtralItemListIsMutable() {
+      private void ensureExtraItemListIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
-          extralItemList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam>(extralItemList_);
+          extraItemList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam>(extraItemList_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder> extralItemListBuilder_;
+          emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder> extraItemListBuilder_;
 
       /**
-       * <code>repeated .ItemParam extral_item_list = 15;</code>
+       * <code>repeated .ItemParam extraItemList = 13;</code>
        */
-      public java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> getExtralItemListList() {
-        if (extralItemListBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(extralItemList_);
+      public java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> getExtraItemListList() {
+        if (extraItemListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(extraItemList_);
         } else {
-          return extralItemListBuilder_.getMessageList();
+          return extraItemListBuilder_.getMessageList();
         }
       }
       /**
-       * <code>repeated .ItemParam extral_item_list = 15;</code>
+       * <code>repeated .ItemParam extraItemList = 13;</code>
        */
-      public int getExtralItemListCount() {
-        if (extralItemListBuilder_ == null) {
-          return extralItemList_.size();
+      public int getExtraItemListCount() {
+        if (extraItemListBuilder_ == null) {
+          return extraItemList_.size();
         } else {
-          return extralItemListBuilder_.getCount();
+          return extraItemListBuilder_.getCount();
         }
       }
       /**
-       * <code>repeated .ItemParam extral_item_list = 15;</code>
+       * <code>repeated .ItemParam extraItemList = 13;</code>
        */
-      public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam getExtralItemList(int index) {
-        if (extralItemListBuilder_ == null) {
-          return extralItemList_.get(index);
+      public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam getExtraItemList(int index) {
+        if (extraItemListBuilder_ == null) {
+          return extraItemList_.get(index);
         } else {
-          return extralItemListBuilder_.getMessage(index);
+          return extraItemListBuilder_.getMessage(index);
         }
       }
       /**
-       * <code>repeated .ItemParam extral_item_list = 15;</code>
+       * <code>repeated .ItemParam extraItemList = 13;</code>
        */
-      public Builder setExtralItemList(
+      public Builder setExtraItemList(
           int index, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam value) {
-        if (extralItemListBuilder_ == null) {
+        if (extraItemListBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureExtralItemListIsMutable();
-          extralItemList_.set(index, value);
+          ensureExtraItemListIsMutable();
+          extraItemList_.set(index, value);
           onChanged();
         } else {
-          extralItemListBuilder_.setMessage(index, value);
+          extraItemListBuilder_.setMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .ItemParam extral_item_list = 15;</code>
+       * <code>repeated .ItemParam extraItemList = 13;</code>
        */
-      public Builder setExtralItemList(
+      public Builder setExtraItemList(
           int index, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder builderForValue) {
-        if (extralItemListBuilder_ == null) {
-          ensureExtralItemListIsMutable();
-          extralItemList_.set(index, builderForValue.build());
+        if (extraItemListBuilder_ == null) {
+          ensureExtraItemListIsMutable();
+          extraItemList_.set(index, builderForValue.build());
           onChanged();
         } else {
-          extralItemListBuilder_.setMessage(index, builderForValue.build());
+          extraItemListBuilder_.setMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .ItemParam extral_item_list = 15;</code>
+       * <code>repeated .ItemParam extraItemList = 13;</code>
        */
-      public Builder addExtralItemList(emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam value) {
-        if (extralItemListBuilder_ == null) {
+      public Builder addExtraItemList(emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam value) {
+        if (extraItemListBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureExtralItemListIsMutable();
-          extralItemList_.add(value);
+          ensureExtraItemListIsMutable();
+          extraItemList_.add(value);
           onChanged();
         } else {
-          extralItemListBuilder_.addMessage(value);
+          extraItemListBuilder_.addMessage(value);
         }
         return this;
       }
       /**
-       * <code>repeated .ItemParam extral_item_list = 15;</code>
+       * <code>repeated .ItemParam extraItemList = 13;</code>
        */
-      public Builder addExtralItemList(
+      public Builder addExtraItemList(
           int index, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam value) {
-        if (extralItemListBuilder_ == null) {
+        if (extraItemListBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureExtralItemListIsMutable();
-          extralItemList_.add(index, value);
+          ensureExtraItemListIsMutable();
+          extraItemList_.add(index, value);
           onChanged();
         } else {
-          extralItemListBuilder_.addMessage(index, value);
+          extraItemListBuilder_.addMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .ItemParam extral_item_list = 15;</code>
+       * <code>repeated .ItemParam extraItemList = 13;</code>
        */
-      public Builder addExtralItemList(
+      public Builder addExtraItemList(
           emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder builderForValue) {
-        if (extralItemListBuilder_ == null) {
-          ensureExtralItemListIsMutable();
-          extralItemList_.add(builderForValue.build());
+        if (extraItemListBuilder_ == null) {
+          ensureExtraItemListIsMutable();
+          extraItemList_.add(builderForValue.build());
           onChanged();
         } else {
-          extralItemListBuilder_.addMessage(builderForValue.build());
+          extraItemListBuilder_.addMessage(builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .ItemParam extral_item_list = 15;</code>
+       * <code>repeated .ItemParam extraItemList = 13;</code>
        */
-      public Builder addExtralItemList(
+      public Builder addExtraItemList(
           int index, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder builderForValue) {
-        if (extralItemListBuilder_ == null) {
-          ensureExtralItemListIsMutable();
-          extralItemList_.add(index, builderForValue.build());
+        if (extraItemListBuilder_ == null) {
+          ensureExtraItemListIsMutable();
+          extraItemList_.add(index, builderForValue.build());
           onChanged();
         } else {
-          extralItemListBuilder_.addMessage(index, builderForValue.build());
+          extraItemListBuilder_.addMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .ItemParam extral_item_list = 15;</code>
+       * <code>repeated .ItemParam extraItemList = 13;</code>
        */
-      public Builder addAllExtralItemList(
+      public Builder addAllExtraItemList(
           java.lang.Iterable<? extends emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> values) {
-        if (extralItemListBuilder_ == null) {
-          ensureExtralItemListIsMutable();
+        if (extraItemListBuilder_ == null) {
+          ensureExtraItemListIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, extralItemList_);
+              values, extraItemList_);
           onChanged();
         } else {
-          extralItemListBuilder_.addAllMessages(values);
+          extraItemListBuilder_.addAllMessages(values);
         }
         return this;
       }
       /**
-       * <code>repeated .ItemParam extral_item_list = 15;</code>
+       * <code>repeated .ItemParam extraItemList = 13;</code>
        */
-      public Builder clearExtralItemList() {
-        if (extralItemListBuilder_ == null) {
-          extralItemList_ = java.util.Collections.emptyList();
+      public Builder clearExtraItemList() {
+        if (extraItemListBuilder_ == null) {
+          extraItemList_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
-          extralItemListBuilder_.clear();
+          extraItemListBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>repeated .ItemParam extral_item_list = 15;</code>
+       * <code>repeated .ItemParam extraItemList = 13;</code>
        */
-      public Builder removeExtralItemList(int index) {
-        if (extralItemListBuilder_ == null) {
-          ensureExtralItemListIsMutable();
-          extralItemList_.remove(index);
+      public Builder removeExtraItemList(int index) {
+        if (extraItemListBuilder_ == null) {
+          ensureExtraItemListIsMutable();
+          extraItemList_.remove(index);
           onChanged();
         } else {
-          extralItemListBuilder_.remove(index);
+          extraItemListBuilder_.remove(index);
         }
         return this;
       }
       /**
-       * <code>repeated .ItemParam extral_item_list = 15;</code>
+       * <code>repeated .ItemParam extraItemList = 13;</code>
        */
-      public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder getExtralItemListBuilder(
+      public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder getExtraItemListBuilder(
           int index) {
-        return getExtralItemListFieldBuilder().getBuilder(index);
+        return getExtraItemListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ItemParam extral_item_list = 15;</code>
+       * <code>repeated .ItemParam extraItemList = 13;</code>
        */
-      public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder getExtralItemListOrBuilder(
+      public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder getExtraItemListOrBuilder(
           int index) {
-        if (extralItemListBuilder_ == null) {
-          return extralItemList_.get(index);  } else {
-          return extralItemListBuilder_.getMessageOrBuilder(index);
+        if (extraItemListBuilder_ == null) {
+          return extraItemList_.get(index);  } else {
+          return extraItemListBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
-       * <code>repeated .ItemParam extral_item_list = 15;</code>
+       * <code>repeated .ItemParam extraItemList = 13;</code>
        */
       public java.util.List<? extends emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder> 
-           getExtralItemListOrBuilderList() {
-        if (extralItemListBuilder_ != null) {
-          return extralItemListBuilder_.getMessageOrBuilderList();
+           getExtraItemListOrBuilderList() {
+        if (extraItemListBuilder_ != null) {
+          return extraItemListBuilder_.getMessageOrBuilderList();
         } else {
-          return java.util.Collections.unmodifiableList(extralItemList_);
+          return java.util.Collections.unmodifiableList(extraItemList_);
         }
       }
       /**
-       * <code>repeated .ItemParam extral_item_list = 15;</code>
+       * <code>repeated .ItemParam extraItemList = 13;</code>
        */
-      public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder addExtralItemListBuilder() {
-        return getExtralItemListFieldBuilder().addBuilder(
+      public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder addExtraItemListBuilder() {
+        return getExtraItemListFieldBuilder().addBuilder(
             emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.getDefaultInstance());
       }
       /**
-       * <code>repeated .ItemParam extral_item_list = 15;</code>
+       * <code>repeated .ItemParam extraItemList = 13;</code>
        */
-      public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder addExtralItemListBuilder(
+      public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder addExtraItemListBuilder(
           int index) {
-        return getExtralItemListFieldBuilder().addBuilder(
+        return getExtraItemListFieldBuilder().addBuilder(
             index, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.getDefaultInstance());
       }
       /**
-       * <code>repeated .ItemParam extral_item_list = 15;</code>
+       * <code>repeated .ItemParam extraItemList = 13;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder> 
-           getExtralItemListBuilderList() {
-        return getExtralItemListFieldBuilder().getBuilderList();
+           getExtraItemListBuilderList() {
+        return getExtraItemListFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
           emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder> 
-          getExtralItemListFieldBuilder() {
-        if (extralItemListBuilder_ == null) {
-          extralItemListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+          getExtraItemListFieldBuilder() {
+        if (extraItemListBuilder_ == null) {
+          extraItemListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder>(
-                  extralItemList_,
+                  extraItemList_,
                   ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
-          extralItemList_ = null;
+          extraItemList_ = null;
         }
-        return extralItemListBuilder_;
-      }
-
-      private int cookCount_ ;
-      /**
-       * <code>uint32 cook_count = 12;</code>
-       * @return The cookCount.
-       */
-      @java.lang.Override
-      public int getCookCount() {
-        return cookCount_;
-      }
-      /**
-       * <code>uint32 cook_count = 12;</code>
-       * @param value The cookCount to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCookCount(int value) {
-        
-        cookCount_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 cook_count = 12;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCookCount() {
-        
-        cookCount_ = 0;
-        onChanged();
-        return this;
+        return extraItemListBuilder_;
       }
 
       private java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> itemList_ =
@@ -1146,7 +1263,7 @@ public final class PlayerCookRspOuterClass {
           emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder> itemListBuilder_;
 
       /**
-       * <code>repeated .ItemParam item_list = 11;</code>
+       * <code>repeated .ItemParam itemList = 9;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> getItemListList() {
         if (itemListBuilder_ == null) {
@@ -1156,7 +1273,7 @@ public final class PlayerCookRspOuterClass {
         }
       }
       /**
-       * <code>repeated .ItemParam item_list = 11;</code>
+       * <code>repeated .ItemParam itemList = 9;</code>
        */
       public int getItemListCount() {
         if (itemListBuilder_ == null) {
@@ -1166,7 +1283,7 @@ public final class PlayerCookRspOuterClass {
         }
       }
       /**
-       * <code>repeated .ItemParam item_list = 11;</code>
+       * <code>repeated .ItemParam itemList = 9;</code>
        */
       public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam getItemList(int index) {
         if (itemListBuilder_ == null) {
@@ -1176,7 +1293,7 @@ public final class PlayerCookRspOuterClass {
         }
       }
       /**
-       * <code>repeated .ItemParam item_list = 11;</code>
+       * <code>repeated .ItemParam itemList = 9;</code>
        */
       public Builder setItemList(
           int index, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam value) {
@@ -1193,7 +1310,7 @@ public final class PlayerCookRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam item_list = 11;</code>
+       * <code>repeated .ItemParam itemList = 9;</code>
        */
       public Builder setItemList(
           int index, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder builderForValue) {
@@ -1207,7 +1324,7 @@ public final class PlayerCookRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam item_list = 11;</code>
+       * <code>repeated .ItemParam itemList = 9;</code>
        */
       public Builder addItemList(emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam value) {
         if (itemListBuilder_ == null) {
@@ -1223,7 +1340,7 @@ public final class PlayerCookRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam item_list = 11;</code>
+       * <code>repeated .ItemParam itemList = 9;</code>
        */
       public Builder addItemList(
           int index, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam value) {
@@ -1240,7 +1357,7 @@ public final class PlayerCookRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam item_list = 11;</code>
+       * <code>repeated .ItemParam itemList = 9;</code>
        */
       public Builder addItemList(
           emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder builderForValue) {
@@ -1254,7 +1371,7 @@ public final class PlayerCookRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam item_list = 11;</code>
+       * <code>repeated .ItemParam itemList = 9;</code>
        */
       public Builder addItemList(
           int index, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder builderForValue) {
@@ -1268,7 +1385,7 @@ public final class PlayerCookRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam item_list = 11;</code>
+       * <code>repeated .ItemParam itemList = 9;</code>
        */
       public Builder addAllItemList(
           java.lang.Iterable<? extends emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> values) {
@@ -1283,7 +1400,7 @@ public final class PlayerCookRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam item_list = 11;</code>
+       * <code>repeated .ItemParam itemList = 9;</code>
        */
       public Builder clearItemList() {
         if (itemListBuilder_ == null) {
@@ -1296,7 +1413,7 @@ public final class PlayerCookRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam item_list = 11;</code>
+       * <code>repeated .ItemParam itemList = 9;</code>
        */
       public Builder removeItemList(int index) {
         if (itemListBuilder_ == null) {
@@ -1309,14 +1426,14 @@ public final class PlayerCookRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam item_list = 11;</code>
+       * <code>repeated .ItemParam itemList = 9;</code>
        */
       public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder getItemListBuilder(
           int index) {
         return getItemListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ItemParam item_list = 11;</code>
+       * <code>repeated .ItemParam itemList = 9;</code>
        */
       public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder getItemListOrBuilder(
           int index) {
@@ -1326,7 +1443,7 @@ public final class PlayerCookRspOuterClass {
         }
       }
       /**
-       * <code>repeated .ItemParam item_list = 11;</code>
+       * <code>repeated .ItemParam itemList = 9;</code>
        */
       public java.util.List<? extends emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder> 
            getItemListOrBuilderList() {
@@ -1337,14 +1454,14 @@ public final class PlayerCookRspOuterClass {
         }
       }
       /**
-       * <code>repeated .ItemParam item_list = 11;</code>
+       * <code>repeated .ItemParam itemList = 9;</code>
        */
       public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder addItemListBuilder() {
         return getItemListFieldBuilder().addBuilder(
             emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.getDefaultInstance());
       }
       /**
-       * <code>repeated .ItemParam item_list = 11;</code>
+       * <code>repeated .ItemParam itemList = 9;</code>
        */
       public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder addItemListBuilder(
           int index) {
@@ -1352,7 +1469,7 @@ public final class PlayerCookRspOuterClass {
             index, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.getDefaultInstance());
       }
       /**
-       * <code>repeated .ItemParam item_list = 11;</code>
+       * <code>repeated .ItemParam itemList = 9;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder> 
            getItemListBuilderList() {
@@ -1373,80 +1490,18 @@ public final class PlayerCookRspOuterClass {
         return itemListBuilder_;
       }
 
-      private int retcode_ ;
-      /**
-       * <code>int32 retcode = 3;</code>
-       * @return The retcode.
-       */
-      @java.lang.Override
-      public int getRetcode() {
-        return retcode_;
-      }
-      /**
-       * <code>int32 retcode = 3;</code>
-       * @param value The retcode to set.
-       * @return This builder for chaining.
-       */
-      public Builder setRetcode(int value) {
-        
-        retcode_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 retcode = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearRetcode() {
-        
-        retcode_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int qteQuality_ ;
-      /**
-       * <code>uint32 qte_quality = 5;</code>
-       * @return The qteQuality.
-       */
-      @java.lang.Override
-      public int getQteQuality() {
-        return qteQuality_;
-      }
-      /**
-       * <code>uint32 qte_quality = 5;</code>
-       * @param value The qteQuality to set.
-       * @return This builder for chaining.
-       */
-      public Builder setQteQuality(int value) {
-        
-        qteQuality_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 qte_quality = 5;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearQteQuality() {
-        
-        qteQuality_ = 0;
-        onChanged();
-        return this;
-      }
-
       private emu.grasscutter.net.proto.CookRecipeDataOuterClass.CookRecipeData recipeData_;
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.CookRecipeDataOuterClass.CookRecipeData, emu.grasscutter.net.proto.CookRecipeDataOuterClass.CookRecipeData.Builder, emu.grasscutter.net.proto.CookRecipeDataOuterClass.CookRecipeDataOrBuilder> recipeDataBuilder_;
       /**
-       * <code>.CookRecipeData recipe_data = 7;</code>
+       * <code>.CookRecipeData recipeData = 5;</code>
        * @return Whether the recipeData field is set.
        */
       public boolean hasRecipeData() {
         return recipeDataBuilder_ != null || recipeData_ != null;
       }
       /**
-       * <code>.CookRecipeData recipe_data = 7;</code>
+       * <code>.CookRecipeData recipeData = 5;</code>
        * @return The recipeData.
        */
       public emu.grasscutter.net.proto.CookRecipeDataOuterClass.CookRecipeData getRecipeData() {
@@ -1457,7 +1512,7 @@ public final class PlayerCookRspOuterClass {
         }
       }
       /**
-       * <code>.CookRecipeData recipe_data = 7;</code>
+       * <code>.CookRecipeData recipeData = 5;</code>
        */
       public Builder setRecipeData(emu.grasscutter.net.proto.CookRecipeDataOuterClass.CookRecipeData value) {
         if (recipeDataBuilder_ == null) {
@@ -1473,7 +1528,7 @@ public final class PlayerCookRspOuterClass {
         return this;
       }
       /**
-       * <code>.CookRecipeData recipe_data = 7;</code>
+       * <code>.CookRecipeData recipeData = 5;</code>
        */
       public Builder setRecipeData(
           emu.grasscutter.net.proto.CookRecipeDataOuterClass.CookRecipeData.Builder builderForValue) {
@@ -1487,7 +1542,7 @@ public final class PlayerCookRspOuterClass {
         return this;
       }
       /**
-       * <code>.CookRecipeData recipe_data = 7;</code>
+       * <code>.CookRecipeData recipeData = 5;</code>
        */
       public Builder mergeRecipeData(emu.grasscutter.net.proto.CookRecipeDataOuterClass.CookRecipeData value) {
         if (recipeDataBuilder_ == null) {
@@ -1505,7 +1560,7 @@ public final class PlayerCookRspOuterClass {
         return this;
       }
       /**
-       * <code>.CookRecipeData recipe_data = 7;</code>
+       * <code>.CookRecipeData recipeData = 5;</code>
        */
       public Builder clearRecipeData() {
         if (recipeDataBuilder_ == null) {
@@ -1519,7 +1574,7 @@ public final class PlayerCookRspOuterClass {
         return this;
       }
       /**
-       * <code>.CookRecipeData recipe_data = 7;</code>
+       * <code>.CookRecipeData recipeData = 5;</code>
        */
       public emu.grasscutter.net.proto.CookRecipeDataOuterClass.CookRecipeData.Builder getRecipeDataBuilder() {
         
@@ -1527,7 +1582,7 @@ public final class PlayerCookRspOuterClass {
         return getRecipeDataFieldBuilder().getBuilder();
       }
       /**
-       * <code>.CookRecipeData recipe_data = 7;</code>
+       * <code>.CookRecipeData recipeData = 5;</code>
        */
       public emu.grasscutter.net.proto.CookRecipeDataOuterClass.CookRecipeDataOrBuilder getRecipeDataOrBuilder() {
         if (recipeDataBuilder_ != null) {
@@ -1538,7 +1593,7 @@ public final class PlayerCookRspOuterClass {
         }
       }
       /**
-       * <code>.CookRecipeData recipe_data = 7;</code>
+       * <code>.CookRecipeData recipeData = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.CookRecipeDataOuterClass.CookRecipeData, emu.grasscutter.net.proto.CookRecipeDataOuterClass.CookRecipeData.Builder, emu.grasscutter.net.proto.CookRecipeDataOuterClass.CookRecipeDataOrBuilder> 
@@ -1552,6 +1607,68 @@ public final class PlayerCookRspOuterClass {
           recipeData_ = null;
         }
         return recipeDataBuilder_;
+      }
+
+      private int cookCount_ ;
+      /**
+       * <code>uint32 cookCount = 12;</code>
+       * @return The cookCount.
+       */
+      @java.lang.Override
+      public int getCookCount() {
+        return cookCount_;
+      }
+      /**
+       * <code>uint32 cookCount = 12;</code>
+       * @param value The cookCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCookCount(int value) {
+        
+        cookCount_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 cookCount = 12;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCookCount() {
+        
+        cookCount_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int qteQuality_ ;
+      /**
+       * <code>uint32 qteQuality = 4;</code>
+       * @return The qteQuality.
+       */
+      @java.lang.Override
+      public int getQteQuality() {
+        return qteQuality_;
+      }
+      /**
+       * <code>uint32 qteQuality = 4;</code>
+       * @param value The qteQuality to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQteQuality(int value) {
+        
+        qteQuality_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 qteQuality = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearQteQuality() {
+        
+        qteQuality_ = 0;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -1621,12 +1738,14 @@ public final class PlayerCookRspOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\023PlayerCookRsp.proto\032\024CookRecipeData.pr" +
-      "oto\032\017ItemParam.proto\"\264\001\n\rPlayerCookRsp\022$" +
-      "\n\020extral_item_list\030\017 \003(\0132\n.ItemParam\022\022\n\n" +
-      "cook_count\030\014 \001(\r\022\035\n\titem_list\030\013 \003(\0132\n.It" +
-      "emParam\022\017\n\007retcode\030\003 \001(\005\022\023\n\013qte_quality\030" +
-      "\005 \001(\r\022$\n\013recipe_data\030\007 \001(\0132\017.CookRecipeD" +
-      "ataB\033\n\031emu.grasscutter.net.protob\006proto3"
+      "oto\032\017ItemParam.proto\"\376\001\n\rPlayerCookRsp\022\017" +
+      "\n\007retcode\030\007 \001(\005\022!\n\rextraItemList\030\r \003(\0132\n" +
+      ".ItemParam\022\034\n\010itemList\030\t \003(\0132\n.ItemParam" +
+      "\022#\n\nrecipeData\030\005 \001(\0132\017.CookRecipeData\022\021\n" +
+      "\tcookCount\030\014 \001(\r\022\022\n\nqteQuality\030\004 \001(\r\"O\n\013" +
+      "FPFCHMGMNFC\022\010\n\004NONE\020\000\022\020\n\013PEPPOHPHJOJ\020\200\001\022" +
+      "\017\n\013DCDNILFDFLB\020\000\022\017\n\013NNBKOLMPOEA\020\001\032\002\020\001B\033\n" +
+      "\031emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1639,7 +1758,7 @@ public final class PlayerCookRspOuterClass {
     internal_static_PlayerCookRsp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_PlayerCookRsp_descriptor,
-        new java.lang.String[] { "ExtralItemList", "CookCount", "ItemList", "Retcode", "QteQuality", "RecipeData", });
+        new java.lang.String[] { "Retcode", "ExtraItemList", "ItemList", "RecipeData", "CookCount", "QteQuality", });
     emu.grasscutter.net.proto.CookRecipeDataOuterClass.getDescriptor();
     emu.grasscutter.net.proto.ItemParamOuterClass.getDescriptor();
   }

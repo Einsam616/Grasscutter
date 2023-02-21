@@ -19,19 +19,12 @@ public final class SetPlayerHeadImageReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 avatar_id = 7;</code>
+     * <code>uint32 avatarId = 10;</code>
      * @return The avatarId.
      */
     int getAvatarId();
   }
   /**
-   * <pre>
-   * CmdId: 4082
-   * EnetChannelId: 0
-   * EnetIsReliable: false
-   * IsAllowClient: true
-   * </pre>
-   *
    * Protobuf type {@code SetPlayerHeadImageReq}
    */
   public static final class SetPlayerHeadImageReq extends
@@ -76,7 +69,7 @@ public final class SetPlayerHeadImageReqOuterClass {
             case 0:
               done = true;
               break;
-            case 56: {
+            case 80: {
 
               avatarId_ = input.readUInt32();
               break;
@@ -113,10 +106,149 @@ public final class SetPlayerHeadImageReqOuterClass {
               emu.grasscutter.net.proto.SetPlayerHeadImageReqOuterClass.SetPlayerHeadImageReq.class, emu.grasscutter.net.proto.SetPlayerHeadImageReqOuterClass.SetPlayerHeadImageReq.Builder.class);
     }
 
-    public static final int AVATAR_ID_FIELD_NUMBER = 7;
+    /**
+     * Protobuf enum {@code SetPlayerHeadImageReq.CFPMHBLKGJM}
+     */
+    public enum CFPMHBLKGJM
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>NONE = 0;</code>
+       */
+      NONE(0, 0),
+      /**
+       * <code>PEPPOHPHJOJ = 4006;</code>
+       */
+      PEPPOHPHJOJ(1, 4006),
+      /**
+       * <code>NNBKOLMPOEA = 1;</code>
+       */
+      NNBKOLMPOEA(3, 1),
+      UNRECOGNIZED(-1, -1),
+      ;
+
+      /**
+       * <code>DCDNILFDFLB = 0;</code>
+       */
+      public static final CFPMHBLKGJM DCDNILFDFLB = NONE;
+      /**
+       * <code>EAJIABGAOCI = 1;</code>
+       */
+      public static final CFPMHBLKGJM EAJIABGAOCI = NNBKOLMPOEA;
+      /**
+       * <code>NONE = 0;</code>
+       */
+      public static final int NONE_VALUE = 0;
+      /**
+       * <code>PEPPOHPHJOJ = 4006;</code>
+       */
+      public static final int PEPPOHPHJOJ_VALUE = 4006;
+      /**
+       * <code>DCDNILFDFLB = 0;</code>
+       */
+      public static final int DCDNILFDFLB_VALUE = 0;
+      /**
+       * <code>NNBKOLMPOEA = 1;</code>
+       */
+      public static final int NNBKOLMPOEA_VALUE = 1;
+      /**
+       * <code>EAJIABGAOCI = 1;</code>
+       */
+      public static final int EAJIABGAOCI_VALUE = 1;
+
+
+      public final int getNumber() {
+        if (index == -1) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static CFPMHBLKGJM valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static CFPMHBLKGJM forNumber(int value) {
+        switch (value) {
+          case 0: return NONE;
+          case 4006: return PEPPOHPHJOJ;
+          case 1: return NNBKOLMPOEA;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<CFPMHBLKGJM>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          CFPMHBLKGJM> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<CFPMHBLKGJM>() {
+              public CFPMHBLKGJM findValueByNumber(int number) {
+                return CFPMHBLKGJM.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (index == -1) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(index);
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return emu.grasscutter.net.proto.SetPlayerHeadImageReqOuterClass.SetPlayerHeadImageReq.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final CFPMHBLKGJM[] VALUES = getStaticValuesArray();
+      private static CFPMHBLKGJM[] getStaticValuesArray() {
+        return new CFPMHBLKGJM[] {
+          NONE, PEPPOHPHJOJ, DCDNILFDFLB, NNBKOLMPOEA, EAJIABGAOCI, 
+        };
+      }
+      public static CFPMHBLKGJM valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int index;
+      private final int value;
+
+      private CFPMHBLKGJM(int index, int value) {
+        this.index = index;
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:SetPlayerHeadImageReq.CFPMHBLKGJM)
+    }
+
+    public static final int AVATARID_FIELD_NUMBER = 10;
     private int avatarId_;
     /**
-     * <code>uint32 avatar_id = 7;</code>
+     * <code>uint32 avatarId = 10;</code>
      * @return The avatarId.
      */
     @java.lang.Override
@@ -139,7 +271,7 @@ public final class SetPlayerHeadImageReqOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (avatarId_ != 0) {
-        output.writeUInt32(7, avatarId_);
+        output.writeUInt32(10, avatarId_);
       }
       unknownFields.writeTo(output);
     }
@@ -152,7 +284,7 @@ public final class SetPlayerHeadImageReqOuterClass {
       size = 0;
       if (avatarId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(7, avatarId_);
+          .computeUInt32Size(10, avatarId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -182,7 +314,7 @@ public final class SetPlayerHeadImageReqOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + AVATAR_ID_FIELD_NUMBER;
+      hash = (37 * hash) + AVATARID_FIELD_NUMBER;
       hash = (53 * hash) + getAvatarId();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -280,13 +412,6 @@ public final class SetPlayerHeadImageReqOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 4082
-     * EnetChannelId: 0
-     * EnetIsReliable: false
-     * IsAllowClient: true
-     * </pre>
-     *
      * Protobuf type {@code SetPlayerHeadImageReq}
      */
     public static final class Builder extends
@@ -435,7 +560,7 @@ public final class SetPlayerHeadImageReqOuterClass {
 
       private int avatarId_ ;
       /**
-       * <code>uint32 avatar_id = 7;</code>
+       * <code>uint32 avatarId = 10;</code>
        * @return The avatarId.
        */
       @java.lang.Override
@@ -443,7 +568,7 @@ public final class SetPlayerHeadImageReqOuterClass {
         return avatarId_;
       }
       /**
-       * <code>uint32 avatar_id = 7;</code>
+       * <code>uint32 avatarId = 10;</code>
        * @param value The avatarId to set.
        * @return This builder for chaining.
        */
@@ -454,7 +579,7 @@ public final class SetPlayerHeadImageReqOuterClass {
         return this;
       }
       /**
-       * <code>uint32 avatar_id = 7;</code>
+       * <code>uint32 avatarId = 10;</code>
        * @return This builder for chaining.
        */
       public Builder clearAvatarId() {
@@ -530,9 +655,12 @@ public final class SetPlayerHeadImageReqOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\033SetPlayerHeadImageReq.proto\"*\n\025SetPlay" +
-      "erHeadImageReq\022\021\n\tavatar_id\030\007 \001(\rB\033\n\031emu" +
-      ".grasscutter.net.protob\006proto3"
+      "\n\033SetPlayerHeadImageReq.proto\"\213\001\n\025SetPla" +
+      "yerHeadImageReq\022\020\n\010avatarId\030\n \001(\r\"`\n\013CFP" +
+      "MHBLKGJM\022\010\n\004NONE\020\000\022\020\n\013PEPPOHPHJOJ\020\246\037\022\017\n\013" +
+      "DCDNILFDFLB\020\000\022\017\n\013NNBKOLMPOEA\020\001\022\017\n\013EAJIAB" +
+      "GAOCI\020\001\032\002\020\001B\033\n\031emu.grasscutter.net.proto" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

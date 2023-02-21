@@ -19,40 +19,33 @@ public final class PlayerEnterDungeonReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.Unk2800_JKLFAJKDLDG Unk2800_ANJAHBGBIFD = 2;</code>
-     * @return Whether the unk2800ANJAHBGBIFD field is set.
+     * <code>uint32 dungeonId = 2;</code>
+     * @return The dungeonId.
      */
-    boolean hasUnk2800ANJAHBGBIFD();
-    /**
-     * <code>.Unk2800_JKLFAJKDLDG Unk2800_ANJAHBGBIFD = 2;</code>
-     * @return The unk2800ANJAHBGBIFD.
-     */
-    emu.grasscutter.net.proto.Unk2800JKLFAJKDLDG.Unk2800_JKLFAJKDLDG getUnk2800ANJAHBGBIFD();
-    /**
-     * <code>.Unk2800_JKLFAJKDLDG Unk2800_ANJAHBGBIFD = 2;</code>
-     */
-    emu.grasscutter.net.proto.Unk2800JKLFAJKDLDG.Unk2800_JKLFAJKDLDGOrBuilder getUnk2800ANJAHBGBIFDOrBuilder();
+    int getDungeonId();
 
     /**
-     * <code>uint32 point_id = 13;</code>
+     * <code>uint32 pointId = 9;</code>
      * @return The pointId.
      */
     int getPointId();
 
     /**
-     * <code>uint32 dungeon_id = 7;</code>
-     * @return The dungeonId.
+     * <code>.DungeonEnterPosInfo enterPosInfo = 4;</code>
+     * @return Whether the enterPosInfo field is set.
      */
-    int getDungeonId();
+    boolean hasEnterPosInfo();
+    /**
+     * <code>.DungeonEnterPosInfo enterPosInfo = 4;</code>
+     * @return The enterPosInfo.
+     */
+    emu.grasscutter.net.proto.DungeonEnterPosInfoOuterClass.DungeonEnterPosInfo getEnterPosInfo();
+    /**
+     * <code>.DungeonEnterPosInfo enterPosInfo = 4;</code>
+     */
+    emu.grasscutter.net.proto.DungeonEnterPosInfoOuterClass.DungeonEnterPosInfoOrBuilder getEnterPosInfoOrBuilder();
   }
   /**
-   * <pre>
-   * CmdId: 912
-   * EnetChannelId: 0
-   * EnetIsReliable: false
-   * IsAllowClient: true
-   * </pre>
-   *
    * Protobuf type {@code PlayerEnterDungeonReq}
    */
   public static final class PlayerEnterDungeonReq extends
@@ -97,25 +90,25 @@ public final class PlayerEnterDungeonReqOuterClass {
             case 0:
               done = true;
               break;
-            case 18: {
-              emu.grasscutter.net.proto.Unk2800JKLFAJKDLDG.Unk2800_JKLFAJKDLDG.Builder subBuilder = null;
-              if (unk2800ANJAHBGBIFD_ != null) {
-                subBuilder = unk2800ANJAHBGBIFD_.toBuilder();
-              }
-              unk2800ANJAHBGBIFD_ = input.readMessage(emu.grasscutter.net.proto.Unk2800JKLFAJKDLDG.Unk2800_JKLFAJKDLDG.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(unk2800ANJAHBGBIFD_);
-                unk2800ANJAHBGBIFD_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 56: {
+            case 16: {
 
               dungeonId_ = input.readUInt32();
               break;
             }
-            case 104: {
+            case 34: {
+              emu.grasscutter.net.proto.DungeonEnterPosInfoOuterClass.DungeonEnterPosInfo.Builder subBuilder = null;
+              if (enterPosInfo_ != null) {
+                subBuilder = enterPosInfo_.toBuilder();
+              }
+              enterPosInfo_ = input.readMessage(emu.grasscutter.net.proto.DungeonEnterPosInfoOuterClass.DungeonEnterPosInfo.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(enterPosInfo_);
+                enterPosInfo_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 72: {
 
               pointId_ = input.readUInt32();
               break;
@@ -152,36 +145,160 @@ public final class PlayerEnterDungeonReqOuterClass {
               emu.grasscutter.net.proto.PlayerEnterDungeonReqOuterClass.PlayerEnterDungeonReq.class, emu.grasscutter.net.proto.PlayerEnterDungeonReqOuterClass.PlayerEnterDungeonReq.Builder.class);
     }
 
-    public static final int UNK2800_ANJAHBGBIFD_FIELD_NUMBER = 2;
-    private emu.grasscutter.net.proto.Unk2800JKLFAJKDLDG.Unk2800_JKLFAJKDLDG unk2800ANJAHBGBIFD_;
     /**
-     * <code>.Unk2800_JKLFAJKDLDG Unk2800_ANJAHBGBIFD = 2;</code>
-     * @return Whether the unk2800ANJAHBGBIFD field is set.
+     * Protobuf enum {@code PlayerEnterDungeonReq.IGBPMBLKBOF}
      */
-    @java.lang.Override
-    public boolean hasUnk2800ANJAHBGBIFD() {
-      return unk2800ANJAHBGBIFD_ != null;
-    }
-    /**
-     * <code>.Unk2800_JKLFAJKDLDG Unk2800_ANJAHBGBIFD = 2;</code>
-     * @return The unk2800ANJAHBGBIFD.
-     */
-    @java.lang.Override
-    public emu.grasscutter.net.proto.Unk2800JKLFAJKDLDG.Unk2800_JKLFAJKDLDG getUnk2800ANJAHBGBIFD() {
-      return unk2800ANJAHBGBIFD_ == null ? emu.grasscutter.net.proto.Unk2800JKLFAJKDLDG.Unk2800_JKLFAJKDLDG.getDefaultInstance() : unk2800ANJAHBGBIFD_;
-    }
-    /**
-     * <code>.Unk2800_JKLFAJKDLDG Unk2800_ANJAHBGBIFD = 2;</code>
-     */
-    @java.lang.Override
-    public emu.grasscutter.net.proto.Unk2800JKLFAJKDLDG.Unk2800_JKLFAJKDLDGOrBuilder getUnk2800ANJAHBGBIFDOrBuilder() {
-      return getUnk2800ANJAHBGBIFD();
+    public enum IGBPMBLKBOF
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>NONE = 0;</code>
+       */
+      NONE(0, 0),
+      /**
+       * <code>PEPPOHPHJOJ = 987;</code>
+       */
+      PEPPOHPHJOJ(1, 987),
+      /**
+       * <code>NNBKOLMPOEA = 1;</code>
+       */
+      NNBKOLMPOEA(3, 1),
+      UNRECOGNIZED(-1, -1),
+      ;
+
+      /**
+       * <code>DCDNILFDFLB = 0;</code>
+       */
+      public static final IGBPMBLKBOF DCDNILFDFLB = NONE;
+      /**
+       * <code>EAJIABGAOCI = 1;</code>
+       */
+      public static final IGBPMBLKBOF EAJIABGAOCI = NNBKOLMPOEA;
+      /**
+       * <code>NONE = 0;</code>
+       */
+      public static final int NONE_VALUE = 0;
+      /**
+       * <code>PEPPOHPHJOJ = 987;</code>
+       */
+      public static final int PEPPOHPHJOJ_VALUE = 987;
+      /**
+       * <code>DCDNILFDFLB = 0;</code>
+       */
+      public static final int DCDNILFDFLB_VALUE = 0;
+      /**
+       * <code>NNBKOLMPOEA = 1;</code>
+       */
+      public static final int NNBKOLMPOEA_VALUE = 1;
+      /**
+       * <code>EAJIABGAOCI = 1;</code>
+       */
+      public static final int EAJIABGAOCI_VALUE = 1;
+
+
+      public final int getNumber() {
+        if (index == -1) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static IGBPMBLKBOF valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static IGBPMBLKBOF forNumber(int value) {
+        switch (value) {
+          case 0: return NONE;
+          case 987: return PEPPOHPHJOJ;
+          case 1: return NNBKOLMPOEA;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<IGBPMBLKBOF>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          IGBPMBLKBOF> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<IGBPMBLKBOF>() {
+              public IGBPMBLKBOF findValueByNumber(int number) {
+                return IGBPMBLKBOF.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (index == -1) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(index);
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return emu.grasscutter.net.proto.PlayerEnterDungeonReqOuterClass.PlayerEnterDungeonReq.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final IGBPMBLKBOF[] VALUES = getStaticValuesArray();
+      private static IGBPMBLKBOF[] getStaticValuesArray() {
+        return new IGBPMBLKBOF[] {
+          NONE, PEPPOHPHJOJ, DCDNILFDFLB, NNBKOLMPOEA, EAJIABGAOCI, 
+        };
+      }
+      public static IGBPMBLKBOF valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int index;
+      private final int value;
+
+      private IGBPMBLKBOF(int index, int value) {
+        this.index = index;
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:PlayerEnterDungeonReq.IGBPMBLKBOF)
     }
 
-    public static final int POINT_ID_FIELD_NUMBER = 13;
+    public static final int DUNGEONID_FIELD_NUMBER = 2;
+    private int dungeonId_;
+    /**
+     * <code>uint32 dungeonId = 2;</code>
+     * @return The dungeonId.
+     */
+    @java.lang.Override
+    public int getDungeonId() {
+      return dungeonId_;
+    }
+
+    public static final int POINTID_FIELD_NUMBER = 9;
     private int pointId_;
     /**
-     * <code>uint32 point_id = 13;</code>
+     * <code>uint32 pointId = 9;</code>
      * @return The pointId.
      */
     @java.lang.Override
@@ -189,15 +306,30 @@ public final class PlayerEnterDungeonReqOuterClass {
       return pointId_;
     }
 
-    public static final int DUNGEON_ID_FIELD_NUMBER = 7;
-    private int dungeonId_;
+    public static final int ENTERPOSINFO_FIELD_NUMBER = 4;
+    private emu.grasscutter.net.proto.DungeonEnterPosInfoOuterClass.DungeonEnterPosInfo enterPosInfo_;
     /**
-     * <code>uint32 dungeon_id = 7;</code>
-     * @return The dungeonId.
+     * <code>.DungeonEnterPosInfo enterPosInfo = 4;</code>
+     * @return Whether the enterPosInfo field is set.
      */
     @java.lang.Override
-    public int getDungeonId() {
-      return dungeonId_;
+    public boolean hasEnterPosInfo() {
+      return enterPosInfo_ != null;
+    }
+    /**
+     * <code>.DungeonEnterPosInfo enterPosInfo = 4;</code>
+     * @return The enterPosInfo.
+     */
+    @java.lang.Override
+    public emu.grasscutter.net.proto.DungeonEnterPosInfoOuterClass.DungeonEnterPosInfo getEnterPosInfo() {
+      return enterPosInfo_ == null ? emu.grasscutter.net.proto.DungeonEnterPosInfoOuterClass.DungeonEnterPosInfo.getDefaultInstance() : enterPosInfo_;
+    }
+    /**
+     * <code>.DungeonEnterPosInfo enterPosInfo = 4;</code>
+     */
+    @java.lang.Override
+    public emu.grasscutter.net.proto.DungeonEnterPosInfoOuterClass.DungeonEnterPosInfoOrBuilder getEnterPosInfoOrBuilder() {
+      return getEnterPosInfo();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -214,14 +346,14 @@ public final class PlayerEnterDungeonReqOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (unk2800ANJAHBGBIFD_ != null) {
-        output.writeMessage(2, getUnk2800ANJAHBGBIFD());
-      }
       if (dungeonId_ != 0) {
-        output.writeUInt32(7, dungeonId_);
+        output.writeUInt32(2, dungeonId_);
+      }
+      if (enterPosInfo_ != null) {
+        output.writeMessage(4, getEnterPosInfo());
       }
       if (pointId_ != 0) {
-        output.writeUInt32(13, pointId_);
+        output.writeUInt32(9, pointId_);
       }
       unknownFields.writeTo(output);
     }
@@ -232,17 +364,17 @@ public final class PlayerEnterDungeonReqOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (unk2800ANJAHBGBIFD_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getUnk2800ANJAHBGBIFD());
-      }
       if (dungeonId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(7, dungeonId_);
+          .computeUInt32Size(2, dungeonId_);
+      }
+      if (enterPosInfo_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getEnterPosInfo());
       }
       if (pointId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(13, pointId_);
+          .computeUInt32Size(9, pointId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -259,15 +391,15 @@ public final class PlayerEnterDungeonReqOuterClass {
       }
       emu.grasscutter.net.proto.PlayerEnterDungeonReqOuterClass.PlayerEnterDungeonReq other = (emu.grasscutter.net.proto.PlayerEnterDungeonReqOuterClass.PlayerEnterDungeonReq) obj;
 
-      if (hasUnk2800ANJAHBGBIFD() != other.hasUnk2800ANJAHBGBIFD()) return false;
-      if (hasUnk2800ANJAHBGBIFD()) {
-        if (!getUnk2800ANJAHBGBIFD()
-            .equals(other.getUnk2800ANJAHBGBIFD())) return false;
-      }
-      if (getPointId()
-          != other.getPointId()) return false;
       if (getDungeonId()
           != other.getDungeonId()) return false;
+      if (getPointId()
+          != other.getPointId()) return false;
+      if (hasEnterPosInfo() != other.hasEnterPosInfo()) return false;
+      if (hasEnterPosInfo()) {
+        if (!getEnterPosInfo()
+            .equals(other.getEnterPosInfo())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -279,14 +411,14 @@ public final class PlayerEnterDungeonReqOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasUnk2800ANJAHBGBIFD()) {
-        hash = (37 * hash) + UNK2800_ANJAHBGBIFD_FIELD_NUMBER;
-        hash = (53 * hash) + getUnk2800ANJAHBGBIFD().hashCode();
-      }
-      hash = (37 * hash) + POINT_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getPointId();
-      hash = (37 * hash) + DUNGEON_ID_FIELD_NUMBER;
+      hash = (37 * hash) + DUNGEONID_FIELD_NUMBER;
       hash = (53 * hash) + getDungeonId();
+      hash = (37 * hash) + POINTID_FIELD_NUMBER;
+      hash = (53 * hash) + getPointId();
+      if (hasEnterPosInfo()) {
+        hash = (37 * hash) + ENTERPOSINFO_FIELD_NUMBER;
+        hash = (53 * hash) + getEnterPosInfo().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -383,13 +515,6 @@ public final class PlayerEnterDungeonReqOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 912
-     * EnetChannelId: 0
-     * EnetIsReliable: false
-     * IsAllowClient: true
-     * </pre>
-     *
      * Protobuf type {@code PlayerEnterDungeonReq}
      */
     public static final class Builder extends
@@ -427,16 +552,16 @@ public final class PlayerEnterDungeonReqOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (unk2800ANJAHBGBIFDBuilder_ == null) {
-          unk2800ANJAHBGBIFD_ = null;
-        } else {
-          unk2800ANJAHBGBIFD_ = null;
-          unk2800ANJAHBGBIFDBuilder_ = null;
-        }
-        pointId_ = 0;
-
         dungeonId_ = 0;
 
+        pointId_ = 0;
+
+        if (enterPosInfoBuilder_ == null) {
+          enterPosInfo_ = null;
+        } else {
+          enterPosInfo_ = null;
+          enterPosInfoBuilder_ = null;
+        }
         return this;
       }
 
@@ -463,13 +588,13 @@ public final class PlayerEnterDungeonReqOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.PlayerEnterDungeonReqOuterClass.PlayerEnterDungeonReq buildPartial() {
         emu.grasscutter.net.proto.PlayerEnterDungeonReqOuterClass.PlayerEnterDungeonReq result = new emu.grasscutter.net.proto.PlayerEnterDungeonReqOuterClass.PlayerEnterDungeonReq(this);
-        if (unk2800ANJAHBGBIFDBuilder_ == null) {
-          result.unk2800ANJAHBGBIFD_ = unk2800ANJAHBGBIFD_;
-        } else {
-          result.unk2800ANJAHBGBIFD_ = unk2800ANJAHBGBIFDBuilder_.build();
-        }
-        result.pointId_ = pointId_;
         result.dungeonId_ = dungeonId_;
+        result.pointId_ = pointId_;
+        if (enterPosInfoBuilder_ == null) {
+          result.enterPosInfo_ = enterPosInfo_;
+        } else {
+          result.enterPosInfo_ = enterPosInfoBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -518,14 +643,14 @@ public final class PlayerEnterDungeonReqOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.PlayerEnterDungeonReqOuterClass.PlayerEnterDungeonReq other) {
         if (other == emu.grasscutter.net.proto.PlayerEnterDungeonReqOuterClass.PlayerEnterDungeonReq.getDefaultInstance()) return this;
-        if (other.hasUnk2800ANJAHBGBIFD()) {
-          mergeUnk2800ANJAHBGBIFD(other.getUnk2800ANJAHBGBIFD());
+        if (other.getDungeonId() != 0) {
+          setDungeonId(other.getDungeonId());
         }
         if (other.getPointId() != 0) {
           setPointId(other.getPointId());
         }
-        if (other.getDungeonId() != 0) {
-          setDungeonId(other.getDungeonId());
+        if (other.hasEnterPosInfo()) {
+          mergeEnterPosInfo(other.getEnterPosInfo());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -556,159 +681,9 @@ public final class PlayerEnterDungeonReqOuterClass {
         return this;
       }
 
-      private emu.grasscutter.net.proto.Unk2800JKLFAJKDLDG.Unk2800_JKLFAJKDLDG unk2800ANJAHBGBIFD_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          emu.grasscutter.net.proto.Unk2800JKLFAJKDLDG.Unk2800_JKLFAJKDLDG, emu.grasscutter.net.proto.Unk2800JKLFAJKDLDG.Unk2800_JKLFAJKDLDG.Builder, emu.grasscutter.net.proto.Unk2800JKLFAJKDLDG.Unk2800_JKLFAJKDLDGOrBuilder> unk2800ANJAHBGBIFDBuilder_;
-      /**
-       * <code>.Unk2800_JKLFAJKDLDG Unk2800_ANJAHBGBIFD = 2;</code>
-       * @return Whether the unk2800ANJAHBGBIFD field is set.
-       */
-      public boolean hasUnk2800ANJAHBGBIFD() {
-        return unk2800ANJAHBGBIFDBuilder_ != null || unk2800ANJAHBGBIFD_ != null;
-      }
-      /**
-       * <code>.Unk2800_JKLFAJKDLDG Unk2800_ANJAHBGBIFD = 2;</code>
-       * @return The unk2800ANJAHBGBIFD.
-       */
-      public emu.grasscutter.net.proto.Unk2800JKLFAJKDLDG.Unk2800_JKLFAJKDLDG getUnk2800ANJAHBGBIFD() {
-        if (unk2800ANJAHBGBIFDBuilder_ == null) {
-          return unk2800ANJAHBGBIFD_ == null ? emu.grasscutter.net.proto.Unk2800JKLFAJKDLDG.Unk2800_JKLFAJKDLDG.getDefaultInstance() : unk2800ANJAHBGBIFD_;
-        } else {
-          return unk2800ANJAHBGBIFDBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.Unk2800_JKLFAJKDLDG Unk2800_ANJAHBGBIFD = 2;</code>
-       */
-      public Builder setUnk2800ANJAHBGBIFD(emu.grasscutter.net.proto.Unk2800JKLFAJKDLDG.Unk2800_JKLFAJKDLDG value) {
-        if (unk2800ANJAHBGBIFDBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          unk2800ANJAHBGBIFD_ = value;
-          onChanged();
-        } else {
-          unk2800ANJAHBGBIFDBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.Unk2800_JKLFAJKDLDG Unk2800_ANJAHBGBIFD = 2;</code>
-       */
-      public Builder setUnk2800ANJAHBGBIFD(
-          emu.grasscutter.net.proto.Unk2800JKLFAJKDLDG.Unk2800_JKLFAJKDLDG.Builder builderForValue) {
-        if (unk2800ANJAHBGBIFDBuilder_ == null) {
-          unk2800ANJAHBGBIFD_ = builderForValue.build();
-          onChanged();
-        } else {
-          unk2800ANJAHBGBIFDBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.Unk2800_JKLFAJKDLDG Unk2800_ANJAHBGBIFD = 2;</code>
-       */
-      public Builder mergeUnk2800ANJAHBGBIFD(emu.grasscutter.net.proto.Unk2800JKLFAJKDLDG.Unk2800_JKLFAJKDLDG value) {
-        if (unk2800ANJAHBGBIFDBuilder_ == null) {
-          if (unk2800ANJAHBGBIFD_ != null) {
-            unk2800ANJAHBGBIFD_ =
-              emu.grasscutter.net.proto.Unk2800JKLFAJKDLDG.Unk2800_JKLFAJKDLDG.newBuilder(unk2800ANJAHBGBIFD_).mergeFrom(value).buildPartial();
-          } else {
-            unk2800ANJAHBGBIFD_ = value;
-          }
-          onChanged();
-        } else {
-          unk2800ANJAHBGBIFDBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.Unk2800_JKLFAJKDLDG Unk2800_ANJAHBGBIFD = 2;</code>
-       */
-      public Builder clearUnk2800ANJAHBGBIFD() {
-        if (unk2800ANJAHBGBIFDBuilder_ == null) {
-          unk2800ANJAHBGBIFD_ = null;
-          onChanged();
-        } else {
-          unk2800ANJAHBGBIFD_ = null;
-          unk2800ANJAHBGBIFDBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.Unk2800_JKLFAJKDLDG Unk2800_ANJAHBGBIFD = 2;</code>
-       */
-      public emu.grasscutter.net.proto.Unk2800JKLFAJKDLDG.Unk2800_JKLFAJKDLDG.Builder getUnk2800ANJAHBGBIFDBuilder() {
-        
-        onChanged();
-        return getUnk2800ANJAHBGBIFDFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.Unk2800_JKLFAJKDLDG Unk2800_ANJAHBGBIFD = 2;</code>
-       */
-      public emu.grasscutter.net.proto.Unk2800JKLFAJKDLDG.Unk2800_JKLFAJKDLDGOrBuilder getUnk2800ANJAHBGBIFDOrBuilder() {
-        if (unk2800ANJAHBGBIFDBuilder_ != null) {
-          return unk2800ANJAHBGBIFDBuilder_.getMessageOrBuilder();
-        } else {
-          return unk2800ANJAHBGBIFD_ == null ?
-              emu.grasscutter.net.proto.Unk2800JKLFAJKDLDG.Unk2800_JKLFAJKDLDG.getDefaultInstance() : unk2800ANJAHBGBIFD_;
-        }
-      }
-      /**
-       * <code>.Unk2800_JKLFAJKDLDG Unk2800_ANJAHBGBIFD = 2;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          emu.grasscutter.net.proto.Unk2800JKLFAJKDLDG.Unk2800_JKLFAJKDLDG, emu.grasscutter.net.proto.Unk2800JKLFAJKDLDG.Unk2800_JKLFAJKDLDG.Builder, emu.grasscutter.net.proto.Unk2800JKLFAJKDLDG.Unk2800_JKLFAJKDLDGOrBuilder> 
-          getUnk2800ANJAHBGBIFDFieldBuilder() {
-        if (unk2800ANJAHBGBIFDBuilder_ == null) {
-          unk2800ANJAHBGBIFDBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              emu.grasscutter.net.proto.Unk2800JKLFAJKDLDG.Unk2800_JKLFAJKDLDG, emu.grasscutter.net.proto.Unk2800JKLFAJKDLDG.Unk2800_JKLFAJKDLDG.Builder, emu.grasscutter.net.proto.Unk2800JKLFAJKDLDG.Unk2800_JKLFAJKDLDGOrBuilder>(
-                  getUnk2800ANJAHBGBIFD(),
-                  getParentForChildren(),
-                  isClean());
-          unk2800ANJAHBGBIFD_ = null;
-        }
-        return unk2800ANJAHBGBIFDBuilder_;
-      }
-
-      private int pointId_ ;
-      /**
-       * <code>uint32 point_id = 13;</code>
-       * @return The pointId.
-       */
-      @java.lang.Override
-      public int getPointId() {
-        return pointId_;
-      }
-      /**
-       * <code>uint32 point_id = 13;</code>
-       * @param value The pointId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPointId(int value) {
-        
-        pointId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 point_id = 13;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearPointId() {
-        
-        pointId_ = 0;
-        onChanged();
-        return this;
-      }
-
       private int dungeonId_ ;
       /**
-       * <code>uint32 dungeon_id = 7;</code>
+       * <code>uint32 dungeonId = 2;</code>
        * @return The dungeonId.
        */
       @java.lang.Override
@@ -716,7 +691,7 @@ public final class PlayerEnterDungeonReqOuterClass {
         return dungeonId_;
       }
       /**
-       * <code>uint32 dungeon_id = 7;</code>
+       * <code>uint32 dungeonId = 2;</code>
        * @param value The dungeonId to set.
        * @return This builder for chaining.
        */
@@ -727,7 +702,7 @@ public final class PlayerEnterDungeonReqOuterClass {
         return this;
       }
       /**
-       * <code>uint32 dungeon_id = 7;</code>
+       * <code>uint32 dungeonId = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearDungeonId() {
@@ -735,6 +710,156 @@ public final class PlayerEnterDungeonReqOuterClass {
         dungeonId_ = 0;
         onChanged();
         return this;
+      }
+
+      private int pointId_ ;
+      /**
+       * <code>uint32 pointId = 9;</code>
+       * @return The pointId.
+       */
+      @java.lang.Override
+      public int getPointId() {
+        return pointId_;
+      }
+      /**
+       * <code>uint32 pointId = 9;</code>
+       * @param value The pointId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPointId(int value) {
+        
+        pointId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 pointId = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPointId() {
+        
+        pointId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private emu.grasscutter.net.proto.DungeonEnterPosInfoOuterClass.DungeonEnterPosInfo enterPosInfo_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          emu.grasscutter.net.proto.DungeonEnterPosInfoOuterClass.DungeonEnterPosInfo, emu.grasscutter.net.proto.DungeonEnterPosInfoOuterClass.DungeonEnterPosInfo.Builder, emu.grasscutter.net.proto.DungeonEnterPosInfoOuterClass.DungeonEnterPosInfoOrBuilder> enterPosInfoBuilder_;
+      /**
+       * <code>.DungeonEnterPosInfo enterPosInfo = 4;</code>
+       * @return Whether the enterPosInfo field is set.
+       */
+      public boolean hasEnterPosInfo() {
+        return enterPosInfoBuilder_ != null || enterPosInfo_ != null;
+      }
+      /**
+       * <code>.DungeonEnterPosInfo enterPosInfo = 4;</code>
+       * @return The enterPosInfo.
+       */
+      public emu.grasscutter.net.proto.DungeonEnterPosInfoOuterClass.DungeonEnterPosInfo getEnterPosInfo() {
+        if (enterPosInfoBuilder_ == null) {
+          return enterPosInfo_ == null ? emu.grasscutter.net.proto.DungeonEnterPosInfoOuterClass.DungeonEnterPosInfo.getDefaultInstance() : enterPosInfo_;
+        } else {
+          return enterPosInfoBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.DungeonEnterPosInfo enterPosInfo = 4;</code>
+       */
+      public Builder setEnterPosInfo(emu.grasscutter.net.proto.DungeonEnterPosInfoOuterClass.DungeonEnterPosInfo value) {
+        if (enterPosInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          enterPosInfo_ = value;
+          onChanged();
+        } else {
+          enterPosInfoBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.DungeonEnterPosInfo enterPosInfo = 4;</code>
+       */
+      public Builder setEnterPosInfo(
+          emu.grasscutter.net.proto.DungeonEnterPosInfoOuterClass.DungeonEnterPosInfo.Builder builderForValue) {
+        if (enterPosInfoBuilder_ == null) {
+          enterPosInfo_ = builderForValue.build();
+          onChanged();
+        } else {
+          enterPosInfoBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.DungeonEnterPosInfo enterPosInfo = 4;</code>
+       */
+      public Builder mergeEnterPosInfo(emu.grasscutter.net.proto.DungeonEnterPosInfoOuterClass.DungeonEnterPosInfo value) {
+        if (enterPosInfoBuilder_ == null) {
+          if (enterPosInfo_ != null) {
+            enterPosInfo_ =
+              emu.grasscutter.net.proto.DungeonEnterPosInfoOuterClass.DungeonEnterPosInfo.newBuilder(enterPosInfo_).mergeFrom(value).buildPartial();
+          } else {
+            enterPosInfo_ = value;
+          }
+          onChanged();
+        } else {
+          enterPosInfoBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.DungeonEnterPosInfo enterPosInfo = 4;</code>
+       */
+      public Builder clearEnterPosInfo() {
+        if (enterPosInfoBuilder_ == null) {
+          enterPosInfo_ = null;
+          onChanged();
+        } else {
+          enterPosInfo_ = null;
+          enterPosInfoBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.DungeonEnterPosInfo enterPosInfo = 4;</code>
+       */
+      public emu.grasscutter.net.proto.DungeonEnterPosInfoOuterClass.DungeonEnterPosInfo.Builder getEnterPosInfoBuilder() {
+        
+        onChanged();
+        return getEnterPosInfoFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.DungeonEnterPosInfo enterPosInfo = 4;</code>
+       */
+      public emu.grasscutter.net.proto.DungeonEnterPosInfoOuterClass.DungeonEnterPosInfoOrBuilder getEnterPosInfoOrBuilder() {
+        if (enterPosInfoBuilder_ != null) {
+          return enterPosInfoBuilder_.getMessageOrBuilder();
+        } else {
+          return enterPosInfo_ == null ?
+              emu.grasscutter.net.proto.DungeonEnterPosInfoOuterClass.DungeonEnterPosInfo.getDefaultInstance() : enterPosInfo_;
+        }
+      }
+      /**
+       * <code>.DungeonEnterPosInfo enterPosInfo = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          emu.grasscutter.net.proto.DungeonEnterPosInfoOuterClass.DungeonEnterPosInfo, emu.grasscutter.net.proto.DungeonEnterPosInfoOuterClass.DungeonEnterPosInfo.Builder, emu.grasscutter.net.proto.DungeonEnterPosInfoOuterClass.DungeonEnterPosInfoOrBuilder> 
+          getEnterPosInfoFieldBuilder() {
+        if (enterPosInfoBuilder_ == null) {
+          enterPosInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              emu.grasscutter.net.proto.DungeonEnterPosInfoOuterClass.DungeonEnterPosInfo, emu.grasscutter.net.proto.DungeonEnterPosInfoOuterClass.DungeonEnterPosInfo.Builder, emu.grasscutter.net.proto.DungeonEnterPosInfoOuterClass.DungeonEnterPosInfoOrBuilder>(
+                  getEnterPosInfo(),
+                  getParentForChildren(),
+                  isClean());
+          enterPosInfo_ = null;
+        }
+        return enterPosInfoBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -803,25 +928,27 @@ public final class PlayerEnterDungeonReqOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\033PlayerEnterDungeonReq.proto\032\031Unk2800_J" +
-      "KLFAJKDLDG.proto\"p\n\025PlayerEnterDungeonRe" +
-      "q\0221\n\023Unk2800_ANJAHBGBIFD\030\002 \001(\0132\024.Unk2800" +
-      "_JKLFAJKDLDG\022\020\n\010point_id\030\r \001(\r\022\022\n\ndungeo" +
-      "n_id\030\007 \001(\rB\033\n\031emu.grasscutter.net.protob" +
-      "\006proto3"
+      "\n\033PlayerEnterDungeonReq.proto\032\031DungeonEn" +
+      "terPosInfo.proto\"\311\001\n\025PlayerEnterDungeonR" +
+      "eq\022\021\n\tdungeonId\030\002 \001(\r\022\017\n\007pointId\030\t \001(\r\022*" +
+      "\n\014enterPosInfo\030\004 \001(\0132\024.DungeonEnterPosIn" +
+      "fo\"`\n\013IGBPMBLKBOF\022\010\n\004NONE\020\000\022\020\n\013PEPPOHPHJ" +
+      "OJ\020\333\007\022\017\n\013DCDNILFDFLB\020\000\022\017\n\013NNBKOLMPOEA\020\001\022" +
+      "\017\n\013EAJIABGAOCI\020\001\032\002\020\001B\033\n\031emu.grasscutter." +
+      "net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          emu.grasscutter.net.proto.Unk2800JKLFAJKDLDG.getDescriptor(),
+          emu.grasscutter.net.proto.DungeonEnterPosInfoOuterClass.getDescriptor(),
         });
     internal_static_PlayerEnterDungeonReq_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_PlayerEnterDungeonReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_PlayerEnterDungeonReq_descriptor,
-        new java.lang.String[] { "Unk2800ANJAHBGBIFD", "PointId", "DungeonId", });
-    emu.grasscutter.net.proto.Unk2800JKLFAJKDLDG.getDescriptor();
+        new java.lang.String[] { "DungeonId", "PointId", "EnterPosInfo", });
+    emu.grasscutter.net.proto.DungeonEnterPosInfoOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

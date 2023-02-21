@@ -59,12 +59,6 @@ public final class MusicGameSearchBeatmapRspOuterClass {
     public emu.grasscutter.net.proto.MusicGameSearchBeatmapRspOuterClass.MusicGameSearchBeatmapRsp.ELBEIFGDBMMCase getELBEIFGDBMMCase();
   }
   /**
-   * <pre>
-   * CmdId: 6304
-   * EnetChannelId: 0
-   * EnetIsReliable: true
-   * </pre>
-   *
    * Protobuf type {@code MusicGameSearchBeatmapRsp}
    */
   public static final class MusicGameSearchBeatmapRsp extends
@@ -485,12 +479,6 @@ public final class MusicGameSearchBeatmapRspOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 6304
-     * EnetChannelId: 0
-     * EnetIsReliable: true
-     * </pre>
-     *
      * Protobuf type {@code MusicGameSearchBeatmapRsp}
      */
     public static final class Builder extends

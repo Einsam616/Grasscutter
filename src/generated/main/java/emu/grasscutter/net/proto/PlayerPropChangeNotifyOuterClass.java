@@ -19,25 +19,18 @@ public final class PlayerPropChangeNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 prop_delta = 13;</code>
+     * <code>uint32 propDelta = 8;</code>
      * @return The propDelta.
      */
     int getPropDelta();
 
     /**
-     * <code>uint32 prop_type = 12;</code>
+     * <code>uint32 propType = 12;</code>
      * @return The propType.
      */
     int getPropType();
   }
   /**
-   * <pre>
-   * CmdId: 139
-   * EnetChannelId: 0
-   * EnetIsReliable: false
-   * IsAllowClient: true
-   * </pre>
-   *
    * Protobuf type {@code PlayerPropChangeNotify}
    */
   public static final class PlayerPropChangeNotify extends
@@ -82,14 +75,14 @@ public final class PlayerPropChangeNotifyOuterClass {
             case 0:
               done = true;
               break;
+            case 64: {
+
+              propDelta_ = input.readUInt32();
+              break;
+            }
             case 96: {
 
               propType_ = input.readUInt32();
-              break;
-            }
-            case 104: {
-
-              propDelta_ = input.readUInt32();
               break;
             }
             default: {
@@ -124,10 +117,141 @@ public final class PlayerPropChangeNotifyOuterClass {
               emu.grasscutter.net.proto.PlayerPropChangeNotifyOuterClass.PlayerPropChangeNotify.class, emu.grasscutter.net.proto.PlayerPropChangeNotifyOuterClass.PlayerPropChangeNotify.Builder.class);
     }
 
-    public static final int PROP_DELTA_FIELD_NUMBER = 13;
+    /**
+     * Protobuf enum {@code PlayerPropChangeNotify.NHOMLNBEJIC}
+     */
+    public enum NHOMLNBEJIC
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>NONE = 0;</code>
+       */
+      NONE(0, 0),
+      /**
+       * <code>PEPPOHPHJOJ = 146;</code>
+       */
+      PEPPOHPHJOJ(1, 146),
+      /**
+       * <code>NNBKOLMPOEA = 1;</code>
+       */
+      NNBKOLMPOEA(3, 1),
+      UNRECOGNIZED(-1, -1),
+      ;
+
+      /**
+       * <code>DCDNILFDFLB = 0;</code>
+       */
+      public static final NHOMLNBEJIC DCDNILFDFLB = NONE;
+      /**
+       * <code>NONE = 0;</code>
+       */
+      public static final int NONE_VALUE = 0;
+      /**
+       * <code>PEPPOHPHJOJ = 146;</code>
+       */
+      public static final int PEPPOHPHJOJ_VALUE = 146;
+      /**
+       * <code>DCDNILFDFLB = 0;</code>
+       */
+      public static final int DCDNILFDFLB_VALUE = 0;
+      /**
+       * <code>NNBKOLMPOEA = 1;</code>
+       */
+      public static final int NNBKOLMPOEA_VALUE = 1;
+
+
+      public final int getNumber() {
+        if (index == -1) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static NHOMLNBEJIC valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static NHOMLNBEJIC forNumber(int value) {
+        switch (value) {
+          case 0: return NONE;
+          case 146: return PEPPOHPHJOJ;
+          case 1: return NNBKOLMPOEA;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<NHOMLNBEJIC>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          NHOMLNBEJIC> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<NHOMLNBEJIC>() {
+              public NHOMLNBEJIC findValueByNumber(int number) {
+                return NHOMLNBEJIC.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (index == -1) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(index);
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return emu.grasscutter.net.proto.PlayerPropChangeNotifyOuterClass.PlayerPropChangeNotify.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final NHOMLNBEJIC[] VALUES = getStaticValuesArray();
+      private static NHOMLNBEJIC[] getStaticValuesArray() {
+        return new NHOMLNBEJIC[] {
+          NONE, PEPPOHPHJOJ, DCDNILFDFLB, NNBKOLMPOEA, 
+        };
+      }
+      public static NHOMLNBEJIC valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int index;
+      private final int value;
+
+      private NHOMLNBEJIC(int index, int value) {
+        this.index = index;
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:PlayerPropChangeNotify.NHOMLNBEJIC)
+    }
+
+    public static final int PROPDELTA_FIELD_NUMBER = 8;
     private int propDelta_;
     /**
-     * <code>uint32 prop_delta = 13;</code>
+     * <code>uint32 propDelta = 8;</code>
      * @return The propDelta.
      */
     @java.lang.Override
@@ -135,10 +259,10 @@ public final class PlayerPropChangeNotifyOuterClass {
       return propDelta_;
     }
 
-    public static final int PROP_TYPE_FIELD_NUMBER = 12;
+    public static final int PROPTYPE_FIELD_NUMBER = 12;
     private int propType_;
     /**
-     * <code>uint32 prop_type = 12;</code>
+     * <code>uint32 propType = 12;</code>
      * @return The propType.
      */
     @java.lang.Override
@@ -160,11 +284,11 @@ public final class PlayerPropChangeNotifyOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (propDelta_ != 0) {
+        output.writeUInt32(8, propDelta_);
+      }
       if (propType_ != 0) {
         output.writeUInt32(12, propType_);
-      }
-      if (propDelta_ != 0) {
-        output.writeUInt32(13, propDelta_);
       }
       unknownFields.writeTo(output);
     }
@@ -175,13 +299,13 @@ public final class PlayerPropChangeNotifyOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      if (propDelta_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(8, propDelta_);
+      }
       if (propType_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(12, propType_);
-      }
-      if (propDelta_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(13, propDelta_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -213,9 +337,9 @@ public final class PlayerPropChangeNotifyOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + PROP_DELTA_FIELD_NUMBER;
+      hash = (37 * hash) + PROPDELTA_FIELD_NUMBER;
       hash = (53 * hash) + getPropDelta();
-      hash = (37 * hash) + PROP_TYPE_FIELD_NUMBER;
+      hash = (37 * hash) + PROPTYPE_FIELD_NUMBER;
       hash = (53 * hash) + getPropType();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -313,13 +437,6 @@ public final class PlayerPropChangeNotifyOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 139
-     * EnetChannelId: 0
-     * EnetIsReliable: false
-     * IsAllowClient: true
-     * </pre>
-     *
      * Protobuf type {@code PlayerPropChangeNotify}
      */
     public static final class Builder extends
@@ -474,7 +591,7 @@ public final class PlayerPropChangeNotifyOuterClass {
 
       private int propDelta_ ;
       /**
-       * <code>uint32 prop_delta = 13;</code>
+       * <code>uint32 propDelta = 8;</code>
        * @return The propDelta.
        */
       @java.lang.Override
@@ -482,7 +599,7 @@ public final class PlayerPropChangeNotifyOuterClass {
         return propDelta_;
       }
       /**
-       * <code>uint32 prop_delta = 13;</code>
+       * <code>uint32 propDelta = 8;</code>
        * @param value The propDelta to set.
        * @return This builder for chaining.
        */
@@ -493,7 +610,7 @@ public final class PlayerPropChangeNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint32 prop_delta = 13;</code>
+       * <code>uint32 propDelta = 8;</code>
        * @return This builder for chaining.
        */
       public Builder clearPropDelta() {
@@ -505,7 +622,7 @@ public final class PlayerPropChangeNotifyOuterClass {
 
       private int propType_ ;
       /**
-       * <code>uint32 prop_type = 12;</code>
+       * <code>uint32 propType = 12;</code>
        * @return The propType.
        */
       @java.lang.Override
@@ -513,7 +630,7 @@ public final class PlayerPropChangeNotifyOuterClass {
         return propType_;
       }
       /**
-       * <code>uint32 prop_type = 12;</code>
+       * <code>uint32 propType = 12;</code>
        * @param value The propType to set.
        * @return This builder for chaining.
        */
@@ -524,7 +641,7 @@ public final class PlayerPropChangeNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint32 prop_type = 12;</code>
+       * <code>uint32 propType = 12;</code>
        * @return This builder for chaining.
        */
       public Builder clearPropType() {
@@ -600,9 +717,11 @@ public final class PlayerPropChangeNotifyOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\034PlayerPropChangeNotify.proto\"?\n\026Player" +
-      "PropChangeNotify\022\022\n\nprop_delta\030\r \001(\r\022\021\n\t" +
-      "prop_type\030\014 \001(\rB\033\n\031emu.grasscutter.net.p" +
+      "\n\034PlayerPropChangeNotify.proto\"\216\001\n\026Playe" +
+      "rPropChangeNotify\022\021\n\tpropDelta\030\010 \001(\r\022\020\n\010" +
+      "propType\030\014 \001(\r\"O\n\013NHOMLNBEJIC\022\010\n\004NONE\020\000\022" +
+      "\020\n\013PEPPOHPHJOJ\020\222\001\022\017\n\013DCDNILFDFLB\020\000\022\017\n\013NN" +
+      "BKOLMPOEA\020\001\032\002\020\001B\033\n\031emu.grasscutter.net.p" +
       "rotob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

@@ -64,13 +64,6 @@ public final class MusicGameGetBeatmapReqOuterClass {
     emu.grasscutter.net.proto.MusicGameGetBeatmapReqTypeOuterClass.MusicGameGetBeatmapReqType getReqType();
   }
   /**
-   * <pre>
-   * CmdId: 6318
-   * EnetChannelId: 0
-   * EnetIsReliable: true
-   * IsAllowClient: true
-   * </pre>
-   *
    * Protobuf type {@code MusicGameGetBeatmapReq}
    */
   public static final class MusicGameGetBeatmapReq extends
@@ -456,13 +449,6 @@ public final class MusicGameGetBeatmapReqOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 6318
-     * EnetChannelId: 0
-     * EnetIsReliable: true
-     * IsAllowClient: true
-     * </pre>
-     *
      * Protobuf type {@code MusicGameGetBeatmapReq}
      */
     public static final class Builder extends

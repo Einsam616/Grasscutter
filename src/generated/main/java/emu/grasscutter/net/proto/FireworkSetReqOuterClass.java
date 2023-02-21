@@ -34,13 +34,6 @@ public final class FireworkSetReqOuterClass {
     emu.grasscutter.net.proto.FireworkSetDataOuterClass.FireworkSetDataOrBuilder getDataOrBuilder();
   }
   /**
-   * <pre>
-   * CmdId: 6099
-   * EnetChannelId: 0
-   * EnetIsReliable: true
-   * IsAllowClient: true
-   * </pre>
-   *
    * Protobuf type {@code FireworkSetReq}
    */
   public static final class FireworkSetReq extends
@@ -317,13 +310,6 @@ public final class FireworkSetReqOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 6099
-     * EnetChannelId: 0
-     * EnetIsReliable: true
-     * IsAllowClient: true
-     * </pre>
-     *
      * Protobuf type {@code FireworkSetReq}
      */
     public static final class Builder extends

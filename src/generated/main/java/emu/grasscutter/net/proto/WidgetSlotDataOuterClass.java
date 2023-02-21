@@ -19,33 +19,33 @@ public final class WidgetSlotDataOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 cd_over_time = 9;</code>
-     * @return The cdOverTime.
-     */
-    int getCdOverTime();
-
-    /**
-     * <code>.WidgetSlotTag tag = 14;</code>
-     * @return The enum numeric value on the wire for tag.
-     */
-    int getTagValue();
-    /**
-     * <code>.WidgetSlotTag tag = 14;</code>
-     * @return The tag.
-     */
-    emu.grasscutter.net.proto.WidgetSlotTagOuterClass.WidgetSlotTag getTag();
-
-    /**
-     * <code>uint32 material_id = 11;</code>
+     * <code>uint32 materialId = 11;</code>
      * @return The materialId.
      */
     int getMaterialId();
 
     /**
-     * <code>bool is_active = 12;</code>
+     * <code>uint32 cdOverTime = 2;</code>
+     * @return The cdOverTime.
+     */
+    int getCdOverTime();
+
+    /**
+     * <code>bool isActive = 12;</code>
      * @return The isActive.
      */
     boolean getIsActive();
+
+    /**
+     * <code>.WidgetSlotTag tag = 8;</code>
+     * @return The enum numeric value on the wire for tag.
+     */
+    int getTagValue();
+    /**
+     * <code>.WidgetSlotTag tag = 8;</code>
+     * @return The tag.
+     */
+    emu.grasscutter.net.proto.WidgetSlotTagOuterClass.WidgetSlotTag getTag();
   }
   /**
    * Protobuf type {@code WidgetSlotData}
@@ -93,9 +93,15 @@ public final class WidgetSlotDataOuterClass {
             case 0:
               done = true;
               break;
-            case 72: {
+            case 16: {
 
               cdOverTime_ = input.readUInt32();
+              break;
+            }
+            case 64: {
+              int rawValue = input.readEnum();
+
+              tag_ = rawValue;
               break;
             }
             case 88: {
@@ -106,12 +112,6 @@ public final class WidgetSlotDataOuterClass {
             case 96: {
 
               isActive_ = input.readBool();
-              break;
-            }
-            case 112: {
-              int rawValue = input.readEnum();
-
-              tag_ = rawValue;
               break;
             }
             default: {
@@ -146,40 +146,10 @@ public final class WidgetSlotDataOuterClass {
               emu.grasscutter.net.proto.WidgetSlotDataOuterClass.WidgetSlotData.class, emu.grasscutter.net.proto.WidgetSlotDataOuterClass.WidgetSlotData.Builder.class);
     }
 
-    public static final int CD_OVER_TIME_FIELD_NUMBER = 9;
-    private int cdOverTime_;
-    /**
-     * <code>uint32 cd_over_time = 9;</code>
-     * @return The cdOverTime.
-     */
-    @java.lang.Override
-    public int getCdOverTime() {
-      return cdOverTime_;
-    }
-
-    public static final int TAG_FIELD_NUMBER = 14;
-    private int tag_;
-    /**
-     * <code>.WidgetSlotTag tag = 14;</code>
-     * @return The enum numeric value on the wire for tag.
-     */
-    @java.lang.Override public int getTagValue() {
-      return tag_;
-    }
-    /**
-     * <code>.WidgetSlotTag tag = 14;</code>
-     * @return The tag.
-     */
-    @java.lang.Override public emu.grasscutter.net.proto.WidgetSlotTagOuterClass.WidgetSlotTag getTag() {
-      @SuppressWarnings("deprecation")
-      emu.grasscutter.net.proto.WidgetSlotTagOuterClass.WidgetSlotTag result = emu.grasscutter.net.proto.WidgetSlotTagOuterClass.WidgetSlotTag.valueOf(tag_);
-      return result == null ? emu.grasscutter.net.proto.WidgetSlotTagOuterClass.WidgetSlotTag.UNRECOGNIZED : result;
-    }
-
-    public static final int MATERIAL_ID_FIELD_NUMBER = 11;
+    public static final int MATERIALID_FIELD_NUMBER = 11;
     private int materialId_;
     /**
-     * <code>uint32 material_id = 11;</code>
+     * <code>uint32 materialId = 11;</code>
      * @return The materialId.
      */
     @java.lang.Override
@@ -187,15 +157,45 @@ public final class WidgetSlotDataOuterClass {
       return materialId_;
     }
 
-    public static final int IS_ACTIVE_FIELD_NUMBER = 12;
+    public static final int CDOVERTIME_FIELD_NUMBER = 2;
+    private int cdOverTime_;
+    /**
+     * <code>uint32 cdOverTime = 2;</code>
+     * @return The cdOverTime.
+     */
+    @java.lang.Override
+    public int getCdOverTime() {
+      return cdOverTime_;
+    }
+
+    public static final int ISACTIVE_FIELD_NUMBER = 12;
     private boolean isActive_;
     /**
-     * <code>bool is_active = 12;</code>
+     * <code>bool isActive = 12;</code>
      * @return The isActive.
      */
     @java.lang.Override
     public boolean getIsActive() {
       return isActive_;
+    }
+
+    public static final int TAG_FIELD_NUMBER = 8;
+    private int tag_;
+    /**
+     * <code>.WidgetSlotTag tag = 8;</code>
+     * @return The enum numeric value on the wire for tag.
+     */
+    @java.lang.Override public int getTagValue() {
+      return tag_;
+    }
+    /**
+     * <code>.WidgetSlotTag tag = 8;</code>
+     * @return The tag.
+     */
+    @java.lang.Override public emu.grasscutter.net.proto.WidgetSlotTagOuterClass.WidgetSlotTag getTag() {
+      @SuppressWarnings("deprecation")
+      emu.grasscutter.net.proto.WidgetSlotTagOuterClass.WidgetSlotTag result = emu.grasscutter.net.proto.WidgetSlotTagOuterClass.WidgetSlotTag.valueOf(tag_);
+      return result == null ? emu.grasscutter.net.proto.WidgetSlotTagOuterClass.WidgetSlotTag.UNRECOGNIZED : result;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -213,16 +213,16 @@ public final class WidgetSlotDataOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (cdOverTime_ != 0) {
-        output.writeUInt32(9, cdOverTime_);
+        output.writeUInt32(2, cdOverTime_);
+      }
+      if (tag_ != emu.grasscutter.net.proto.WidgetSlotTagOuterClass.WidgetSlotTag.WIDGET_SLOT_TAG_QUICK_USE.getNumber()) {
+        output.writeEnum(8, tag_);
       }
       if (materialId_ != 0) {
         output.writeUInt32(11, materialId_);
       }
       if (isActive_ != false) {
         output.writeBool(12, isActive_);
-      }
-      if (tag_ != emu.grasscutter.net.proto.WidgetSlotTagOuterClass.WidgetSlotTag.WIDGET_SLOT_TAG_QUICK_USE.getNumber()) {
-        output.writeEnum(14, tag_);
       }
       unknownFields.writeTo(output);
     }
@@ -235,7 +235,11 @@ public final class WidgetSlotDataOuterClass {
       size = 0;
       if (cdOverTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(9, cdOverTime_);
+          .computeUInt32Size(2, cdOverTime_);
+      }
+      if (tag_ != emu.grasscutter.net.proto.WidgetSlotTagOuterClass.WidgetSlotTag.WIDGET_SLOT_TAG_QUICK_USE.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(8, tag_);
       }
       if (materialId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -244,10 +248,6 @@ public final class WidgetSlotDataOuterClass {
       if (isActive_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(12, isActive_);
-      }
-      if (tag_ != emu.grasscutter.net.proto.WidgetSlotTagOuterClass.WidgetSlotTag.WIDGET_SLOT_TAG_QUICK_USE.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(14, tag_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -264,13 +264,13 @@ public final class WidgetSlotDataOuterClass {
       }
       emu.grasscutter.net.proto.WidgetSlotDataOuterClass.WidgetSlotData other = (emu.grasscutter.net.proto.WidgetSlotDataOuterClass.WidgetSlotData) obj;
 
-      if (getCdOverTime()
-          != other.getCdOverTime()) return false;
-      if (tag_ != other.tag_) return false;
       if (getMaterialId()
           != other.getMaterialId()) return false;
+      if (getCdOverTime()
+          != other.getCdOverTime()) return false;
       if (getIsActive()
           != other.getIsActive()) return false;
+      if (tag_ != other.tag_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -282,15 +282,15 @@ public final class WidgetSlotDataOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CD_OVER_TIME_FIELD_NUMBER;
-      hash = (53 * hash) + getCdOverTime();
-      hash = (37 * hash) + TAG_FIELD_NUMBER;
-      hash = (53 * hash) + tag_;
-      hash = (37 * hash) + MATERIAL_ID_FIELD_NUMBER;
+      hash = (37 * hash) + MATERIALID_FIELD_NUMBER;
       hash = (53 * hash) + getMaterialId();
-      hash = (37 * hash) + IS_ACTIVE_FIELD_NUMBER;
+      hash = (37 * hash) + CDOVERTIME_FIELD_NUMBER;
+      hash = (53 * hash) + getCdOverTime();
+      hash = (37 * hash) + ISACTIVE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsActive());
+      hash = (37 * hash) + TAG_FIELD_NUMBER;
+      hash = (53 * hash) + tag_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -424,13 +424,13 @@ public final class WidgetSlotDataOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        cdOverTime_ = 0;
-
-        tag_ = 0;
-
         materialId_ = 0;
 
+        cdOverTime_ = 0;
+
         isActive_ = false;
+
+        tag_ = 0;
 
         return this;
       }
@@ -458,10 +458,10 @@ public final class WidgetSlotDataOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.WidgetSlotDataOuterClass.WidgetSlotData buildPartial() {
         emu.grasscutter.net.proto.WidgetSlotDataOuterClass.WidgetSlotData result = new emu.grasscutter.net.proto.WidgetSlotDataOuterClass.WidgetSlotData(this);
-        result.cdOverTime_ = cdOverTime_;
-        result.tag_ = tag_;
         result.materialId_ = materialId_;
+        result.cdOverTime_ = cdOverTime_;
         result.isActive_ = isActive_;
+        result.tag_ = tag_;
         onBuilt();
         return result;
       }
@@ -510,17 +510,17 @@ public final class WidgetSlotDataOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.WidgetSlotDataOuterClass.WidgetSlotData other) {
         if (other == emu.grasscutter.net.proto.WidgetSlotDataOuterClass.WidgetSlotData.getDefaultInstance()) return this;
-        if (other.getCdOverTime() != 0) {
-          setCdOverTime(other.getCdOverTime());
-        }
-        if (other.tag_ != 0) {
-          setTagValue(other.getTagValue());
-        }
         if (other.getMaterialId() != 0) {
           setMaterialId(other.getMaterialId());
         }
+        if (other.getCdOverTime() != 0) {
+          setCdOverTime(other.getCdOverTime());
+        }
         if (other.getIsActive() != false) {
           setIsActive(other.getIsActive());
+        }
+        if (other.tag_ != 0) {
+          setTagValue(other.getTagValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -551,9 +551,40 @@ public final class WidgetSlotDataOuterClass {
         return this;
       }
 
+      private int materialId_ ;
+      /**
+       * <code>uint32 materialId = 11;</code>
+       * @return The materialId.
+       */
+      @java.lang.Override
+      public int getMaterialId() {
+        return materialId_;
+      }
+      /**
+       * <code>uint32 materialId = 11;</code>
+       * @param value The materialId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaterialId(int value) {
+        
+        materialId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 materialId = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaterialId() {
+        
+        materialId_ = 0;
+        onChanged();
+        return this;
+      }
+
       private int cdOverTime_ ;
       /**
-       * <code>uint32 cd_over_time = 9;</code>
+       * <code>uint32 cdOverTime = 2;</code>
        * @return The cdOverTime.
        */
       @java.lang.Override
@@ -561,7 +592,7 @@ public final class WidgetSlotDataOuterClass {
         return cdOverTime_;
       }
       /**
-       * <code>uint32 cd_over_time = 9;</code>
+       * <code>uint32 cdOverTime = 2;</code>
        * @param value The cdOverTime to set.
        * @return This builder for chaining.
        */
@@ -572,7 +603,7 @@ public final class WidgetSlotDataOuterClass {
         return this;
       }
       /**
-       * <code>uint32 cd_over_time = 9;</code>
+       * <code>uint32 cdOverTime = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearCdOverTime() {
@@ -582,16 +613,47 @@ public final class WidgetSlotDataOuterClass {
         return this;
       }
 
+      private boolean isActive_ ;
+      /**
+       * <code>bool isActive = 12;</code>
+       * @return The isActive.
+       */
+      @java.lang.Override
+      public boolean getIsActive() {
+        return isActive_;
+      }
+      /**
+       * <code>bool isActive = 12;</code>
+       * @param value The isActive to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsActive(boolean value) {
+        
+        isActive_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool isActive = 12;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsActive() {
+        
+        isActive_ = false;
+        onChanged();
+        return this;
+      }
+
       private int tag_ = 0;
       /**
-       * <code>.WidgetSlotTag tag = 14;</code>
+       * <code>.WidgetSlotTag tag = 8;</code>
        * @return The enum numeric value on the wire for tag.
        */
       @java.lang.Override public int getTagValue() {
         return tag_;
       }
       /**
-       * <code>.WidgetSlotTag tag = 14;</code>
+       * <code>.WidgetSlotTag tag = 8;</code>
        * @param value The enum numeric value on the wire for tag to set.
        * @return This builder for chaining.
        */
@@ -602,7 +664,7 @@ public final class WidgetSlotDataOuterClass {
         return this;
       }
       /**
-       * <code>.WidgetSlotTag tag = 14;</code>
+       * <code>.WidgetSlotTag tag = 8;</code>
        * @return The tag.
        */
       @java.lang.Override
@@ -612,7 +674,7 @@ public final class WidgetSlotDataOuterClass {
         return result == null ? emu.grasscutter.net.proto.WidgetSlotTagOuterClass.WidgetSlotTag.UNRECOGNIZED : result;
       }
       /**
-       * <code>.WidgetSlotTag tag = 14;</code>
+       * <code>.WidgetSlotTag tag = 8;</code>
        * @param value The tag to set.
        * @return This builder for chaining.
        */
@@ -626,74 +688,12 @@ public final class WidgetSlotDataOuterClass {
         return this;
       }
       /**
-       * <code>.WidgetSlotTag tag = 14;</code>
+       * <code>.WidgetSlotTag tag = 8;</code>
        * @return This builder for chaining.
        */
       public Builder clearTag() {
         
         tag_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int materialId_ ;
-      /**
-       * <code>uint32 material_id = 11;</code>
-       * @return The materialId.
-       */
-      @java.lang.Override
-      public int getMaterialId() {
-        return materialId_;
-      }
-      /**
-       * <code>uint32 material_id = 11;</code>
-       * @param value The materialId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMaterialId(int value) {
-        
-        materialId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 material_id = 11;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearMaterialId() {
-        
-        materialId_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private boolean isActive_ ;
-      /**
-       * <code>bool is_active = 12;</code>
-       * @return The isActive.
-       */
-      @java.lang.Override
-      public boolean getIsActive() {
-        return isActive_;
-      }
-      /**
-       * <code>bool is_active = 12;</code>
-       * @param value The isActive to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIsActive(boolean value) {
-        
-        isActive_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool is_active = 12;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearIsActive() {
-        
-        isActive_ = false;
         onChanged();
         return this;
       }
@@ -765,10 +765,10 @@ public final class WidgetSlotDataOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\024WidgetSlotData.proto\032\023WidgetSlotTag.pr" +
-      "oto\"k\n\016WidgetSlotData\022\024\n\014cd_over_time\030\t " +
-      "\001(\r\022\033\n\003tag\030\016 \001(\0162\016.WidgetSlotTag\022\023\n\013mate" +
-      "rial_id\030\013 \001(\r\022\021\n\tis_active\030\014 \001(\010B\033\n\031emu." +
-      "grasscutter.net.protob\006proto3"
+      "oto\"g\n\016WidgetSlotData\022\022\n\nmaterialId\030\013 \001(" +
+      "\r\022\022\n\ncdOverTime\030\002 \001(\r\022\020\n\010isActive\030\014 \001(\010\022" +
+      "\033\n\003tag\030\010 \001(\0162\016.WidgetSlotTagB\033\n\031emu.gras" +
+      "scutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -780,7 +780,7 @@ public final class WidgetSlotDataOuterClass {
     internal_static_WidgetSlotData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_WidgetSlotData_descriptor,
-        new java.lang.String[] { "CdOverTime", "Tag", "MaterialId", "IsActive", });
+        new java.lang.String[] { "MaterialId", "CdOverTime", "IsActive", "Tag", });
     emu.grasscutter.net.proto.WidgetSlotTagOuterClass.getDescriptor();
   }
 

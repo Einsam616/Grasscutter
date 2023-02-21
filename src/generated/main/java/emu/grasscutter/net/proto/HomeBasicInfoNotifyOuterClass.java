@@ -19,28 +19,21 @@ public final class HomeBasicInfoNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.HomeBasicInfo basic_info = 15;</code>
+     * <code>.HomeBasicInfo basicInfo = 7;</code>
      * @return Whether the basicInfo field is set.
      */
     boolean hasBasicInfo();
     /**
-     * <code>.HomeBasicInfo basic_info = 15;</code>
+     * <code>.HomeBasicInfo basicInfo = 7;</code>
      * @return The basicInfo.
      */
     emu.grasscutter.net.proto.HomeBasicInfoOuterClass.HomeBasicInfo getBasicInfo();
     /**
-     * <code>.HomeBasicInfo basic_info = 15;</code>
+     * <code>.HomeBasicInfo basicInfo = 7;</code>
      */
     emu.grasscutter.net.proto.HomeBasicInfoOuterClass.HomeBasicInfoOrBuilder getBasicInfoOrBuilder();
   }
   /**
-   * <pre>
-   * CmdId: 4885
-   * EnetChannelId: 0
-   * EnetIsReliable: false
-   * IsAllowClient: true
-   * </pre>
-   *
    * Protobuf type {@code HomeBasicInfoNotify}
    */
   public static final class HomeBasicInfoNotify extends
@@ -85,7 +78,7 @@ public final class HomeBasicInfoNotifyOuterClass {
             case 0:
               done = true;
               break;
-            case 122: {
+            case 58: {
               emu.grasscutter.net.proto.HomeBasicInfoOuterClass.HomeBasicInfo.Builder subBuilder = null;
               if (basicInfo_ != null) {
                 subBuilder = basicInfo_.toBuilder();
@@ -130,10 +123,141 @@ public final class HomeBasicInfoNotifyOuterClass {
               emu.grasscutter.net.proto.HomeBasicInfoNotifyOuterClass.HomeBasicInfoNotify.class, emu.grasscutter.net.proto.HomeBasicInfoNotifyOuterClass.HomeBasicInfoNotify.Builder.class);
     }
 
-    public static final int BASIC_INFO_FIELD_NUMBER = 15;
+    /**
+     * Protobuf enum {@code HomeBasicInfoNotify.PBMCNDPEMAC}
+     */
+    public enum PBMCNDPEMAC
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>NONE = 0;</code>
+       */
+      NONE(0, 0),
+      /**
+       * <code>PEPPOHPHJOJ = 4607;</code>
+       */
+      PEPPOHPHJOJ(1, 4607),
+      /**
+       * <code>NNBKOLMPOEA = 1;</code>
+       */
+      NNBKOLMPOEA(3, 1),
+      UNRECOGNIZED(-1, -1),
+      ;
+
+      /**
+       * <code>DCDNILFDFLB = 0;</code>
+       */
+      public static final PBMCNDPEMAC DCDNILFDFLB = NONE;
+      /**
+       * <code>NONE = 0;</code>
+       */
+      public static final int NONE_VALUE = 0;
+      /**
+       * <code>PEPPOHPHJOJ = 4607;</code>
+       */
+      public static final int PEPPOHPHJOJ_VALUE = 4607;
+      /**
+       * <code>DCDNILFDFLB = 0;</code>
+       */
+      public static final int DCDNILFDFLB_VALUE = 0;
+      /**
+       * <code>NNBKOLMPOEA = 1;</code>
+       */
+      public static final int NNBKOLMPOEA_VALUE = 1;
+
+
+      public final int getNumber() {
+        if (index == -1) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static PBMCNDPEMAC valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static PBMCNDPEMAC forNumber(int value) {
+        switch (value) {
+          case 0: return NONE;
+          case 4607: return PEPPOHPHJOJ;
+          case 1: return NNBKOLMPOEA;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<PBMCNDPEMAC>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          PBMCNDPEMAC> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<PBMCNDPEMAC>() {
+              public PBMCNDPEMAC findValueByNumber(int number) {
+                return PBMCNDPEMAC.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (index == -1) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(index);
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return emu.grasscutter.net.proto.HomeBasicInfoNotifyOuterClass.HomeBasicInfoNotify.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final PBMCNDPEMAC[] VALUES = getStaticValuesArray();
+      private static PBMCNDPEMAC[] getStaticValuesArray() {
+        return new PBMCNDPEMAC[] {
+          NONE, PEPPOHPHJOJ, DCDNILFDFLB, NNBKOLMPOEA, 
+        };
+      }
+      public static PBMCNDPEMAC valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int index;
+      private final int value;
+
+      private PBMCNDPEMAC(int index, int value) {
+        this.index = index;
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:HomeBasicInfoNotify.PBMCNDPEMAC)
+    }
+
+    public static final int BASICINFO_FIELD_NUMBER = 7;
     private emu.grasscutter.net.proto.HomeBasicInfoOuterClass.HomeBasicInfo basicInfo_;
     /**
-     * <code>.HomeBasicInfo basic_info = 15;</code>
+     * <code>.HomeBasicInfo basicInfo = 7;</code>
      * @return Whether the basicInfo field is set.
      */
     @java.lang.Override
@@ -141,7 +265,7 @@ public final class HomeBasicInfoNotifyOuterClass {
       return basicInfo_ != null;
     }
     /**
-     * <code>.HomeBasicInfo basic_info = 15;</code>
+     * <code>.HomeBasicInfo basicInfo = 7;</code>
      * @return The basicInfo.
      */
     @java.lang.Override
@@ -149,7 +273,7 @@ public final class HomeBasicInfoNotifyOuterClass {
       return basicInfo_ == null ? emu.grasscutter.net.proto.HomeBasicInfoOuterClass.HomeBasicInfo.getDefaultInstance() : basicInfo_;
     }
     /**
-     * <code>.HomeBasicInfo basic_info = 15;</code>
+     * <code>.HomeBasicInfo basicInfo = 7;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.HomeBasicInfoOuterClass.HomeBasicInfoOrBuilder getBasicInfoOrBuilder() {
@@ -171,7 +295,7 @@ public final class HomeBasicInfoNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (basicInfo_ != null) {
-        output.writeMessage(15, getBasicInfo());
+        output.writeMessage(7, getBasicInfo());
       }
       unknownFields.writeTo(output);
     }
@@ -184,7 +308,7 @@ public final class HomeBasicInfoNotifyOuterClass {
       size = 0;
       if (basicInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(15, getBasicInfo());
+          .computeMessageSize(7, getBasicInfo());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -218,7 +342,7 @@ public final class HomeBasicInfoNotifyOuterClass {
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
       if (hasBasicInfo()) {
-        hash = (37 * hash) + BASIC_INFO_FIELD_NUMBER;
+        hash = (37 * hash) + BASICINFO_FIELD_NUMBER;
         hash = (53 * hash) + getBasicInfo().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
@@ -317,13 +441,6 @@ public final class HomeBasicInfoNotifyOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 4885
-     * EnetChannelId: 0
-     * EnetIsReliable: false
-     * IsAllowClient: true
-     * </pre>
-     *
      * Protobuf type {@code HomeBasicInfoNotify}
      */
     public static final class Builder extends
@@ -482,14 +599,14 @@ public final class HomeBasicInfoNotifyOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.HomeBasicInfoOuterClass.HomeBasicInfo, emu.grasscutter.net.proto.HomeBasicInfoOuterClass.HomeBasicInfo.Builder, emu.grasscutter.net.proto.HomeBasicInfoOuterClass.HomeBasicInfoOrBuilder> basicInfoBuilder_;
       /**
-       * <code>.HomeBasicInfo basic_info = 15;</code>
+       * <code>.HomeBasicInfo basicInfo = 7;</code>
        * @return Whether the basicInfo field is set.
        */
       public boolean hasBasicInfo() {
         return basicInfoBuilder_ != null || basicInfo_ != null;
       }
       /**
-       * <code>.HomeBasicInfo basic_info = 15;</code>
+       * <code>.HomeBasicInfo basicInfo = 7;</code>
        * @return The basicInfo.
        */
       public emu.grasscutter.net.proto.HomeBasicInfoOuterClass.HomeBasicInfo getBasicInfo() {
@@ -500,7 +617,7 @@ public final class HomeBasicInfoNotifyOuterClass {
         }
       }
       /**
-       * <code>.HomeBasicInfo basic_info = 15;</code>
+       * <code>.HomeBasicInfo basicInfo = 7;</code>
        */
       public Builder setBasicInfo(emu.grasscutter.net.proto.HomeBasicInfoOuterClass.HomeBasicInfo value) {
         if (basicInfoBuilder_ == null) {
@@ -516,7 +633,7 @@ public final class HomeBasicInfoNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.HomeBasicInfo basic_info = 15;</code>
+       * <code>.HomeBasicInfo basicInfo = 7;</code>
        */
       public Builder setBasicInfo(
           emu.grasscutter.net.proto.HomeBasicInfoOuterClass.HomeBasicInfo.Builder builderForValue) {
@@ -530,7 +647,7 @@ public final class HomeBasicInfoNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.HomeBasicInfo basic_info = 15;</code>
+       * <code>.HomeBasicInfo basicInfo = 7;</code>
        */
       public Builder mergeBasicInfo(emu.grasscutter.net.proto.HomeBasicInfoOuterClass.HomeBasicInfo value) {
         if (basicInfoBuilder_ == null) {
@@ -548,7 +665,7 @@ public final class HomeBasicInfoNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.HomeBasicInfo basic_info = 15;</code>
+       * <code>.HomeBasicInfo basicInfo = 7;</code>
        */
       public Builder clearBasicInfo() {
         if (basicInfoBuilder_ == null) {
@@ -562,7 +679,7 @@ public final class HomeBasicInfoNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.HomeBasicInfo basic_info = 15;</code>
+       * <code>.HomeBasicInfo basicInfo = 7;</code>
        */
       public emu.grasscutter.net.proto.HomeBasicInfoOuterClass.HomeBasicInfo.Builder getBasicInfoBuilder() {
         
@@ -570,7 +687,7 @@ public final class HomeBasicInfoNotifyOuterClass {
         return getBasicInfoFieldBuilder().getBuilder();
       }
       /**
-       * <code>.HomeBasicInfo basic_info = 15;</code>
+       * <code>.HomeBasicInfo basicInfo = 7;</code>
        */
       public emu.grasscutter.net.proto.HomeBasicInfoOuterClass.HomeBasicInfoOrBuilder getBasicInfoOrBuilder() {
         if (basicInfoBuilder_ != null) {
@@ -581,7 +698,7 @@ public final class HomeBasicInfoNotifyOuterClass {
         }
       }
       /**
-       * <code>.HomeBasicInfo basic_info = 15;</code>
+       * <code>.HomeBasicInfo basicInfo = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.HomeBasicInfoOuterClass.HomeBasicInfo, emu.grasscutter.net.proto.HomeBasicInfoOuterClass.HomeBasicInfo.Builder, emu.grasscutter.net.proto.HomeBasicInfoOuterClass.HomeBasicInfoOrBuilder> 
@@ -664,9 +781,11 @@ public final class HomeBasicInfoNotifyOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\031HomeBasicInfoNotify.proto\032\023HomeBasicIn" +
-      "fo.proto\"9\n\023HomeBasicInfoNotify\022\"\n\nbasic" +
-      "_info\030\017 \001(\0132\016.HomeBasicInfoB\033\n\031emu.grass" +
-      "cutter.net.protob\006proto3"
+      "fo.proto\"\211\001\n\023HomeBasicInfoNotify\022!\n\tbasi" +
+      "cInfo\030\007 \001(\0132\016.HomeBasicInfo\"O\n\013PBMCNDPEM" +
+      "AC\022\010\n\004NONE\020\000\022\020\n\013PEPPOHPHJOJ\020\377#\022\017\n\013DCDNIL" +
+      "FDFLB\020\000\022\017\n\013NNBKOLMPOEA\020\001\032\002\020\001B\033\n\031emu.gras" +
+      "scutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

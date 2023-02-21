@@ -20,40 +20,40 @@ public final class OperationOuterClass {
   public enum Operation
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
-     * <code>Add = 0;</code>
+     * <code>OPERATION_ADD = 0;</code>
      */
-    Add(0),
+    OPERATION_ADD(0),
     /**
-     * <code>Mod = 1;</code>
+     * <code>OPERATION_MOD = 1;</code>
      */
-    Mod(1),
+    OPERATION_MOD(1),
     /**
-     * <code>Del = 2;</code>
+     * <code>OPERATION_DEL = 2;</code>
      */
-    Del(2),
+    OPERATION_DEL(2),
     /**
-     * <code>Get = 3;</code>
+     * <code>OPERATION_GET = 3;</code>
      */
-    Get(3),
+    OPERATION_GET(3),
     UNRECOGNIZED(-1),
     ;
 
     /**
-     * <code>Add = 0;</code>
+     * <code>OPERATION_ADD = 0;</code>
      */
-    public static final int Add_VALUE = 0;
+    public static final int OPERATION_ADD_VALUE = 0;
     /**
-     * <code>Mod = 1;</code>
+     * <code>OPERATION_MOD = 1;</code>
      */
-    public static final int Mod_VALUE = 1;
+    public static final int OPERATION_MOD_VALUE = 1;
     /**
-     * <code>Del = 2;</code>
+     * <code>OPERATION_DEL = 2;</code>
      */
-    public static final int Del_VALUE = 2;
+    public static final int OPERATION_DEL_VALUE = 2;
     /**
-     * <code>Get = 3;</code>
+     * <code>OPERATION_GET = 3;</code>
      */
-    public static final int Get_VALUE = 3;
+    public static final int OPERATION_GET_VALUE = 3;
 
 
     public final int getNumber() {
@@ -80,10 +80,10 @@ public final class OperationOuterClass {
      */
     public static Operation forNumber(int value) {
       switch (value) {
-        case 0: return Add;
-        case 1: return Mod;
-        case 2: return Del;
-        case 3: return Get;
+        case 0: return OPERATION_ADD;
+        case 1: return OPERATION_MOD;
+        case 2: return OPERATION_DEL;
+        case 3: return OPERATION_GET;
         default: return null;
       }
     }
@@ -149,8 +149,9 @@ public final class OperationOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\017Operation.proto*/\n\tOperation\022\007\n\003Add\020\000\022" +
-      "\007\n\003Mod\020\001\022\007\n\003Del\020\002\022\007\n\003Get\020\003B\033\n\031emu.grassc" +
+      "\n\017Operation.proto*W\n\tOperation\022\021\n\rOPERAT" +
+      "ION_ADD\020\000\022\021\n\rOPERATION_MOD\020\001\022\021\n\rOPERATIO" +
+      "N_DEL\020\002\022\021\n\rOPERATION_GET\020\003B\033\n\031emu.grassc" +
       "utter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

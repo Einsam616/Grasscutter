@@ -19,40 +19,40 @@ public final class CrystalLinkSettleInfoOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 kill_elite_monster_num = 2;</code>
-     * @return The killEliteMonsterNum.
+     * <code>uint32 killNormalMonsterNum = 11;</code>
+     * @return The killNormalMonsterNum.
      */
-    int getKillEliteMonsterNum();
+    int getKillNormalMonsterNum();
 
     /**
-     * <code>uint32 final_score = 6;</code>
-     * @return The finalScore.
-     */
-    int getFinalScore();
-
-    /**
-     * <code>uint32 level_id = 12;</code>
-     * @return The levelId.
-     */
-    int getLevelId();
-
-    /**
-     * <code>bool is_new_record = 13;</code>
+     * <code>bool isNewRecord = 6;</code>
      * @return The isNewRecord.
      */
     boolean getIsNewRecord();
 
     /**
-     * <code>uint32 difficulty_id = 9;</code>
+     * <code>uint32 finalScore = 13;</code>
+     * @return The finalScore.
+     */
+    int getFinalScore();
+
+    /**
+     * <code>uint32 killEliteMonsterNum = 15;</code>
+     * @return The killEliteMonsterNum.
+     */
+    int getKillEliteMonsterNum();
+
+    /**
+     * <code>uint32 difficultyId = 3;</code>
      * @return The difficultyId.
      */
     int getDifficultyId();
 
     /**
-     * <code>uint32 kill_normal_mosnter_num = 3;</code>
-     * @return The killNormalMosnterNum.
+     * <code>uint32 levelId = 10;</code>
+     * @return The levelId.
      */
-    int getKillNormalMosnterNum();
+    int getLevelId();
   }
   /**
    * Protobuf type {@code CrystalLinkSettleInfo}
@@ -99,34 +99,34 @@ public final class CrystalLinkSettleInfoOuterClass {
             case 0:
               done = true;
               break;
-            case 16: {
-
-              killEliteMonsterNum_ = input.readUInt32();
-              break;
-            }
             case 24: {
-
-              killNormalMosnterNum_ = input.readUInt32();
-              break;
-            }
-            case 48: {
-
-              finalScore_ = input.readUInt32();
-              break;
-            }
-            case 72: {
 
               difficultyId_ = input.readUInt32();
               break;
             }
-            case 96: {
+            case 48: {
+
+              isNewRecord_ = input.readBool();
+              break;
+            }
+            case 80: {
 
               levelId_ = input.readUInt32();
               break;
             }
+            case 88: {
+
+              killNormalMonsterNum_ = input.readUInt32();
+              break;
+            }
             case 104: {
 
-              isNewRecord_ = input.readBool();
+              finalScore_ = input.readUInt32();
+              break;
+            }
+            case 120: {
+
+              killEliteMonsterNum_ = input.readUInt32();
               break;
             }
             default: {
@@ -161,43 +161,21 @@ public final class CrystalLinkSettleInfoOuterClass {
               emu.grasscutter.net.proto.CrystalLinkSettleInfoOuterClass.CrystalLinkSettleInfo.class, emu.grasscutter.net.proto.CrystalLinkSettleInfoOuterClass.CrystalLinkSettleInfo.Builder.class);
     }
 
-    public static final int KILL_ELITE_MONSTER_NUM_FIELD_NUMBER = 2;
-    private int killEliteMonsterNum_;
+    public static final int KILLNORMALMONSTERNUM_FIELD_NUMBER = 11;
+    private int killNormalMonsterNum_;
     /**
-     * <code>uint32 kill_elite_monster_num = 2;</code>
-     * @return The killEliteMonsterNum.
+     * <code>uint32 killNormalMonsterNum = 11;</code>
+     * @return The killNormalMonsterNum.
      */
     @java.lang.Override
-    public int getKillEliteMonsterNum() {
-      return killEliteMonsterNum_;
+    public int getKillNormalMonsterNum() {
+      return killNormalMonsterNum_;
     }
 
-    public static final int FINAL_SCORE_FIELD_NUMBER = 6;
-    private int finalScore_;
-    /**
-     * <code>uint32 final_score = 6;</code>
-     * @return The finalScore.
-     */
-    @java.lang.Override
-    public int getFinalScore() {
-      return finalScore_;
-    }
-
-    public static final int LEVEL_ID_FIELD_NUMBER = 12;
-    private int levelId_;
-    /**
-     * <code>uint32 level_id = 12;</code>
-     * @return The levelId.
-     */
-    @java.lang.Override
-    public int getLevelId() {
-      return levelId_;
-    }
-
-    public static final int IS_NEW_RECORD_FIELD_NUMBER = 13;
+    public static final int ISNEWRECORD_FIELD_NUMBER = 6;
     private boolean isNewRecord_;
     /**
-     * <code>bool is_new_record = 13;</code>
+     * <code>bool isNewRecord = 6;</code>
      * @return The isNewRecord.
      */
     @java.lang.Override
@@ -205,10 +183,32 @@ public final class CrystalLinkSettleInfoOuterClass {
       return isNewRecord_;
     }
 
-    public static final int DIFFICULTY_ID_FIELD_NUMBER = 9;
+    public static final int FINALSCORE_FIELD_NUMBER = 13;
+    private int finalScore_;
+    /**
+     * <code>uint32 finalScore = 13;</code>
+     * @return The finalScore.
+     */
+    @java.lang.Override
+    public int getFinalScore() {
+      return finalScore_;
+    }
+
+    public static final int KILLELITEMONSTERNUM_FIELD_NUMBER = 15;
+    private int killEliteMonsterNum_;
+    /**
+     * <code>uint32 killEliteMonsterNum = 15;</code>
+     * @return The killEliteMonsterNum.
+     */
+    @java.lang.Override
+    public int getKillEliteMonsterNum() {
+      return killEliteMonsterNum_;
+    }
+
+    public static final int DIFFICULTYID_FIELD_NUMBER = 3;
     private int difficultyId_;
     /**
-     * <code>uint32 difficulty_id = 9;</code>
+     * <code>uint32 difficultyId = 3;</code>
      * @return The difficultyId.
      */
     @java.lang.Override
@@ -216,15 +216,15 @@ public final class CrystalLinkSettleInfoOuterClass {
       return difficultyId_;
     }
 
-    public static final int KILL_NORMAL_MOSNTER_NUM_FIELD_NUMBER = 3;
-    private int killNormalMosnterNum_;
+    public static final int LEVELID_FIELD_NUMBER = 10;
+    private int levelId_;
     /**
-     * <code>uint32 kill_normal_mosnter_num = 3;</code>
-     * @return The killNormalMosnterNum.
+     * <code>uint32 levelId = 10;</code>
+     * @return The levelId.
      */
     @java.lang.Override
-    public int getKillNormalMosnterNum() {
-      return killNormalMosnterNum_;
+    public int getLevelId() {
+      return levelId_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -241,23 +241,23 @@ public final class CrystalLinkSettleInfoOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (killEliteMonsterNum_ != 0) {
-        output.writeUInt32(2, killEliteMonsterNum_);
-      }
-      if (killNormalMosnterNum_ != 0) {
-        output.writeUInt32(3, killNormalMosnterNum_);
-      }
-      if (finalScore_ != 0) {
-        output.writeUInt32(6, finalScore_);
-      }
       if (difficultyId_ != 0) {
-        output.writeUInt32(9, difficultyId_);
-      }
-      if (levelId_ != 0) {
-        output.writeUInt32(12, levelId_);
+        output.writeUInt32(3, difficultyId_);
       }
       if (isNewRecord_ != false) {
-        output.writeBool(13, isNewRecord_);
+        output.writeBool(6, isNewRecord_);
+      }
+      if (levelId_ != 0) {
+        output.writeUInt32(10, levelId_);
+      }
+      if (killNormalMonsterNum_ != 0) {
+        output.writeUInt32(11, killNormalMonsterNum_);
+      }
+      if (finalScore_ != 0) {
+        output.writeUInt32(13, finalScore_);
+      }
+      if (killEliteMonsterNum_ != 0) {
+        output.writeUInt32(15, killEliteMonsterNum_);
       }
       unknownFields.writeTo(output);
     }
@@ -268,29 +268,29 @@ public final class CrystalLinkSettleInfoOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (killEliteMonsterNum_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, killEliteMonsterNum_);
-      }
-      if (killNormalMosnterNum_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(3, killNormalMosnterNum_);
-      }
-      if (finalScore_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(6, finalScore_);
-      }
       if (difficultyId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(9, difficultyId_);
-      }
-      if (levelId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(12, levelId_);
+          .computeUInt32Size(3, difficultyId_);
       }
       if (isNewRecord_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(13, isNewRecord_);
+          .computeBoolSize(6, isNewRecord_);
+      }
+      if (levelId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(10, levelId_);
+      }
+      if (killNormalMonsterNum_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(11, killNormalMonsterNum_);
+      }
+      if (finalScore_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(13, finalScore_);
+      }
+      if (killEliteMonsterNum_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(15, killEliteMonsterNum_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -307,18 +307,18 @@ public final class CrystalLinkSettleInfoOuterClass {
       }
       emu.grasscutter.net.proto.CrystalLinkSettleInfoOuterClass.CrystalLinkSettleInfo other = (emu.grasscutter.net.proto.CrystalLinkSettleInfoOuterClass.CrystalLinkSettleInfo) obj;
 
-      if (getKillEliteMonsterNum()
-          != other.getKillEliteMonsterNum()) return false;
-      if (getFinalScore()
-          != other.getFinalScore()) return false;
-      if (getLevelId()
-          != other.getLevelId()) return false;
+      if (getKillNormalMonsterNum()
+          != other.getKillNormalMonsterNum()) return false;
       if (getIsNewRecord()
           != other.getIsNewRecord()) return false;
+      if (getFinalScore()
+          != other.getFinalScore()) return false;
+      if (getKillEliteMonsterNum()
+          != other.getKillEliteMonsterNum()) return false;
       if (getDifficultyId()
           != other.getDifficultyId()) return false;
-      if (getKillNormalMosnterNum()
-          != other.getKillNormalMosnterNum()) return false;
+      if (getLevelId()
+          != other.getLevelId()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -330,19 +330,19 @@ public final class CrystalLinkSettleInfoOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + KILL_ELITE_MONSTER_NUM_FIELD_NUMBER;
-      hash = (53 * hash) + getKillEliteMonsterNum();
-      hash = (37 * hash) + FINAL_SCORE_FIELD_NUMBER;
-      hash = (53 * hash) + getFinalScore();
-      hash = (37 * hash) + LEVEL_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getLevelId();
-      hash = (37 * hash) + IS_NEW_RECORD_FIELD_NUMBER;
+      hash = (37 * hash) + KILLNORMALMONSTERNUM_FIELD_NUMBER;
+      hash = (53 * hash) + getKillNormalMonsterNum();
+      hash = (37 * hash) + ISNEWRECORD_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsNewRecord());
-      hash = (37 * hash) + DIFFICULTY_ID_FIELD_NUMBER;
+      hash = (37 * hash) + FINALSCORE_FIELD_NUMBER;
+      hash = (53 * hash) + getFinalScore();
+      hash = (37 * hash) + KILLELITEMONSTERNUM_FIELD_NUMBER;
+      hash = (53 * hash) + getKillEliteMonsterNum();
+      hash = (37 * hash) + DIFFICULTYID_FIELD_NUMBER;
       hash = (53 * hash) + getDifficultyId();
-      hash = (37 * hash) + KILL_NORMAL_MOSNTER_NUM_FIELD_NUMBER;
-      hash = (53 * hash) + getKillNormalMosnterNum();
+      hash = (37 * hash) + LEVELID_FIELD_NUMBER;
+      hash = (53 * hash) + getLevelId();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -476,17 +476,17 @@ public final class CrystalLinkSettleInfoOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        killEliteMonsterNum_ = 0;
-
-        finalScore_ = 0;
-
-        levelId_ = 0;
+        killNormalMonsterNum_ = 0;
 
         isNewRecord_ = false;
 
+        finalScore_ = 0;
+
+        killEliteMonsterNum_ = 0;
+
         difficultyId_ = 0;
 
-        killNormalMosnterNum_ = 0;
+        levelId_ = 0;
 
         return this;
       }
@@ -514,12 +514,12 @@ public final class CrystalLinkSettleInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.CrystalLinkSettleInfoOuterClass.CrystalLinkSettleInfo buildPartial() {
         emu.grasscutter.net.proto.CrystalLinkSettleInfoOuterClass.CrystalLinkSettleInfo result = new emu.grasscutter.net.proto.CrystalLinkSettleInfoOuterClass.CrystalLinkSettleInfo(this);
-        result.killEliteMonsterNum_ = killEliteMonsterNum_;
-        result.finalScore_ = finalScore_;
-        result.levelId_ = levelId_;
+        result.killNormalMonsterNum_ = killNormalMonsterNum_;
         result.isNewRecord_ = isNewRecord_;
+        result.finalScore_ = finalScore_;
+        result.killEliteMonsterNum_ = killEliteMonsterNum_;
         result.difficultyId_ = difficultyId_;
-        result.killNormalMosnterNum_ = killNormalMosnterNum_;
+        result.levelId_ = levelId_;
         onBuilt();
         return result;
       }
@@ -568,23 +568,23 @@ public final class CrystalLinkSettleInfoOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.CrystalLinkSettleInfoOuterClass.CrystalLinkSettleInfo other) {
         if (other == emu.grasscutter.net.proto.CrystalLinkSettleInfoOuterClass.CrystalLinkSettleInfo.getDefaultInstance()) return this;
-        if (other.getKillEliteMonsterNum() != 0) {
-          setKillEliteMonsterNum(other.getKillEliteMonsterNum());
-        }
-        if (other.getFinalScore() != 0) {
-          setFinalScore(other.getFinalScore());
-        }
-        if (other.getLevelId() != 0) {
-          setLevelId(other.getLevelId());
+        if (other.getKillNormalMonsterNum() != 0) {
+          setKillNormalMonsterNum(other.getKillNormalMonsterNum());
         }
         if (other.getIsNewRecord() != false) {
           setIsNewRecord(other.getIsNewRecord());
         }
+        if (other.getFinalScore() != 0) {
+          setFinalScore(other.getFinalScore());
+        }
+        if (other.getKillEliteMonsterNum() != 0) {
+          setKillEliteMonsterNum(other.getKillEliteMonsterNum());
+        }
         if (other.getDifficultyId() != 0) {
           setDifficultyId(other.getDifficultyId());
         }
-        if (other.getKillNormalMosnterNum() != 0) {
-          setKillNormalMosnterNum(other.getKillNormalMosnterNum());
+        if (other.getLevelId() != 0) {
+          setLevelId(other.getLevelId());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -615,102 +615,40 @@ public final class CrystalLinkSettleInfoOuterClass {
         return this;
       }
 
-      private int killEliteMonsterNum_ ;
+      private int killNormalMonsterNum_ ;
       /**
-       * <code>uint32 kill_elite_monster_num = 2;</code>
-       * @return The killEliteMonsterNum.
+       * <code>uint32 killNormalMonsterNum = 11;</code>
+       * @return The killNormalMonsterNum.
        */
       @java.lang.Override
-      public int getKillEliteMonsterNum() {
-        return killEliteMonsterNum_;
+      public int getKillNormalMonsterNum() {
+        return killNormalMonsterNum_;
       }
       /**
-       * <code>uint32 kill_elite_monster_num = 2;</code>
-       * @param value The killEliteMonsterNum to set.
+       * <code>uint32 killNormalMonsterNum = 11;</code>
+       * @param value The killNormalMonsterNum to set.
        * @return This builder for chaining.
        */
-      public Builder setKillEliteMonsterNum(int value) {
+      public Builder setKillNormalMonsterNum(int value) {
         
-        killEliteMonsterNum_ = value;
+        killNormalMonsterNum_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 kill_elite_monster_num = 2;</code>
+       * <code>uint32 killNormalMonsterNum = 11;</code>
        * @return This builder for chaining.
        */
-      public Builder clearKillEliteMonsterNum() {
+      public Builder clearKillNormalMonsterNum() {
         
-        killEliteMonsterNum_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int finalScore_ ;
-      /**
-       * <code>uint32 final_score = 6;</code>
-       * @return The finalScore.
-       */
-      @java.lang.Override
-      public int getFinalScore() {
-        return finalScore_;
-      }
-      /**
-       * <code>uint32 final_score = 6;</code>
-       * @param value The finalScore to set.
-       * @return This builder for chaining.
-       */
-      public Builder setFinalScore(int value) {
-        
-        finalScore_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 final_score = 6;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearFinalScore() {
-        
-        finalScore_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int levelId_ ;
-      /**
-       * <code>uint32 level_id = 12;</code>
-       * @return The levelId.
-       */
-      @java.lang.Override
-      public int getLevelId() {
-        return levelId_;
-      }
-      /**
-       * <code>uint32 level_id = 12;</code>
-       * @param value The levelId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setLevelId(int value) {
-        
-        levelId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 level_id = 12;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearLevelId() {
-        
-        levelId_ = 0;
+        killNormalMonsterNum_ = 0;
         onChanged();
         return this;
       }
 
       private boolean isNewRecord_ ;
       /**
-       * <code>bool is_new_record = 13;</code>
+       * <code>bool isNewRecord = 6;</code>
        * @return The isNewRecord.
        */
       @java.lang.Override
@@ -718,7 +656,7 @@ public final class CrystalLinkSettleInfoOuterClass {
         return isNewRecord_;
       }
       /**
-       * <code>bool is_new_record = 13;</code>
+       * <code>bool isNewRecord = 6;</code>
        * @param value The isNewRecord to set.
        * @return This builder for chaining.
        */
@@ -729,7 +667,7 @@ public final class CrystalLinkSettleInfoOuterClass {
         return this;
       }
       /**
-       * <code>bool is_new_record = 13;</code>
+       * <code>bool isNewRecord = 6;</code>
        * @return This builder for chaining.
        */
       public Builder clearIsNewRecord() {
@@ -739,9 +677,71 @@ public final class CrystalLinkSettleInfoOuterClass {
         return this;
       }
 
+      private int finalScore_ ;
+      /**
+       * <code>uint32 finalScore = 13;</code>
+       * @return The finalScore.
+       */
+      @java.lang.Override
+      public int getFinalScore() {
+        return finalScore_;
+      }
+      /**
+       * <code>uint32 finalScore = 13;</code>
+       * @param value The finalScore to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFinalScore(int value) {
+        
+        finalScore_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 finalScore = 13;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFinalScore() {
+        
+        finalScore_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int killEliteMonsterNum_ ;
+      /**
+       * <code>uint32 killEliteMonsterNum = 15;</code>
+       * @return The killEliteMonsterNum.
+       */
+      @java.lang.Override
+      public int getKillEliteMonsterNum() {
+        return killEliteMonsterNum_;
+      }
+      /**
+       * <code>uint32 killEliteMonsterNum = 15;</code>
+       * @param value The killEliteMonsterNum to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKillEliteMonsterNum(int value) {
+        
+        killEliteMonsterNum_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 killEliteMonsterNum = 15;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKillEliteMonsterNum() {
+        
+        killEliteMonsterNum_ = 0;
+        onChanged();
+        return this;
+      }
+
       private int difficultyId_ ;
       /**
-       * <code>uint32 difficulty_id = 9;</code>
+       * <code>uint32 difficultyId = 3;</code>
        * @return The difficultyId.
        */
       @java.lang.Override
@@ -749,7 +749,7 @@ public final class CrystalLinkSettleInfoOuterClass {
         return difficultyId_;
       }
       /**
-       * <code>uint32 difficulty_id = 9;</code>
+       * <code>uint32 difficultyId = 3;</code>
        * @param value The difficultyId to set.
        * @return This builder for chaining.
        */
@@ -760,7 +760,7 @@ public final class CrystalLinkSettleInfoOuterClass {
         return this;
       }
       /**
-       * <code>uint32 difficulty_id = 9;</code>
+       * <code>uint32 difficultyId = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearDifficultyId() {
@@ -770,33 +770,33 @@ public final class CrystalLinkSettleInfoOuterClass {
         return this;
       }
 
-      private int killNormalMosnterNum_ ;
+      private int levelId_ ;
       /**
-       * <code>uint32 kill_normal_mosnter_num = 3;</code>
-       * @return The killNormalMosnterNum.
+       * <code>uint32 levelId = 10;</code>
+       * @return The levelId.
        */
       @java.lang.Override
-      public int getKillNormalMosnterNum() {
-        return killNormalMosnterNum_;
+      public int getLevelId() {
+        return levelId_;
       }
       /**
-       * <code>uint32 kill_normal_mosnter_num = 3;</code>
-       * @param value The killNormalMosnterNum to set.
+       * <code>uint32 levelId = 10;</code>
+       * @param value The levelId to set.
        * @return This builder for chaining.
        */
-      public Builder setKillNormalMosnterNum(int value) {
+      public Builder setLevelId(int value) {
         
-        killNormalMosnterNum_ = value;
+        levelId_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 kill_normal_mosnter_num = 3;</code>
+       * <code>uint32 levelId = 10;</code>
        * @return This builder for chaining.
        */
-      public Builder clearKillNormalMosnterNum() {
+      public Builder clearLevelId() {
         
-        killNormalMosnterNum_ = 0;
+        levelId_ = 0;
         onChanged();
         return this;
       }
@@ -867,13 +867,12 @@ public final class CrystalLinkSettleInfoOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\033CrystalLinkSettleInfo.proto\"\255\001\n\025Crysta" +
-      "lLinkSettleInfo\022\036\n\026kill_elite_monster_nu" +
-      "m\030\002 \001(\r\022\023\n\013final_score\030\006 \001(\r\022\020\n\010level_id" +
-      "\030\014 \001(\r\022\025\n\ris_new_record\030\r \001(\010\022\025\n\rdifficu" +
-      "lty_id\030\t \001(\r\022\037\n\027kill_normal_mosnter_num\030" +
-      "\003 \001(\rB\033\n\031emu.grasscutter.net.protob\006prot" +
-      "o3"
+      "\n\033CrystalLinkSettleInfo.proto\"\242\001\n\025Crysta" +
+      "lLinkSettleInfo\022\034\n\024killNormalMonsterNum\030" +
+      "\013 \001(\r\022\023\n\013isNewRecord\030\006 \001(\010\022\022\n\nfinalScore" +
+      "\030\r \001(\r\022\033\n\023killEliteMonsterNum\030\017 \001(\r\022\024\n\014d" +
+      "ifficultyId\030\003 \001(\r\022\017\n\007levelId\030\n \001(\rB\033\n\031em" +
+      "u.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -884,7 +883,7 @@ public final class CrystalLinkSettleInfoOuterClass {
     internal_static_CrystalLinkSettleInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CrystalLinkSettleInfo_descriptor,
-        new java.lang.String[] { "KillEliteMonsterNum", "FinalScore", "LevelId", "IsNewRecord", "DifficultyId", "KillNormalMosnterNum", });
+        new java.lang.String[] { "KillNormalMonsterNum", "IsNewRecord", "FinalScore", "KillEliteMonsterNum", "DifficultyId", "LevelId", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

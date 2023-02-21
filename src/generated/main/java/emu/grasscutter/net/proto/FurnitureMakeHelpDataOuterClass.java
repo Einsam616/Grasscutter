@@ -25,7 +25,7 @@ public final class FurnitureMakeHelpDataOuterClass {
     int getTimes();
 
     /**
-     * <code>uint32 uid = 13;</code>
+     * <code>uint32 uid = 6;</code>
      * @return The uid.
      */
     int getUid();
@@ -80,7 +80,7 @@ public final class FurnitureMakeHelpDataOuterClass {
               times_ = input.readUInt32();
               break;
             }
-            case 104: {
+            case 48: {
 
               uid_ = input.readUInt32();
               break;
@@ -128,10 +128,10 @@ public final class FurnitureMakeHelpDataOuterClass {
       return times_;
     }
 
-    public static final int UID_FIELD_NUMBER = 13;
+    public static final int UID_FIELD_NUMBER = 6;
     private int uid_;
     /**
-     * <code>uint32 uid = 13;</code>
+     * <code>uint32 uid = 6;</code>
      * @return The uid.
      */
     @java.lang.Override
@@ -157,7 +157,7 @@ public final class FurnitureMakeHelpDataOuterClass {
         output.writeUInt32(2, times_);
       }
       if (uid_ != 0) {
-        output.writeUInt32(13, uid_);
+        output.writeUInt32(6, uid_);
       }
       unknownFields.writeTo(output);
     }
@@ -174,7 +174,7 @@ public final class FurnitureMakeHelpDataOuterClass {
       }
       if (uid_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(13, uid_);
+          .computeUInt32Size(6, uid_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -491,7 +491,7 @@ public final class FurnitureMakeHelpDataOuterClass {
 
       private int uid_ ;
       /**
-       * <code>uint32 uid = 13;</code>
+       * <code>uint32 uid = 6;</code>
        * @return The uid.
        */
       @java.lang.Override
@@ -499,7 +499,7 @@ public final class FurnitureMakeHelpDataOuterClass {
         return uid_;
       }
       /**
-       * <code>uint32 uid = 13;</code>
+       * <code>uint32 uid = 6;</code>
        * @param value The uid to set.
        * @return This builder for chaining.
        */
@@ -510,7 +510,7 @@ public final class FurnitureMakeHelpDataOuterClass {
         return this;
       }
       /**
-       * <code>uint32 uid = 13;</code>
+       * <code>uint32 uid = 6;</code>
        * @return This builder for chaining.
        */
       public Builder clearUid() {
@@ -587,7 +587,7 @@ public final class FurnitureMakeHelpDataOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\033FurnitureMakeHelpData.proto\"3\n\025Furnitu" +
-      "reMakeHelpData\022\r\n\005times\030\002 \001(\r\022\013\n\003uid\030\r \001" +
+      "reMakeHelpData\022\r\n\005times\030\002 \001(\r\022\013\n\003uid\030\006 \001" +
       "(\rB\033\n\031emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
